@@ -7,52 +7,52 @@ import SectionWrapper from '../ui/SectionWrapper';
 export default function StudioLocationSection() {
   const locations = [
     {
-      title: '학교 실내강당',
-      description: '체육 수업과 방과후 활동으로 활용',
-      icon: '🏫',
-      image: '/images/tent/KakaoTalk_20251031_090124174.jpg',
-    },
-    {
-      title: '전원주택',
-      description: '집 앞마당에서 즐기는 프라이빗 골프',
-      icon: '🏡',
-      image: '/images/tent/KakaoTalk_20251031_090152512.jpg',
-    },
-    {
-      title: '캠핑장',
-      description: '캠핑과 골프를 동시에 즐기는 새로운 경험',
-      icon: '⛺',
-      image: '/images/tent/KakaoTalk_20251031_090219860.jpg',
+      title: '프로 개인 강습장',
+      description: '프로 골퍼의 1:1 맞춤형 레슨 스튜디오',
+      icon: '⛳',
+      image: '/images/tent/KakaoTalk_20251031_090656348.jpg', // 실내 프로 강습 이미지
     },
     {
       title: '해수욕장',
       description: '바닷가에서 즐기는 특별한 골프 체험',
       icon: '🏖️',
-      image: '/images/tent/KakaoTalk_20251031_090230595.jpg',
+      image: '/images/tent/KakaoTalk_20251031_090230595.jpg', // 해변 설치 이미지
+    },
+    {
+      title: '골프장 & 컨트리클럽',
+      description: '골프장에서 워밍업과 대기 시간 활용',
+      icon: '⛳',
+      image: '/images/tent/KakaoTalk_20251031_090452525.jpg', // 골프장 잔디밭 설치
+    },
+    {
+      title: '전원주택',
+      description: '집 앞마당에서 즐기는 프라이빗 골프',
+      icon: '🏡',
+      image: '/images/tent/KakaoTalk_20251031_090152512.jpg', // 전원주택 정원 설치
+    },
+    {
+      title: '학교 실내강당',
+      description: '체육 수업과 방과후 활동으로 활용',
+      icon: '🏫',
+      image: '/images/tent/KakaoTalk_20251031_090124174.jpg', // 체육관 실내 설치
+    },
+    {
+      title: '캠핑장',
+      description: '캠핑과 골프를 동시에 즐기는 새로운 경험',
+      icon: '⛺',
+      image: '/images/tent/KakaoTalk_20251031_090219860.jpg', // 캠핑장 숲속 설치
     },
     {
       title: '지방축제 개최지',
-      description: '축제 부스로 관광객 유치 효과',
+      description: '축제 현장에서 인기 만점 골프 챌린지!',
       icon: '🎪',
-      image: '/images/tent/KakaoTalk_20251031_090305001.jpg',
+      image: '/images/tent/KakaoTalk_20251031_090305001.jpg', // 축제 부스 이미지
     },
     {
-      title: '각종 전시회',
-      description: '실내외 전시회장에서의 체험 부스',
-      icon: '🎭',
-      image: '/images/tent/KakaoTalk_20251031_090452525.jpg',
-    },
-    {
-      title: '프로 개인 강습장',
-      description: '프로 골퍼의 이동형 레슨 스튜디오',
-      icon: '⛳',
-      image: '/images/tent/KakaoTalk_20251031_090656348.jpg',
-    },
-    {
-      title: '티박스 (사계절)',
-      description: '여름 더위, 겨울 추위를 막아주는 쾌적한 공간',
-      icon: '🌡️',
-      image: '/images/tent/KakaoTalk_20251031_090814649.png',
+      title: '골프연습장 & 티박스',
+      description: '실외 연습장과 사계절 쾌적한 티박스',
+      icon: '🏌️',
+      image: '/images/tent/KakaoTalk_20251031_090814649.png', // 골프 연습장 이미지
     },
   ];
 
