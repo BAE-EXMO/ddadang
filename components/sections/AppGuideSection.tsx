@@ -244,7 +244,7 @@ export default function AppGuideSection() {
         className="text-center mt-20"
         id="download"
       >
-        <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl p-12 border-2 border-green-200">
+        <div className="bg-green-50 rounded-2xl p-12 border-2 border-green-200">
           <h3 className="text-3xl font-bold text-gray-900 mb-4">
             🏌️‍♂️ 언제칠까로 더 즐거운 골프 라이프를!
           </h3>

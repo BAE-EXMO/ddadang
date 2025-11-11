@@ -50,7 +50,7 @@ export default function VisionSection() {
         {features.map((feature, index) => (
           <Card key={index} delay={index * 0.1}>
             <div className="text-center">
-              <div className={`w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-br ${feature.color} p-4 text-white glow-blue`}>
+              <div className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-blue-600 p-4 text-white shadow-lg">
                 {feature.icon}
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-3">
@@ -62,23 +62,6 @@ export default function VisionSection() {
         ))}
       </div>
 
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-        className="text-center mt-12"
-      >
-        <div className="inline-block px-8 py-6 bg-white border-2 border-gray-300 rounded-2xl shadow-lg">
-          <p className="text-xl md:text-2xl text-gray-900 font-semibold italic">
-            "우리는 천을 팔지 않습니다.{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
-              골프의 경험을 설계합니다
-            </span>
-            ."
-          </p>
-        </div>
-      </motion.div>
     </SectionWrapper>
   );
 }

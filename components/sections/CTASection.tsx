@@ -22,7 +22,7 @@ export default function CTASection() {
   return (
     <section
       id="contact"
-      className="relative py-32 overflow-hidden bg-gradient-to-br from-gray-100 via-gray-200 to-gray-300"
+      className="relative py-32 overflow-hidden bg-gray-100"
     >
       {/* Animated Background Orbs */}
       <div className="absolute inset-0">
@@ -73,7 +73,7 @@ export default function CTASection() {
           <h2 className="text-5xl md:text-7xl font-extrabold text-gray-900 mb-6 tracking-tight leading-tight drop-shadow-sm">
             골프의 미래는
             <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600">
+            <span className="text-blue-600">
               언제칠까가 만듭니다
             </span>
           </h2>
@@ -129,7 +129,7 @@ export default function CTASection() {
             <p className="text-gray-600 text-sm mb-2 font-mono">Contact Us</p>
             <a
               href="mailto:info@exmo.kr"
-              className="text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-indigo-600 hover:to-blue-600 transition-all"
+              className="text-2xl md:text-3xl font-bold text-blue-600 hover:text-indigo-600 transition-all"
             >
               info@exmo.kr
             </a>

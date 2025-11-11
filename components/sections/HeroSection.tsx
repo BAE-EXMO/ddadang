@@ -20,7 +20,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-100 via-gray-200 to-gray-300">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gray-100">
       {/* Animated Gradient Orbs */}
       <div className="absolute inset-0">
         <motion.div
@@ -108,7 +108,7 @@ export default function HeroSection() {
           <h1 className="text-6xl md:text-8xl font-extrabold text-gray-900 mb-6 leading-tight tracking-tight drop-shadow-sm">
             골프의 모든 순간을
             <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600">
+            <span className="text-blue-600">
               하나로
             </span>
           </h1>
@@ -151,7 +151,7 @@ export default function HeroSection() {
             { label: 'Data Points', value: '1M+' },
           ].map((stat, i) => (
             <div key={i} className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
+              <div className="text-3xl md:text-4xl font-bold text-blue-600">
                 {stat.value}
               </div>
               <div className="text-sm text-gray-600 font-mono mt-1 font-semibold">{stat.label}</div>

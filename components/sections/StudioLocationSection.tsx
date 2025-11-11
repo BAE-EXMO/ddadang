@@ -83,7 +83,7 @@ export default function StudioLocationSection() {
 
           {/* Product Info */}
           <div className="space-y-6">
-            <div className="inline-block px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-2xl shadow-xl">
+            <div className="inline-block px-8 py-4 bg-blue-600 text-white rounded-2xl shadow-xl">
               <p className="text-2xl font-bold">⚡ 설치 시간 단 5분 ⚡</p>
             </div>
             
@@ -205,7 +205,7 @@ export default function StudioLocationSection() {
         transition={{ duration: 0.6, delay: 0.5 }}
         className="mt-16 max-w-4xl mx-auto"
       >
-        <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8 border-2 border-blue-200">
+        <div className="bg-blue-50 rounded-2xl p-8 border-2 border-blue-200">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
             🛠️ 간편한 설치 과정
           </h3>
