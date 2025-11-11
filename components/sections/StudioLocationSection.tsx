@@ -7,52 +7,52 @@ import SectionWrapper from '../ui/SectionWrapper';
 export default function StudioLocationSection() {
   const locations = [
     {
-      title: '프로 개인 강습장',
-      description: '프로 골퍼의 1:1 맞춤형 레슨 스튜디오',
-      icon: '⛳',
-      image: '/images/tent/KakaoTalk_20251031_090656348.jpg', // 실내 프로 강습 이미지
-    },
-    {
-      title: '해수욕장',
-      description: '바닷가에서 즐기는 특별한 골프 체험',
-      icon: '🏖️',
-      image: '/images/tent/KakaoTalk_20251031_090230595.jpg', // 해변 설치 이미지
+      title: '전원주택',
+      description: '집 앞마당에서 즐기는 프라이빗 골프',
+      icon: '🏡',
+      image: '/images/studio-locations/country-house.jpg',
     },
     {
       title: '골프장 & 컨트리클럽',
       description: '골프장에서 워밍업과 대기 시간 활용',
       icon: '⛳',
-      image: '/images/tent/KakaoTalk_20251031_090452525.jpg', // 골프장 잔디밭 설치
+      image: '/images/studio-locations/golf-course.jpg',
     },
     {
-      title: '전원주택',
-      description: '집 앞마당에서 즐기는 프라이빗 골프',
-      icon: '🏡',
-      image: '/images/tent/KakaoTalk_20251031_090152512.jpg', // 전원주택 정원 설치
+      title: '프로 개인 강습장',
+      description: '프로 골퍼의 1:1 맞춤형 레슨 스튜디오',
+      icon: '⛳',
+      image: '/images/studio-locations/lesson-studio.jpg',
+    },
+    {
+      title: '해수욕장',
+      description: '바닷가에서 즐기는 특별한 골프 체험',
+      icon: '🏖️',
+      image: '/images/studio-locations/beach.jpg',
+    },
+    {
+      title: '골프연습장',
+      description: '실외 연습장에서 실전 같은 연습',
+      icon: '🏌️',
+      image: '/images/studio-locations/practice-range.jpg',
     },
     {
       title: '학교 실내강당',
       description: '체육 수업과 방과후 활동으로 활용',
       icon: '🏫',
-      image: '/images/tent/KakaoTalk_20251031_090124174.jpg', // 체육관 실내 설치
-    },
-    {
-      title: '캠핑장',
-      description: '캠핑과 골프를 동시에 즐기는 새로운 경험',
-      icon: '⛺',
-      image: '/images/tent/KakaoTalk_20251031_090219860.jpg', // 캠핑장 숲속 설치
+      image: '/images/studio-locations/school-gym.jpg',
     },
     {
       title: '지방축제 개최지',
       description: '축제 현장에서 인기 만점 골프 챌린지!',
       icon: '🎪',
-      image: '/images/tent/KakaoTalk_20251031_090305001.jpg', // 축제 부스 이미지
+      image: '/images/studio-locations/festival.jpg',
     },
     {
-      title: '골프연습장 & 티박스',
-      description: '실외 연습장과 사계절 쾌적한 티박스',
-      icon: '🏌️',
-      image: '/images/tent/KakaoTalk_20251031_090814649.png', // 골프 연습장 이미지
+      title: '캠핑장',
+      description: '캠핑과 골프를 동시에 즐기는 새로운 경험',
+      icon: '⛺',
+      image: '/images/studio-locations/camping.jpg',
     },
   ];
 
@@ -73,11 +73,11 @@ export default function StudioLocationSection() {
       >
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
           {/* Product Image */}
-          <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+          <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-white">
             <img
-              src="/images/tent/KakaoTalk_20251031_090254255.jpg"
-              alt="언제칠까 STUDIO 내부"
-              className="w-full h-full object-cover"
+              src="/images/studio-locations/product-showcase.jpg"
+              alt="언제칠까 STUDIO 제품"
+              className="w-full h-full object-contain"
             />
           </div>
 
