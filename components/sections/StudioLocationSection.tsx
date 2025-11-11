@@ -10,49 +10,49 @@ export default function StudioLocationSection() {
       title: '학교 실내강당',
       description: '체육 수업과 방과후 활동으로 활용',
       icon: '🏫',
-      image: '/images/tent/KakaoTalk_20251031_090254255.jpg',
+      image: '/images/tent/KakaoTalk_20251031_090124174.jpg',
     },
     {
       title: '전원주택',
       description: '집 앞마당에서 즐기는 프라이빗 골프',
       icon: '🏡',
-      image: '/images/tent/KakaoTalk_20251031_090305001.jpg',
+      image: '/images/tent/KakaoTalk_20251031_090152512.jpg',
     },
     {
       title: '캠핑장',
       description: '캠핑과 골프를 동시에 즐기는 새로운 경험',
       icon: '⛺',
-      image: '/images/tent/KakaoTalk_20251031_090452525.jpg',
+      image: '/images/tent/KakaoTalk_20251031_090219860.jpg',
     },
     {
       title: '해수욕장',
       description: '바닷가에서 즐기는 특별한 골프 체험',
       icon: '🏖️',
-      image: '/images/tent/KakaoTalk_20251031_090656348.jpg',
+      image: '/images/tent/KakaoTalk_20251031_090230595.jpg',
     },
     {
       title: '지방축제 개최지',
       description: '축제 부스로 관광객 유치 효과',
       icon: '🎪',
-      image: '/images/tent/KakaoTalk_20251031_090814649.png',
+      image: '/images/tent/KakaoTalk_20251031_090305001.jpg',
     },
     {
       title: '각종 전시회',
       description: '실내외 전시회장에서의 체험 부스',
       icon: '🎭',
-      image: '/images/tent/KakaoTalk_20251031_090848814.jpg',
+      image: '/images/tent/KakaoTalk_20251031_090452525.jpg',
     },
     {
       title: '프로 개인 강습장',
       description: '프로 골퍼의 이동형 레슨 스튜디오',
       icon: '⛳',
-      image: '/images/tent/KakaoTalk_20251031_090932910.jpg',
+      image: '/images/tent/KakaoTalk_20251031_090656348.jpg',
     },
     {
       title: '티박스 (사계절)',
       description: '여름 더위, 겨울 추위를 막아주는 쾌적한 공간',
       icon: '🌡️',
-      image: '/images/tent/KakaoTalk_20251031_090950953.jpg',
+      image: '/images/tent/KakaoTalk_20251031_090814649.png',
     },
   ];
 
@@ -63,24 +63,75 @@ export default function StudioLocationSection() {
       subheading="5분 안에 설치 완료! 장소에 구애받지 않는 이동형 스크린골프 공간"
       bgColor="dark"
     >
-      {/* Main Feature */}
+      {/* Product Showcase */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="mb-16 text-center"
+        className="mb-16"
       >
-        <div className="inline-block px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-2xl shadow-xl mb-8">
-          <p className="text-2xl font-bold">⚡ 설치 시간 단 5분 ⚡</p>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
+          {/* Product Image */}
+          <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+            <img
+              src="/images/tent/KakaoTalk_20251031_090254255.jpg"
+              alt="언제칠까 STUDIO 내부"
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+          {/* Product Info */}
+          <div className="space-y-6">
+            <div className="inline-block px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-2xl shadow-xl">
+              <p className="text-2xl font-bold">⚡ 설치 시간 단 5분 ⚡</p>
+            </div>
+            
+            <h3 className="text-3xl font-bold text-gray-900">
+              공기압 구조로 간편한 설치
+            </h3>
+            
+            <p className="text-lg text-gray-700 leading-relaxed">
+              공기압 프레임 구조로 누구나 쉽게 설치할 수 있습니다.
+              특별한 공간, 특별한 장소에서 골프를 즐기세요!
+            </p>
+
+            {/* Specifications */}
+            <div className="bg-gray-50 rounded-xl p-6 border-2 border-gray-200">
+              <h4 className="font-bold text-gray-900 mb-4 text-lg">제품 사양</h4>
+              <div className="grid grid-cols-2 gap-4 text-sm">
+                <div>
+                  <span className="text-gray-600">크기</span>
+                  <p className="font-bold text-gray-900">4.6m × 3.5m × 3.3m</p>
+                </div>
+                <div>
+                  <span className="text-gray-600">무게</span>
+                  <p className="font-bold text-gray-900">약 150kg</p>
+                </div>
+                <div>
+                  <span className="text-gray-600">설치 시간</span>
+                  <p className="font-bold text-gray-900">5분</p>
+                </div>
+                <div>
+                  <span className="text-gray-600">구조</span>
+                  <p className="font-bold text-gray-900">공기압 프레임</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Features */}
+            <div className="flex flex-wrap gap-3">
+              {['실내외 설치', '빠른 조립', '이동 편리', '내구성 우수'].map((feature, i) => (
+                <span
+                  key={i}
+                  className="px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold"
+                >
+                  ✓ {feature}
+                </span>
+              ))}
+            </div>
+          </div>
         </div>
-        <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
-          공기압 프레임 구조로 누구나 쉽게 설치할 수 있습니다.
-          <br />
-          <span className="font-bold text-gray-900">
-            특별한 공간, 특별한 장소에서 골프를 즐기세요!
-          </span>
-        </p>
       </motion.div>
 
       {/* Location Grid */}

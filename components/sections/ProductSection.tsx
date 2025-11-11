@@ -28,7 +28,7 @@ export default function ProductSection() {
     {
       id: 'tent',
       title: '언제칠까 STUDIO',
-      description: '당신의 골프를 위한 스마트한 공간. 설치 5분, 어디서든 라운드처럼.',
+      description: '공기압 구조로 설치 5분! 실내외 어디든 설치 가능한 이동형 스크린골프 공간. 학교, 캠핑장, 해변, 축제, 전시회, 전원주택까지 장소 제약 없이 골프를 즐기세요.',
       image: '/images/tent/KakaoTalk_20251031_090254255.jpg',
       ctaLabel: '구매 문의',
       ctaHref: '#contact',
