@@ -20,6 +20,7 @@ export default function Header() {
     { name: 'About', href: '#about' },
     { name: 'Products', href: '#products' },
     { name: 'Studio 설치장소', href: '#studio-locations' },
+    { name: '앱 가이드', href: '#app' },
     { name: 'Technology', href: '#technology' },
     { name: 'Contact', href: '#contact' },
   ];
