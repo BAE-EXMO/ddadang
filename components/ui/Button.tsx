@@ -21,10 +21,10 @@ export default function Button({
   const baseStyles = 'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 hover:scale-105 active:scale-95 tracking-wide';
   
 const variants = {
-  primary: 'bg-lime-500 text-white hover:bg-lime-600 shadow-lg hover:shadow-xl transition-all',
+  primary: 'bg-green-600 text-white hover:bg-green-700 shadow-lg hover:shadow-xl transition-all',
   secondary: 'bg-green-500 text-white hover:bg-green-600 shadow-lg hover:shadow-xl transition-all',
-  outline: 'border-2 border-lime-500 text-lime-600 hover:bg-lime-500 hover:text-white backdrop-blur-sm transition-all',
-  ghost: 'bg-lime-50 text-lime-700 hover:bg-lime-100 backdrop-blur-sm border border-lime-300 transition-all',
+  outline: 'border-2 border-green-600 text-green-700 hover:bg-green-600 hover:text-white backdrop-blur-sm transition-all',
+  ghost: 'bg-green-50 text-green-700 hover:bg-green-100 backdrop-blur-sm border border-green-300 transition-all',
 };
 
   const sizes = {

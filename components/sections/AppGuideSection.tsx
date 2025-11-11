@@ -126,7 +126,7 @@ export default function AppGuideSection() {
         <div className="max-w-3xl mx-auto">
           <p className="text-xl text-gray-700 leading-relaxed mb-8">
             <span className="font-bold text-gray-900">언제칠까</span>는 아마추어 골퍼를 위한{' '}
-            <span className="font-bold text-lime-600">올인원 라운딩 앱</span>입니다.
+            <span className="font-bold text-green-600">올인원 라운딩 앱</span>입니다.
             골프 약속 관리부터 실시간 스코어링, 자동 정산까지 모든 기능을 제공합니다.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
@@ -190,7 +190,7 @@ export default function AppGuideSection() {
               <div className="space-y-3">
                 {guide.steps.map((step, i) => (
                   <div key={i} className="flex items-start gap-3">
-                    <span className="flex-shrink-0 w-6 h-6 bg-lime-100 text-lime-700 rounded-full flex items-center justify-center text-sm font-bold">
+                    <span className="flex-shrink-0 w-6 h-6 bg-green-100 text-green-700 rounded-full flex items-center justify-center text-sm font-bold">
                       {i + 1}
                     </span>
                     <p className="text-gray-700">{step}</p>
@@ -224,11 +224,11 @@ export default function AppGuideSection() {
               className="bg-white rounded-xl p-6 shadow-md border border-gray-200"
             >
               <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-start gap-2">
-                <span className="text-lime-600">Q.</span>
+                <span className="text-green-600">Q.</span>
                 {faq.q}
               </h4>
               <p className="text-gray-700 pl-6 leading-relaxed">
-                <span className="text-lime-600 font-bold">A.</span> {faq.a}
+                <span className="text-green-600 font-bold">A.</span> {faq.a}
               </p>
             </motion.div>
           ))}
@@ -244,7 +244,7 @@ export default function AppGuideSection() {
         className="text-center mt-20"
         id="download"
       >
-        <div className="bg-gradient-to-r from-lime-50 to-green-50 rounded-2xl p-12 border-2 border-lime-200">
+        <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl p-12 border-2 border-green-200">
           <h3 className="text-3xl font-bold text-gray-900 mb-4">
             🏌️‍♂️ 언제칠까로 더 즐거운 골프 라이프를!
           </h3>

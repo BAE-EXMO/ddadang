@@ -76,7 +76,7 @@ ${formData.simulator ? '✓ 시뮬레이터\n' : ''}${formData.projector ? '✓ 
             onClick={(e) => e.stopPropagation()}
           >
             {/* Header */}
-            <div className="bg-lime-500 text-white p-6 rounded-t-2xl">
+            <div className="bg-green-600 text-white p-6 rounded-t-2xl">
               <div className="flex justify-between items-center">
                 <h3 className="text-2xl font-bold">
                   {productType === 'tent' ? 'STUDIO 구매 문의' : '스크린 구매 문의'}
@@ -238,7 +238,7 @@ ${formData.simulator ? '✓ 시뮬레이터\n' : ''}${formData.projector ? '✓ 
                 </button>
                 <button
                   type="submit"
-                  className="flex-1 px-6 py-3 bg-lime-500 text-white rounded-lg font-semibold hover:bg-lime-600 transition-colors shadow-lg"
+                  className="flex-1 px-6 py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition-colors shadow-lg"
                 >
                   문의하기
                 </button>
