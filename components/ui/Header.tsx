@@ -19,8 +19,8 @@ export default function Header() {
   const navLinks = [
     { name: 'About', href: '#about' },
     { name: 'Products', href: '#products' },
+    { name: 'Studio 설치장소', href: '#studio-locations' },
     { name: 'Technology', href: '#technology' },
-    { name: 'Ecosystem', href: '#ecosystem' },
     { name: 'Contact', href: '#contact' },
   ];
 

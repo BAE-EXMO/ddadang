@@ -5,6 +5,7 @@ import Footer from '@/components/ui/Footer';
 import HeroSection from '@/components/sections/HeroSection';
 import VisionSection from '@/components/sections/VisionSection';
 import ProductSection from '@/components/sections/ProductSection';
+import StudioLocationSection from '@/components/sections/StudioLocationSection';
 import TechnologySection from '@/components/sections/TechnologySection';
 import EcosystemSection from '@/components/sections/EcosystemSection';
 import StorySection from '@/components/sections/StorySection';
@@ -18,6 +19,7 @@ export default function Home() {
         <HeroSection />
         <VisionSection />
         <ProductSection />
+        <StudioLocationSection />
         <TechnologySection />
         <EcosystemSection />
         <StorySection />
