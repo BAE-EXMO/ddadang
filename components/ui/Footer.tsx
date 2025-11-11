@@ -21,15 +21,15 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12">
+            <div className="flex items-center gap-4 mb-4">
+              <div className="w-16 h-16 rounded-2xl overflow-hidden shadow-xl">
                 <img 
                   src="/images/logo.png" 
                   alt="언제칠까 로고" 
-                  className="w-full h-full object-contain drop-shadow-lg"
+                  className="w-full h-full object-contain"
                 />
               </div>
-              <h3 className="text-2xl font-bold">
+              <h3 className="text-3xl font-bold">
                 <span className="text-white">
                   언제칠까
                 </span>

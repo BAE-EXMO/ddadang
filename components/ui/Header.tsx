@@ -35,15 +35,15 @@ export default function Header() {
       <nav className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <a href="#" className="flex items-center space-x-2">
-            <div className="relative w-8 h-8">
+          <a href="#" className="flex items-center space-x-3">
+            <div className="relative w-12 h-12 rounded-xl overflow-hidden shadow-md">
               <img 
                 src="/images/logo.png" 
                 alt="언제칠까 로고" 
                 className="w-full h-full object-contain"
               />
             </div>
-            <div className="text-xl font-bold text-black">
+            <div className="text-2xl font-bold text-black">
               언제칠까
             </div>
           </a>
