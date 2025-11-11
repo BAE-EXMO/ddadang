@@ -4,8 +4,8 @@ export default function Footer() {
   const quickLinks = [
     { name: 'About', href: '#about' },
     { name: 'Products', href: '#products' },
-    { name: 'Technology', href: '#technology' },
-    { name: 'Ecosystem', href: '#ecosystem' },
+    { name: 'Studio 설치장소', href: '#studio-locations' },
+    { name: '앱 가이드', href: '#app' },
     { name: 'Contact', href: '#contact' },
   ];
 
