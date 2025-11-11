@@ -10,49 +10,49 @@ export default function StudioLocationSection() {
       title: '전원주택',
       description: '집 앞마당에서 즐기는 프라이빗 골프',
       icon: '🏡',
-      image: '/images/studio-locations/country-house.jpg',
+      image: '/images/studio-locations/개인주택.png',
     },
     {
       title: '골프장 & 컨트리클럽',
       description: '골프장에서 워밍업과 대기 시간 활용',
       icon: '⛳',
-      image: '/images/studio-locations/golf-course.jpg',
+      image: '/images/studio-locations/골프코스.png',
     },
     {
       title: '프로 개인 강습장',
       description: '프로 골퍼의 1:1 맞춤형 레슨 스튜디오',
       icon: '⛳',
-      image: '/images/studio-locations/lesson-studio.jpg',
+      image: '/images/studio-locations/개인레슨.png',
     },
     {
       title: '해수욕장',
       description: '바닷가에서 즐기는 특별한 골프 체험',
       icon: '🏖️',
-      image: '/images/studio-locations/beach.jpg',
+      image: '/images/studio-locations/해수욕장.png',
     },
     {
       title: '골프연습장',
       description: '실외 연습장에서 실전 같은 연습',
       icon: '🏌️',
-      image: '/images/studio-locations/practice-range.jpg',
+      image: '/images/studio-locations/골프장.png',
     },
     {
       title: '학교 실내강당',
       description: '체육 수업과 방과후 활동으로 활용',
       icon: '🏫',
-      image: '/images/studio-locations/school-gym.jpg',
+      image: '/images/studio-locations/실내강당.png',
     },
     {
       title: '지방축제 개최지',
       description: '축제 현장에서 인기 만점 골프 챌린지!',
       icon: '🎪',
-      image: '/images/studio-locations/festival.jpg',
+      image: '/images/studio-locations/축제장소.png',
     },
     {
       title: '캠핑장',
       description: '캠핑과 골프를 동시에 즐기는 새로운 경험',
       icon: '⛺',
-      image: '/images/studio-locations/camping.jpg',
+      image: '/images/studio-locations/캠핑장.png',
     },
   ];
 
@@ -75,7 +75,7 @@ export default function StudioLocationSection() {
           {/* Product Image */}
           <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-white">
             <img
-              src="/images/studio-locations/product-showcase.jpg"
+              src="/images/studio-locations/실내.png"
               alt="언제칠까 STUDIO 제품"
               className="w-full h-full object-contain"
             />
