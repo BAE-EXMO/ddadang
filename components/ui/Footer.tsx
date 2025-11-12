@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Footer() {
   const quickLinks = [
-    { name: '에어텐트', href: '#airtent' },
+    { name: 'Studio', href: '#airtent' },
     { name: '따당 앱', href: '#app' },
     { name: '스크린천', href: '#screen' },
     { name: '언제칠까 이야기', href: '#story' },
@@ -37,7 +37,7 @@ export default function Footer() {
             </div>
             <p className="text-sm text-gray-400 mb-2">by EXMO Inc.</p>
             <p className="text-gray-300 text-sm">
-              에어텐트 · 따당 앱 · 스크린천
+              Studio · 따당 앱 · 스크린천
             </p>
           </div>
 

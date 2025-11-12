@@ -76,7 +76,7 @@ export default function AirtentSection() {
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             "추억은 장소에 묶여 있지 않습니다"<br />
-            언제칠까 에어텐트는 골프를 어디서든 가능하게 합니다
+            언제칠까 Studio는 골프를 어디서든 가능하게 합니다
           </p>
         </motion.div>
 
@@ -93,7 +93,7 @@ export default function AirtentSection() {
             <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-amber-50 to-white p-8">
               <img
                 src="/images/studio-locations/실내.png"
-                alt="EXMO 에어텐트"
+                alt="언제칠까 Studio"
                 className="w-full h-full object-contain"
               />
               <div className="absolute top-6 right-6 bg-amber-500 text-white px-6 py-3 rounded-full font-bold shadow-lg">
@@ -214,7 +214,7 @@ export default function AirtentSection() {
               "추억은 특별한 장소에서 만들어집니다"
             </p>
             <p className="text-xl text-gray-600 mt-6">
-              언제칠까 에어텐트가 그 특별한 장소를 만들어드립니다
+              언제칠까 Studio가 그 특별한 장소를 만들어드립니다
             </p>
           </div>
         </motion.div>

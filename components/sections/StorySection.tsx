@@ -10,7 +10,7 @@ export default function StorySection() {
     {
       icon: '🎯',
       title: '추억을 만들고',
-      description: '에어텐트',
+      description: 'Studio',
       detail: '어디서든 골프의 무대를 만듭니다',
       color: 'from-amber-500 to-orange-500',
     },
@@ -34,7 +34,7 @@ export default function StorySection() {
     {
       name: '김철수',
       role: '골프장 운영자',
-      comment: '에어텐트 덕분에 야외 이벤트가 성공적이었습니다. 설치도 빠르고 고객들의 반응이 아주 좋았어요!',
+      comment: 'Studio 덕분에 야외 이벤트가 성공적이었습니다. 설치도 빠르고 고객들의 반응이 아주 좋았어요!',
       rating: 5,
     },
     {

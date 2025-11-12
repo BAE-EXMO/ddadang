@@ -75,7 +75,7 @@ export default function CTASection() {
                      "추억을 만들고, 기록하고, 지켜줍니다"
                    </p>
                    <p className="text-xl text-white/90">
-                     에어텐트 · 따당 앱 · 스크린천
+                     Studio · 따당 앱 · 스크린천
                    </p>
                  </motion.div>
         </motion.div>
@@ -89,7 +89,7 @@ export default function CTASection() {
           className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
         >
                <Button variant="primary" size="lg" href="#airtent">
-                 에어텐트 문의
+                 Studio 문의
                </Button>
                <Button variant="secondary" size="lg" href="#app">
                  따당 앱 다운로드
