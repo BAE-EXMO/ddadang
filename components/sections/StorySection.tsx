@@ -8,25 +8,18 @@ import Card from '../ui/Card';
 export default function StorySection() {
   const values = [
     {
-      icon: '🎯',
-      title: '추억을 만들고',
+      icon: '🏕️',
+      title: '추억의 공간을 만들다',
       description: 'Studio',
-      detail: '어디서든 골프의 무대를 만듭니다',
+      detail: '프리미엄 스크린 시스템으로 어디서든 최상의 골프 환경을 제공합니다',
       color: 'from-amber-500 to-orange-500',
     },
     {
       icon: '📱',
-      title: '추억을 남기고',
+      title: '추억을 기록하다',
       description: '따당 앱',
-      detail: '모든 순간을 기록하고 저장합니다',
+      detail: '골프 약속부터 스코어, 정산까지 모든 순간을 저장합니다',
       color: 'from-blue-500 to-cyan-500',
-    },
-    {
-      icon: '🛡️',
-      title: '추억을 오래 지키는',
-      description: '스크린천',
-      detail: '품질로 추억의 공간을 지킵니다',
-      color: 'from-green-500 to-emerald-500',
     },
   ];
 
@@ -45,8 +38,8 @@ export default function StorySection() {
     },
     {
       name: '이준호',
-      role: '스크린골프장 사장',
-      comment: '언제칠까 스크린천은 내구성이 탁월합니다. 교체 비용이 확실히 줄었고, 소음도 적어 만족스럽습니다.',
+      role: '기업 체육대회 담당',
+      comment: 'Studio를 행사장에 설치했는데 프리미엄 스크린 덕분에 소음 걱정 없이 진행했습니다. 참가자들도 만족했어요!',
       rating: 5,
     },
   ];
@@ -85,9 +78,9 @@ export default function StorySection() {
         className="mb-24"
       >
         <h3 className="text-3xl font-bold text-gray-900 text-center mb-12">
-          3개를 하나로 묶는 스토리
+          2개의 제품, 하나의 스토리
         </h3>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
           {values.map((value, i) => (
             <motion.div
               key={i}
@@ -108,12 +101,12 @@ export default function StorySection() {
                   <p className="text-lg font-semibold text-gray-700 mb-3">
                     {value.description}
                   </p>
-                  <p className="text-gray-600">
+                  <p className="text-gray-600 leading-relaxed">
                     {value.detail}
                   </p>
                 </div>
-                {i < 2 && (
-                  <div className="hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2 text-4xl text-gray-300">
+                {i < 1 && (
+                  <div className="hidden md:block absolute top-1/2 -right-6 transform -translate-y-1/2 text-5xl text-gray-300">
                     →
                   </div>
                 )}

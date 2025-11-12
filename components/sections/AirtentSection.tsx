@@ -160,6 +160,187 @@ export default function AirtentSection() {
           </div>
         </motion.div>
 
+        {/* Premium Screen System Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="mb-20 mt-32"
+        >
+          <div className="text-center mb-16">
+            <span className="inline-block px-6 py-2 bg-green-100 text-green-800 rounded-full text-sm font-semibold mb-6">
+              언제칠까 Studio가 조용한 이유
+            </span>
+            <h3 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              프리미엄 <span className="text-green-600">스크린 시스템</span>
+            </h3>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              타격감은 살리고, 소음은 줄였습니다<br />
+              TPU 라미네이트 스크린을 기본 제공합니다
+            </p>
+          </div>
+
+          {/* Exploded View - Components */}
+          <div className="max-w-6xl mx-auto mb-20">
+            <div className="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-12 shadow-2xl border-2 border-gray-200">
+              <h4 className="text-2xl font-bold text-gray-900 text-center mb-12">
+                🔧 프리미엄 구성
+              </h4>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {[
+                  {
+                    icon: '🎯',
+                    title: 'TPU 라미네이트 스크린',
+                    desc: '소음·내구 강화',
+                    highlight: true,
+                    detail: '200,000타 이상, -6dB 소음 감소',
+                  },
+                  {
+                    icon: '🏗️',
+                    title: '견고한 프레임',
+                    desc: '공기압 구조',
+                    highlight: false,
+                    detail: '강철/알루미늄 옵션',
+                  },
+                  {
+                    icon: '🛡️',
+                    title: '방염 커버',
+                    desc: '보호/브랜딩',
+                    highlight: false,
+                    detail: '방염 인증, 커스텀 인쇄',
+                  },
+                  {
+                    icon: '⚡',
+                    title: '스마트 설치 시스템',
+                    desc: '안전 고정',
+                    highlight: false,
+                    detail: '실내·실외 대응',
+                  },
+                ].map((component, i) => (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: i * 0.1 }}
+                    className={`relative rounded-2xl p-6 ${
+                      component.highlight
+                        ? 'bg-gradient-to-br from-green-500 to-emerald-600 text-white shadow-2xl transform scale-105'
+                        : 'bg-white border-2 border-gray-200'
+                    }`}
+                  >
+                    {component.highlight && (
+                      <div className="absolute -top-3 -right-3 bg-yellow-400 text-gray-900 px-3 py-1 rounded-full text-xs font-bold shadow-lg">
+                        핵심
+                      </div>
+                    )}
+                    <div className="text-5xl mb-4">{component.icon}</div>
+                    <h5 className={`text-lg font-bold mb-2 ${component.highlight ? 'text-white' : 'text-gray-900'}`}>
+                      {component.title}
+                    </h5>
+                    <p className={`text-sm mb-3 ${component.highlight ? 'text-green-100' : 'text-gray-600'}`}>
+                      {component.desc}
+                    </p>
+                    <p className={`text-xs ${component.highlight ? 'text-green-50' : 'text-gray-500'}`}>
+                      {component.detail}
+                    </p>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Performance Comparison */}
+          <div className="max-w-6xl mx-auto mb-20">
+            <h4 className="text-3xl font-bold text-gray-900 text-center mb-12">
+              성능 차이가 고객 만족을 결정합니다
+            </h4>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* Durability Chart */}
+              <div className="bg-white rounded-2xl p-8 shadow-xl border-2 border-gray-200">
+                <h5 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+                  <span>💪</span> 내구성 테스트
+                </h5>
+                <div className="space-y-4">
+                  <div>
+                    <div className="flex justify-between mb-2">
+                      <span className="text-sm text-gray-600">일반 스크린</span>
+                      <span className="text-sm font-bold text-gray-400">50,000타</span>
+                    </div>
+                    <div className="w-full bg-gray-200 rounded-full h-4">
+                      <div className="bg-gray-400 h-4 rounded-full" style={{ width: '25%' }}></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="flex justify-between mb-2">
+                      <span className="text-sm text-gray-600">TPU 라미네이트</span>
+                      <span className="text-sm font-bold text-green-600">200,000타+</span>
+                    </div>
+                    <div className="w-full bg-gray-200 rounded-full h-4">
+                      <div className="bg-gradient-to-r from-green-500 to-emerald-600 h-4 rounded-full" style={{ width: '100%' }}></div>
+                    </div>
+                  </div>
+                </div>
+                <p className="text-sm text-gray-600 mt-6 text-center">
+                  <span className="font-bold text-green-600">4배 이상</span> 오래 사용
+                </p>
+              </div>
+
+              {/* Noise Reduction Chart */}
+              <div className="bg-white rounded-2xl p-8 shadow-xl border-2 border-gray-200">
+                <h5 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+                  <span>🔇</span> 소음 감소
+                </h5>
+                <div className="space-y-4">
+                  <div>
+                    <div className="flex justify-between mb-2">
+                      <span className="text-sm text-gray-600">일반 스크린</span>
+                      <span className="text-sm font-bold text-gray-400">85dB</span>
+                    </div>
+                    <div className="w-full bg-gray-200 rounded-full h-4">
+                      <div className="bg-red-400 h-4 rounded-full" style={{ width: '85%' }}></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="flex justify-between mb-2">
+                      <span className="text-sm text-gray-600">TPU 라미네이트</span>
+                      <span className="text-sm font-bold text-green-600">79dB</span>
+                    </div>
+                    <div className="w-full bg-gray-200 rounded-full h-4">
+                      <div className="bg-gradient-to-r from-green-500 to-emerald-600 h-4 rounded-full" style={{ width: '79%' }}></div>
+                    </div>
+                  </div>
+                </div>
+                <p className="text-sm text-gray-600 mt-6 text-center">
+                  <span className="font-bold text-green-600">-6dB</span> 더 조용함
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Why It Matters */}
+          <div className="max-w-4xl mx-auto bg-gradient-to-br from-green-900 to-emerald-800 rounded-3xl p-12 text-white shadow-2xl">
+            <h4 className="text-3xl font-bold mb-8 text-center">
+              좋은 추억은 좋은 공간에서 만들어집니다
+            </h4>
+            <div className="space-y-6">
+              <p className="text-lg leading-relaxed text-center">
+                언제칠까 Studio의 부드러운 타구감과 저소음은<br />
+                <span className="font-bold text-yellow-300">TPU 라미네이트 스크린</span> 덕분입니다
+              </p>
+              <div className="border-t border-green-700 pt-6">
+                <p className="text-center text-xl font-semibold text-yellow-300">
+                  '프리미엄 스크린 시스템'은 기본 사양입니다
+                </p>
+                <p className="text-center text-green-200 mt-2">
+                  옵션이 아닙니다
+                </p>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
         {/* Installation Locations */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}

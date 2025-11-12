@@ -17,9 +17,8 @@ export default function Header() {
   }, []);
 
   const navLinks = [
-    { name: '추억의 무대', href: '#airtent' },
-    { name: '추억을 기록', href: '#app' },
-    { name: '추억을 지키다', href: '#screen' },
+    { name: 'Studio', href: '#airtent' },
+    { name: '따당 앱', href: '#app' },
     { name: '언제칠까 이야기', href: '#story' },
     { name: '문의하기', href: '#contact' },
   ];

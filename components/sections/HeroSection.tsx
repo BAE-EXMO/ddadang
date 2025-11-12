@@ -80,12 +80,11 @@ export default function HeroSection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.9 }}
-            className="mt-24 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto"
+            className="mt-24 grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto"
           >
             {[
-              { icon: '🏕️', title: '추억의 무대', description: '어디서나 골프 공간을' },
-              { icon: '📱', title: '추억을 기록', description: '모든 순간을 저장' },
-              { icon: '🎯', title: '추억을 지키다', description: '오래 지속되는 품질' },
+              { icon: '🏕️', title: 'Studio', description: '프리미엄 골프 공간' },
+              { icon: '📱', title: '따당 앱', description: '추억을 기록하다' },
             ].map((item, i) => (
               <motion.div
                 key={i}
