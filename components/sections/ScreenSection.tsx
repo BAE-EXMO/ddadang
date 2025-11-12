@@ -117,7 +117,7 @@ export default function ScreenSection() {
               <div className="aspect-video bg-gray-200 rounded-2xl flex items-center justify-center">
                 <div className="text-center">
                   <div className="text-6xl mb-4">🎯</div>
-                  <p className="text-xl font-bold text-gray-700">EXMO 스크린천</p>
+                  <p className="text-xl font-bold text-gray-700">언제칠까 스크린천</p>
                   <p className="text-gray-600">TPU 라미네이트</p>
                 </div>
               </div>
@@ -133,7 +133,7 @@ export default function ScreenSection() {
               </h3>
 
               <p className="text-lg text-gray-700 leading-relaxed">
-                EXMO 스크린천은 TPU 라미네이트 기술로 제작되어<br />
+                언제칠까 스크린천은 TPU 라미네이트 기술로 제작되어<br />
                 일반 스크린보다 훨씬 오래 사용할 수 있습니다
               </p>
 
@@ -273,7 +273,7 @@ export default function ScreenSection() {
               스크린이 오래가면 즐거움도 오래갑니다
             </p>
             <p className="text-lg text-gray-600">
-              EXMO 스크린천은 추억이 닳지 않게 만듭니다
+              언제칠까 스크린천은 추억이 닳지 않게 만듭니다
             </p>
           </div>
         </motion.div>

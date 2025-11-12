@@ -59,7 +59,7 @@ export default function CTASection() {
                    추억을 만드는 기술
                    <br />
                    <span className="text-yellow-400">
-                     EXMO
+                     언제칠까
                    </span>
                  </h2>
 

@@ -5,7 +5,7 @@ export default function Footer() {
     { name: '에어텐트', href: '#airtent' },
     { name: '따당 앱', href: '#app' },
     { name: '스크린천', href: '#screen' },
-    { name: 'EXMO 이야기', href: '#story' },
+    { name: '언제칠까 이야기', href: '#story' },
     { name: '문의하기', href: '#contact' },
   ];
 
@@ -31,11 +31,11 @@ export default function Footer() {
               </div>
               <h3 className="text-3xl font-bold">
                 <span className="bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">
-                  EXMO
+                  언제칠까
                 </span>
               </h3>
             </div>
-            <p className="text-sm text-gray-400 mb-2">골프 추억을 만드는 기술</p>
+            <p className="text-sm text-gray-400 mb-2">by EXMO Inc.</p>
             <p className="text-gray-300 text-sm">
               에어텐트 · 따당 앱 · 스크린천
             </p>

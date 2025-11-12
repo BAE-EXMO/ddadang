@@ -76,7 +76,7 @@ export default function AirtentSection() {
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             "추억은 장소에 묶여 있지 않습니다"<br />
-            EXMO 에어텐트는 골프를 어디서든 가능하게 합니다
+            언제칠까 에어텐트는 골프를 어디서든 가능하게 합니다
           </p>
         </motion.div>
 
@@ -214,7 +214,7 @@ export default function AirtentSection() {
               "추억은 특별한 장소에서 만들어집니다"
             </p>
             <p className="text-xl text-gray-600 mt-6">
-              EXMO 에어텐트가 그 특별한 장소를 만들어드립니다
+              언제칠까 에어텐트가 그 특별한 장소를 만들어드립니다
             </p>
           </div>
         </motion.div>

@@ -20,7 +20,7 @@ export default function Header() {
     { name: '추억의 무대', href: '#airtent' },
     { name: '추억을 기록', href: '#app' },
     { name: '추억을 지키다', href: '#screen' },
-    { name: 'EXMO 이야기', href: '#story' },
+    { name: '언제칠까 이야기', href: '#story' },
     { name: '문의하기', href: '#contact' },
   ];
 
@@ -44,7 +44,7 @@ export default function Header() {
               />
             </div>
             <div className="text-2xl font-bold bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">
-              EXMO
+              언제칠까
             </div>
           </a>
 
