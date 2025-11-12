@@ -337,6 +337,19 @@ export default function AirtentSection() {
                   옵션이 아닙니다
                 </p>
               </div>
+              <div className="pt-6 text-center">
+                <p className="text-white/90 mb-4">
+                  스크린만 별도 구매도 가능합니다
+                </p>
+                <Button 
+                  variant="secondary" 
+                  size="lg" 
+                  onClick={() => setIsModalOpen(true)}
+                  className="bg-white text-green-900 hover:bg-green-50"
+                >
+                  스크린 구매 문의
+                </Button>
+              </div>
             </div>
           </div>
         </motion.div>

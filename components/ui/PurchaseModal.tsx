@@ -28,9 +28,9 @@ export default function PurchaseModal({ isOpen, onClose, productType }: Purchase
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    let emailBody = '';
-    if (productType === 'tent') {
-      emailBody = `STUDIO 구매 문의
+           let emailBody = '';
+           if (productType === 'tent') {
+             emailBody = `STUDIO 구매 문의
 
 이름: ${formData.name}
 전화번호: ${formData.phone}
@@ -38,8 +38,8 @@ export default function PurchaseModal({ isOpen, onClose, productType }: Purchase
 
 선택 옵션:
 ${formData.simulator ? '✓ 시뮬레이터\n' : ''}${formData.projector ? '✓ 프로젝터\n' : ''}${formData.monitor ? '✓ 모니터\n' : ''}`;
-    } else {
-      emailBody = `스크린 구매 문의
+           } else {
+             emailBody = `TPU 라미네이트 스크린 구매 문의
 
 이름: ${formData.name}
 전화번호: ${formData.phone}
@@ -52,9 +52,9 @@ ${formData.simulator ? '✓ 시뮬레이터\n' : ''}${formData.projector ? '✓ 
 밸크로:
 부착 위치: ${formData.velcroPosition}
 종류: ${formData.velcroType}`;
-    }
+           }
 
-    window.location.href = `mailto:info@exmo.kr?subject=${productType === 'tent' ? 'STUDIO' : '스크린'} 구매 문의&body=${encodeURIComponent(emailBody)}`;
+           window.location.href = `mailto:info@exmo.kr?subject=${productType === 'tent' ? 'STUDIO' : 'TPU 스크린'} 구매 문의&body=${encodeURIComponent(emailBody)}`;
     onClose();
   };
 
@@ -79,7 +79,7 @@ ${formData.simulator ? '✓ 시뮬레이터\n' : ''}${formData.projector ? '✓ 
             <div className="bg-green-600 text-white p-6 rounded-t-2xl">
               <div className="flex justify-between items-center">
                 <h3 className="text-2xl font-bold">
-                  {productType === 'tent' ? 'STUDIO 구매 문의' : '스크린 구매 문의'}
+                   {productType === 'tent' ? 'STUDIO 구매 문의' : 'TPU 스크린 구매 문의'}
                 </h3>
                 <button
                   onClick={onClose}
