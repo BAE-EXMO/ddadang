@@ -18,7 +18,7 @@ export default function Header() {
 
   const navLinks = [
     { name: 'Studio', href: '#airtent' },
-    { name: '따당 앱', href: '#app' },
+    { name: '언제칠까 앱', href: '#app' },
     { name: '언제칠까 이야기', href: '#story' },
     { name: '문의하기', href: '#contact' },
   ];
@@ -59,7 +59,7 @@ export default function Header() {
               </a>
             ))}
             <Button variant="secondary" size="sm" href="#app">
-              따당 앱
+              언제칠까 앱
             </Button>
           </div>
 

@@ -29,7 +29,7 @@ export default function AppGuideSection() {
     { 
       icon: '⚡', 
       title: '스코어 기록', 
-      description: '말로만 해도 자동 입력',
+      description: '간편한 버튼 입력',
       color: 'from-yellow-500 to-orange-500'
     },
     { 
@@ -122,20 +122,20 @@ export default function AppGuideSection() {
           ))}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="space-y-4"
-        >
-          <p className="text-2xl text-gray-700 font-light">
-            따당 앱은 추억을 잃지 않게 합니다
-          </p>
-          <p className="text-xl text-gray-600">
-            사진처럼, 스코어도 기록됩니다
-          </p>
-        </motion.div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="space-y-4"
+          >
+            <p className="text-2xl text-gray-700 font-light">
+              언제칠까 앱은 추억을 잃지 않게 합니다
+            </p>
+            <p className="text-xl text-gray-600">
+              사진처럼, 스코어도 기록됩니다
+            </p>
+          </motion.div>
       </motion.div>
 
       {/* App Preview */}
@@ -167,7 +167,7 @@ export default function AppGuideSection() {
               </div>
               <div className="mt-8 pt-8 border-t border-blue-400">
                 <p className="text-2xl font-bold">
-                  → 따당 앱이 추억을 '간단히' 남겨줍니다
+                  → 언제칠까 앱이 추억을 '간단히' 남겨줍니다
                 </p>
               </div>
             </div>
@@ -232,26 +232,6 @@ export default function AppGuideSection() {
         </div>
       </motion.div>
 
-      {/* Voice Input Highlight */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.95 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-        className="mb-20"
-      >
-        <div className="bg-gradient-to-r from-orange-50 via-amber-50 to-yellow-50 rounded-3xl p-12 text-center border-2 border-orange-200 shadow-xl">
-          <div className="text-6xl mb-6">🎤</div>
-          <h3 className="text-3xl font-bold text-gray-900 mb-4">
-            음성으로 스코어 기록
-          </h3>
-          <p className="text-xl text-gray-700 max-w-2xl mx-auto">
-            "버디!" 라고 말하면 자동으로 입력됩니다<br />
-            라운드 끝나면 자동 정산까지 완료
-          </p>
-        </div>
-      </motion.div>
-
       {/* Emotional Closing */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -268,7 +248,7 @@ export default function AppGuideSection() {
 
           <div className="pt-8">
             <Button variant="primary" size="lg" href="#download">
-              📱 따당 앱 다운로드
+              📱 언제칠까 앱 다운로드
             </Button>
           </div>
 

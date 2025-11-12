@@ -84,7 +84,7 @@ export default function HeroSection() {
           >
             {[
               { icon: '🏕️', title: 'Studio', description: '프리미엄 골프 공간' },
-              { icon: '📱', title: '따당 앱', description: '추억을 기록하다' },
+              { icon: '📱', title: '언제칠까 앱', description: '추억을 기록하다' },
             ].map((item, i) => (
               <motion.div
                 key={i}

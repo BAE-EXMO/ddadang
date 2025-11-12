@@ -75,7 +75,7 @@ export default function CTASection() {
                      "추억을 만들고, 기록하고, 지켜줍니다"
                    </p>
                    <p className="text-xl text-white/90">
-                     Studio · 따당 앱
+                     Studio · 언제칠까 앱
                    </p>
                  </motion.div>
         </motion.div>
@@ -92,7 +92,7 @@ export default function CTASection() {
                  Studio 문의
                </Button>
                <Button variant="secondary" size="lg" href="#app">
-                 따당 앱 다운로드
+                 언제칠까 앱 다운로드
                </Button>
         </motion.div>
 
