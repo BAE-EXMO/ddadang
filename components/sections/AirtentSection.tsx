@@ -1,0 +1,231 @@
+'use client';
+
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import SectionWrapper from '../ui/SectionWrapper';
+import Card from '../ui/Card';
+import Button from '../ui/Button';
+import PurchaseModal from '../ui/PurchaseModal';
+
+export default function AirtentSection() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const locations = [
+    {
+      title: '학교 실내강당',
+      image: '/images/studio-locations/실내강당.png',
+      description: '체육 수업과 방과후 활동',
+    },
+    {
+      title: '전원주택',
+      image: '/images/studio-locations/개인주택.png',
+      description: '집 앞마당의 프라이빗 골프',
+    },
+    {
+      title: '캠핑장',
+      image: '/images/studio-locations/캠핑장.png',
+      description: '캠핑과 골프를 동시에',
+    },
+    {
+      title: '해수욕장',
+      image: '/images/studio-locations/해수욕장.png',
+      description: '바다에서 즐기는 골프',
+    },
+    {
+      title: '지방축제 개최지',
+      image: '/images/studio-locations/축제장소.png',
+      description: '축제 현장의 인기 콘텐츠',
+    },
+    {
+      title: '골프연습장',
+      image: '/images/studio-locations/골프장.png',
+      description: '실전 같은 연습 환경',
+    },
+    {
+      title: '프로 개인 강습장',
+      image: '/images/studio-locations/개인레슨.png',
+      description: '1:1 맞춤형 레슨',
+    },
+    {
+      title: '골프장 & 컨트리클럽',
+      image: '/images/studio-locations/골프코스.png',
+      description: '워밍업과 대기 시간 활용',
+    },
+  ];
+
+  return (
+    <>
+      <SectionWrapper
+        id="airtent"
+        className="bg-gradient-to-b from-white via-amber-50/30 to-white"
+      >
+        {/* Section Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-20"
+        >
+          <span className="inline-block px-6 py-2 bg-amber-100 text-amber-800 rounded-full text-sm font-semibold mb-6">
+            추억의 무대를 만드는 기술
+          </span>
+          <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+            소중한 사람들과 함께할<br />
+            <span className="text-amber-600">골프의 무대</span>를 어디든 만들 수 있습니다
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            "추억은 장소에 묶여 있지 않습니다"<br />
+            EXMO 에어텐트는 골프를 어디서든 가능하게 합니다
+          </p>
+        </motion.div>
+
+        {/* Main Product Showcase */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="mb-20"
+        >
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+            {/* Product Image */}
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-amber-50 to-white p-8">
+              <img
+                src="/images/studio-locations/실내.png"
+                alt="EXMO 에어텐트"
+                className="w-full h-full object-contain"
+              />
+              <div className="absolute top-6 right-6 bg-amber-500 text-white px-6 py-3 rounded-full font-bold shadow-lg">
+                ⚡ 설치 30분
+              </div>
+            </div>
+
+            {/* Product Info */}
+            <div className="space-y-6">
+              <h3 className="text-4xl font-bold text-gray-900">
+                30분 만에<br />
+                오늘의 추억이 시작됩니다
+              </h3>
+
+              <p className="text-lg text-gray-700 leading-relaxed">
+                공기압 프레임 구조로 누구나 쉽게 설치할 수 있습니다.<br />
+                특별한 공간, 특별한 장소에서 골프를 즐기세요!
+              </p>
+
+              {/* Key Features */}
+              <div className="grid grid-cols-2 gap-4 pt-4">
+                {[
+                  { icon: '⚡', label: '빠른 설치', value: '30분' },
+                  { icon: '📦', label: '간편한 이동', value: '150kg' },
+                  { icon: '🏕️', label: '실내외 설치', value: '자유롭게' },
+                  { icon: '💪', label: '내구성', value: '우수' },
+                ].map((feature, i) => (
+                  <div key={i} className="bg-white rounded-xl p-4 shadow-md border border-amber-100">
+                    <div className="text-3xl mb-2">{feature.icon}</div>
+                    <div className="text-sm text-gray-600">{feature.label}</div>
+                    <div className="text-lg font-bold text-gray-900">{feature.value}</div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Specs */}
+              <div className="bg-gradient-to-r from-amber-50 to-orange-50 rounded-xl p-6 border-2 border-amber-200">
+                <h4 className="font-bold text-gray-900 mb-4">제품 사양</h4>
+                <div className="space-y-2 text-sm">
+                  <div className="flex justify-between">
+                    <span className="text-gray-600">크기</span>
+                    <span className="font-bold text-gray-900">4.6m × 3.5m × 3.3m</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-600">무게</span>
+                    <span className="font-bold text-gray-900">약 150kg</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-600">구조</span>
+                    <span className="font-bold text-gray-900">공기압 프레임</span>
+                  </div>
+                </div>
+              </div>
+
+              <Button 
+                variant="primary" 
+                size="lg" 
+                onClick={() => setIsModalOpen(true)}
+                className="w-full"
+              >
+                구매 문의하기
+              </Button>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Installation Locations */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="mb-16"
+        >
+          <h3 className="text-3xl font-bold text-gray-900 text-center mb-4">
+            새로운 추억을, 새로운 곳에서
+          </h3>
+          <p className="text-lg text-gray-600 text-center mb-12">
+            어디든 골프의 무대가 됩니다
+          </p>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {locations.map((location, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.05 }}
+                className="group relative aspect-[3/4] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all"
+              >
+                <img
+                  src={location.image}
+                  alt={location.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
+                  <h4 className="text-lg font-bold mb-1">{location.title}</h4>
+                  <p className="text-sm text-white/90">{location.description}</p>
+                </div>
+                <div className="absolute inset-0 border-4 border-transparent group-hover:border-amber-400 transition-all duration-300 rounded-2xl pointer-events-none" />
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Emotional Closing */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="text-center py-16"
+        >
+          <div className="max-w-3xl mx-auto">
+            <p className="text-2xl md:text-3xl font-light text-gray-700 leading-relaxed italic">
+              "추억은 특별한 장소에서 만들어집니다"
+            </p>
+            <p className="text-xl text-gray-600 mt-6">
+              EXMO 에어텐트가 그 특별한 장소를 만들어드립니다
+            </p>
+          </div>
+        </motion.div>
+      </SectionWrapper>
+
+      <PurchaseModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        productType="tent"
+      />
+    </>
+  );
+}
+

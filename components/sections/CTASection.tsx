@@ -22,80 +22,62 @@ export default function CTASection() {
   return (
     <section
       id="contact"
-      className="relative py-32 overflow-hidden bg-gray-100"
+      className="relative py-32 overflow-hidden"
     >
-      {/* Animated Background Orbs */}
+      {/* Background with Overlay */}
       <div className="absolute inset-0">
-        <motion.div
-          animate={{
-            scale: [1, 1.3, 1],
-            rotate: [0, 180, 360],
-            opacity: [0.15, 0.25, 0.15],
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            ease: "linear",
-          }}
-          className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-300 rounded-full blur-[150px]"
-        />
+        <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-gray-800 to-black z-10" />
+        {/* Sunset colors for emotional touch */}
         <motion.div
           animate={{
             scale: [1, 1.2, 1],
-            rotate: [360, 180, 0],
-            opacity: [0.15, 0.3, 0.15],
+            opacity: [0.3, 0.5, 0.3],
           }}
           transition={{
             duration: 15,
             repeat: Infinity,
-            ease: "linear",
+            ease: "easeInOut",
           }}
-          className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-indigo-300 rounded-full blur-[150px]"
+          className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-orange-400/30 via-yellow-500/20 to-transparent"
         />
       </div>
 
-      {/* Tech Grid */}
-      <div className="absolute inset-0 tech-grid opacity-10" />
-
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <span className="inline-block px-6 py-2 bg-white/80 border border-gray-300 rounded-full text-gray-700 text-sm font-mono mb-8 shadow-sm">
-            Join the Future of Golf
+          <span className="inline-block px-6 py-2 bg-yellow-500/20 border border-yellow-400/30 rounded-full text-yellow-300 text-sm font-semibold mb-8 backdrop-blur-sm">
+            추억을 함께 만들어갑니다
           </span>
 
           {/* Main Heading */}
-          <h2 className="text-5xl md:text-7xl font-extrabold text-gray-900 mb-6 tracking-tight leading-tight drop-shadow-sm">
-            골프의 미래는
-            <br />
-            <span className="text-blue-600">
-              언제칠까가 만듭니다
-            </span>
-          </h2>
+                 <h2 className="text-5xl md:text-7xl font-extrabold text-white mb-8 tracking-tight leading-tight drop-shadow-2xl">
+                   추억을 만드는 기술
+                   <br />
+                   <span className="text-yellow-400">
+                     EXMO
+                   </span>
+                 </h2>
 
-          {/* Subheading */}
-          <p className="text-xl md:text-2xl text-gray-700 mb-4 font-medium">
-            EXMO가 만든 GolfTech 브랜드,{' '}
-            <span className="font-bold text-gray-900">언제칠까</span>
-          </p>
-          
-          {/* Tagline */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="mb-12"
-          >
-            <p className="text-lg text-gray-600 font-mono font-semibold">
-              Golf <span className="text-blue-600 mx-2">•</span> Data <span className="text-indigo-600 mx-2">•</span> Space
-            </p>
-          </motion.div>
+                 {/* Emotional Messages */}
+                 <motion.div
+                   initial={{ opacity: 0 }}
+                   whileInView={{ opacity: 1 }}
+                   viewport={{ once: true }}
+                   transition={{ duration: 0.8, delay: 0.2 }}
+                   className="mb-12 space-y-4"
+                 >
+                   <p className="text-2xl md:text-3xl text-white font-light italic">
+                     "추억을 만들고, 기록하고, 지켜줍니다"
+                   </p>
+                   <p className="text-xl text-white/90">
+                     에어텐트 · 따당 앱 · 스크린천
+                   </p>
+                 </motion.div>
         </motion.div>
 
         {/* CTA Buttons */}
@@ -106,15 +88,15 @@ export default function CTASection() {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
         >
-          <Button variant="primary" size="lg" href="#contact">
-            제품 상담
-          </Button>
-          <Button variant="ghost" size="lg" href="#contact">
-            체험 신청
-          </Button>
-          <Button variant="outline" size="lg" href="#download">
-            앱 다운로드
-          </Button>
+               <Button variant="primary" size="lg" href="#airtent">
+                 에어텐트 문의
+               </Button>
+               <Button variant="secondary" size="lg" href="#app">
+                 따당 앱 다운로드
+               </Button>
+               <Button variant="outline" size="lg" href="#screen">
+                 스크린천 문의
+               </Button>
         </motion.div>
 
         {/* Contact Info */}

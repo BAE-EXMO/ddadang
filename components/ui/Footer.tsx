@@ -2,11 +2,11 @@ import React from 'react';
 
 export default function Footer() {
   const quickLinks = [
-    { name: 'About', href: '#about' },
-    { name: 'Products', href: '#products' },
-    { name: 'Studio 설치장소', href: '#studio-locations' },
-    { name: '앱 가이드', href: '#app' },
-    { name: 'Contact', href: '#contact' },
+    { name: '에어텐트', href: '#airtent' },
+    { name: '따당 앱', href: '#app' },
+    { name: '스크린천', href: '#screen' },
+    { name: 'EXMO 이야기', href: '#story' },
+    { name: '문의하기', href: '#contact' },
   ];
 
   const socialLinks = [
@@ -30,14 +30,14 @@ export default function Footer() {
                 />
               </div>
               <h3 className="text-3xl font-bold">
-                <span className="text-white">
-                  언제칠까
+                <span className="bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">
+                  EXMO
                 </span>
               </h3>
             </div>
-            <p className="text-sm text-gray-400 font-mono mb-2">by EXMO Inc.</p>
+            <p className="text-sm text-gray-400 mb-2">골프 추억을 만드는 기술</p>
             <p className="text-gray-300 text-sm">
-              골프의 모든 순간을 하나로 연결하는 GolfTech 플랫폼
+              에어텐트 · 따당 앱 · 스크린천
             </p>
           </div>
 
@@ -49,7 +49,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="text-gray-300 hover:text-blue-400 transition-colors text-sm tracking-wide"
+                    className="text-gray-300 hover:text-amber-400 transition-colors text-sm tracking-wide"
                   >
                     {link.name}
                   </a>

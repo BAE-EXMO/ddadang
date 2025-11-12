@@ -17,11 +17,11 @@ export default function Header() {
   }, []);
 
   const navLinks = [
-    { name: 'About', href: '#about' },
-    { name: 'Products', href: '#products' },
-    { name: 'Studio 설치장소', href: '#studio-locations' },
-    { name: '앱 가이드', href: '#app' },
-    { name: 'Contact', href: '#contact' },
+    { name: '추억의 무대', href: '#airtent' },
+    { name: '추억을 기록', href: '#app' },
+    { name: '추억을 지키다', href: '#screen' },
+    { name: 'EXMO 이야기', href: '#story' },
+    { name: '문의하기', href: '#contact' },
   ];
 
   return (
@@ -43,8 +43,8 @@ export default function Header() {
                 className="w-full h-full object-contain"
               />
             </div>
-            <div className="text-2xl font-bold text-black">
-              언제칠까
+            <div className="text-2xl font-bold bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">
+              EXMO
             </div>
           </a>
 
@@ -59,8 +59,8 @@ export default function Header() {
                 {link.name}
               </a>
             ))}
-            <Button variant="primary" size="sm" href="#download">
-              앱 다운로드
+            <Button variant="secondary" size="sm" href="#app">
+              따당 앱
             </Button>
           </div>
 
