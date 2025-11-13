@@ -32,7 +32,7 @@ export default function StudioLocationSection() {
       image: '/images/studio-locations/해수욕장.png',
     },
     {
-      title: '골프연습장',
+      title: '클럽하우스',
       description: '실외 연습장에서 실전 같은 연습',
       icon: <Flag className="w-8 h-8" />,
       image: '/images/studio-locations/골프장.png',

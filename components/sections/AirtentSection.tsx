@@ -38,7 +38,7 @@ export default function AirtentSection() {
       description: '축제 현장의 인기 콘텐츠',
     },
     {
-      title: '골프연습장',
+      title: '클럽하우스',
       image: '/images/studio-locations/골프장.png',
       description: '실전 같은 연습 환경',
     },
