@@ -149,7 +149,7 @@ export default function AirtentSection() {
             </h3>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               타격감은 살리고, 소음은 줄였습니다<br />
-              TPU 라미네이트 스크린을 기본 제공합니다
+              TPU라미네이트로 더욱 오래 사용할 수 있습니다.
             </p>
           </div>
 
