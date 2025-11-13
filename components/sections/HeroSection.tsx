@@ -49,15 +49,6 @@ export default function HeroSection() {
             <p className="text-2xl md:text-3xl text-white/95 font-light leading-relaxed max-w-4xl mx-auto drop-shadow-lg">
               <span className="brand-name">언제칠까</span>는 그 추억을 더 오래,<br className="md:hidden" /> 더 스마트하게 지켜드립니다
             </p>
-
-            <div className="pt-8 space-y-4">
-              <p className="text-lg md:text-xl text-white/90 italic">
-                "골프는 스코어가 아니라 사람과의 시간입니다"
-              </p>
-              <p className="text-lg md:text-xl text-white/90 italic">
-                "그 순간은 소중한 추억이 됩니다"
-              </p>
-            </div>
           </motion.div>
 
           {/* CTA Buttons */}
@@ -69,9 +60,6 @@ export default function HeroSection() {
           >
             <Button variant="primary" size="lg" href="#airtent">
               추억의 시작 →
-            </Button>
-            <Button variant="outline" size="lg" href="#story">
-              EXMO 이야기
             </Button>
           </motion.div>
 
