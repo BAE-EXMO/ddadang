@@ -51,26 +51,6 @@ export default function StorySection() {
       id="story"
       className="bg-gradient-to-b from-gray-50 to-white"
     >
-      {/* Brand Story Header */}
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-        className="text-center mb-20"
-      >
-        <span className="inline-block px-6 py-2 bg-gray-200 text-gray-800 rounded-full text-sm font-semibold mb-6">
-          <span className="brand-name">언제칠까</span> 이야기
-        </span>
-        <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-8">
-          골프는 단순한 스포츠가 아니라<br />
-          함께 <span className="text-yellow-600">웃고, 응원하고, 기억하는</span> 순간입니다
-        </h2>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-          <span className="brand-name">언제칠까</span>는 그 순간을 만들어주고, 기록하고, 지켜주는 기술입니다
-        </p>
-      </motion.div>
-
       {/* Three Pillars */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
