@@ -15,7 +15,7 @@ export default function HeroSection() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70 z-10" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80 z-10" />
         <img
           src="/images/hero-golf.jpg"
           alt="골프를 즐기는 사람들"
@@ -29,14 +29,14 @@ export default function HeroSection() {
       </div>
 
       {/* Content */}
-      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative z-20 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 text-center py-12">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
         >
           {/* Main Message */}
-          <h1 className="text-4xl md:text-7xl font-bold text-white mb-8 leading-tight drop-shadow-2xl">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-white mb-8 leading-tight drop-shadow-2xl">
             골프는 소중한 <span className="text-yellow-400">추억</span>입니다
           </h1>
           
@@ -46,7 +46,7 @@ export default function HeroSection() {
             transition={{ duration: 1, delay: 0.3 }}
             className="space-y-6"
           >
-            <p className="text-2xl md:text-3xl text-white/95 font-light leading-relaxed max-w-4xl mx-auto drop-shadow-lg">
+            <p className="text-xl sm:text-2xl md:text-3xl text-white font-medium leading-relaxed max-w-4xl mx-auto drop-shadow-lg">
               <span className="brand-name">언제칠까</span>는 그 추억을 더 오래,<br className="md:hidden" /> 더 스마트하게 지켜드립니다
             </p>
           </motion.div>
