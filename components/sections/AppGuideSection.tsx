@@ -145,7 +145,7 @@ export default function AppGuideSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
           {/* App Screenshots/Info */}
           <div className="relative">
-            <div className="bg-gradient-to-br from-[#EC4899] to-[#DB2777] rounded-3xl p-12 text-white shadow-2xl">
+            <div className="bg-gradient-to-br from-[#F472B6] to-[#F9A8D4] rounded-3xl p-12 text-white shadow-2xl">
               <h3 className="text-3xl font-bold mb-6">
                 골프의 추억 = <br />
                 함께한 시간 + 기록 + 에피소드

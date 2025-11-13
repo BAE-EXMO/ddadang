@@ -250,7 +250,7 @@ export default function AirtentSection() {
           </div>
 
           {/* Why It Matters */}
-          <div className="max-w-4xl mx-auto bg-gradient-to-br from-[#DB2777] to-[#EC4899] rounded-3xl p-12 text-white shadow-2xl">
+          <div className="max-w-4xl mx-auto bg-gradient-to-br from-[#F472B6] to-[#F9A8D4] rounded-3xl p-12 text-white shadow-2xl">
             <h4 className="text-3xl font-bold mb-8 text-center">
               좋은 추억은 좋은 공간에서 만들어집니다
             </h4>
