@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Home, Flag, Waves, User, School, PartyPopper, Tent } from 'lucide-react';
 import SectionWrapper from '../ui/SectionWrapper';
 
 export default function StudioLocationSection() {
@@ -9,49 +10,49 @@ export default function StudioLocationSection() {
     {
       title: '전원주택',
       description: '집 앞마당에서 즐기는 프라이빗 골프',
-      icon: '🏡',
+      icon: <Home className="w-8 h-8" />,
       image: '/images/studio-locations/개인주택.png',
     },
     {
       title: '골프장 & 컨트리클럽',
       description: '골프장에서 워밍업과 대기 시간 활용',
-      icon: '⛳',
+      icon: <Flag className="w-8 h-8" />,
       image: '/images/studio-locations/골프코스.png',
     },
     {
       title: '프로 개인 강습장',
       description: '프로 골퍼의 1:1 맞춤형 레슨 스튜디오',
-      icon: '⛳',
+      icon: <User className="w-8 h-8" />,
       image: '/images/studio-locations/개인레슨.png',
     },
     {
       title: '해수욕장',
       description: '바닷가에서 즐기는 특별한 골프 체험',
-      icon: '🏖️',
+      icon: <Waves className="w-8 h-8" />,
       image: '/images/studio-locations/해수욕장.png',
     },
     {
       title: '골프연습장',
       description: '실외 연습장에서 실전 같은 연습',
-      icon: '🏌️',
+      icon: <Flag className="w-8 h-8" />,
       image: '/images/studio-locations/골프장.png',
     },
     {
       title: '학교 실내강당',
       description: '체육 수업과 방과후 활동으로 활용',
-      icon: '🏫',
+      icon: <School className="w-8 h-8" />,
       image: '/images/studio-locations/실내강당.png',
     },
     {
       title: '지방축제 개최지',
       description: '축제 현장에서 인기 만점 골프 챌린지!',
-      icon: '🎪',
+      icon: <PartyPopper className="w-8 h-8" />,
       image: '/images/studio-locations/축제장소.png',
     },
     {
       title: '캠핑장',
       description: '캠핑과 골프를 동시에 즐기는 새로운 경험',
-      icon: '⛺',
+      icon: <Tent className="w-8 h-8" />,
       image: '/images/studio-locations/캠핑장.png',
     },
   ];
@@ -157,7 +158,7 @@ export default function StudioLocationSection() {
 
             {/* Content */}
             <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-              <div className="text-4xl mb-3 transform group-hover:scale-110 transition-transform">
+              <div className="mb-3 transform group-hover:scale-110 transition-transform">
                 {location.icon}
               </div>
               <h3 className="text-xl font-bold mb-2">{location.title}</h3>

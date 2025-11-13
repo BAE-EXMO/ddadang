@@ -2,41 +2,42 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Camera, Users, Flag, Calendar, DollarSign, MessageCircle, Zap, BarChart, Trophy } from 'lucide-react';
 import SectionWrapper from '../ui/SectionWrapper';
 import Button from '../ui/Button';
 import Card from '../ui/Card';
 
 export default function AppGuideSection() {
   const memories = [
-    { icon: '📸', text: '어제의 라운드를 기억하시나요?' },
-    { icon: '👥', text: '함께한 사람들의 웃음소리' },
-    { icon: '⛳', text: '최고의 샷, 그 순간의 감동' },
+    { icon: <Camera className="w-6 h-6" />, text: '어제의 라운드를 기억하시나요?' },
+    { icon: <Users className="w-6 h-6" />, text: '함께한 사람들의 웃음소리' },
+    { icon: <Flag className="w-6 h-6" />, text: '최고의 샷, 그 순간의 감동' },
   ];
 
   const benefits = [
     { 
-      icon: '📅', 
+      icon: <Calendar className="w-12 h-12" />, 
       title: '골프 약속, 이제 간단하게', 
       problem: '4명의 스케줄 조율, 날씨 확인, 골프장 예약 변경 공지...',
       solution: '한 번의 기록으로 모두 완료. 캘린더에서 날씨 확인하고, 약속 카드가 곧 단톡방입니다.',
       color: 'from-blue-500 to-cyan-500'
     },
     { 
-      icon: '💰', 
+      icon: <DollarSign className="w-12 h-12" />, 
       title: '정산 걱정 없는 즐거운 라운드', 
       problem: '타당 천원 정산 때문에 언성이 높아지고, 총액이 안 맞아 불편하셨죠?',
       solution: '타수에 따른 정확한 자동 정산. 누가 얼마를 잃고 땄는지 투명하게. 이제 천원 때문에 기분 상할 일 없습니다.',
       color: 'from-green-500 to-emerald-500'
     },
     { 
-      icon: '👥', 
+      icon: <Users className="w-12 h-12" />, 
       title: '총무도, 회원도 편한 월례회', 
       problem: '총무는 참여 여부 일일이 확인하고, 회원은 불참 메시지 남기기 부담스럽고...',
       solution: '약속 카드 삭제만으로 불참 의사 전달. 회원 관리 한눈에, 새 회원 추가도 자동으로.',
       color: 'from-purple-500 to-pink-500'
     },
     { 
-      icon: '📸', 
+      icon: <Camera className="w-12 h-12" />, 
       title: '함께한 추억, 영원히 간직하세요', 
       problem: '작년 그날의 라운드, 누구와 함께했는지 기억나시나요?',
       solution: '한 명만 저장하면 동반자 모두에게 공유. 앨범처럼 찾아보는 추억, 전적 비교까지.',
@@ -46,32 +47,32 @@ export default function AppGuideSection() {
 
   const quickFeatures = [
     {
-      icon: '📅',
+      icon: <Calendar className="w-8 h-8" />,
       title: '약속 생성',
       desc: '캘린더에서 날씨 보며 일정 조율',
     },
     {
-      icon: '💬',
+      icon: <MessageCircle className="w-8 h-8" />,
       title: '그룹 채팅',
       desc: '약속 카드가 곧 단톡방',
     },
     {
-      icon: '⚡',
+      icon: <Zap className="w-8 h-8" />,
       title: '간편 입력',
       desc: '홀별 스코어 버튼으로 기록',
     },
     {
-      icon: '💰',
+      icon: <DollarSign className="w-8 h-8" />,
       title: '자동 정산',
       desc: '타수 기반 투명한 계산',
     },
     {
-      icon: '📊',
+      icon: <BarChart className="w-8 h-8" />,
       title: '전적 관리',
       desc: '동반자별 누적 전적 비교',
     },
     {
-      icon: '🏆',
+      icon: <Trophy className="w-8 h-8" />,
       title: '추억 저장',
       desc: '앨범처럼 라운드 기록 보관',
     },
@@ -109,7 +110,7 @@ export default function AppGuideSection() {
               transition={{ duration: 0.6, delay: i * 0.1 }}
               className="bg-white rounded-2xl p-6 shadow-lg border-2 border-blue-100"
             >
-              <div className="text-5xl mb-4">{memory.icon}</div>
+              <div className="flex justify-center mb-4 text-blue-600">{memory.icon}</div>
               <p className="text-lg text-gray-700 font-medium italic">
                 "{memory.text}"
               </p>
@@ -183,7 +184,7 @@ export default function AppGuideSection() {
                 className="bg-white rounded-xl p-6 shadow-md border border-gray-100 hover:shadow-xl transition-all"
               >
                 <div className="flex items-start gap-4 mb-4">
-                  <div className={`text-4xl bg-gradient-to-r ${benefit.color} w-16 h-16 flex-shrink-0 rounded-2xl flex items-center justify-center text-white shadow-lg`}>
+                  <div className={`bg-gradient-to-r ${benefit.color} w-16 h-16 flex-shrink-0 rounded-2xl flex items-center justify-center text-white shadow-lg`}>
                     {benefit.icon}
                   </div>
                   <div>
@@ -222,7 +223,7 @@ export default function AppGuideSection() {
               transition={{ duration: 0.5, delay: i * 0.05 }}
               className="bg-white rounded-xl p-4 shadow-md border border-gray-100 hover:shadow-lg transition-all text-center"
             >
-              <div className="text-4xl mb-3">{feature.icon}</div>
+              <div className="flex justify-center mb-3 text-blue-600">{feature.icon}</div>
               <h4 className="text-sm font-bold text-gray-900 mb-1">{feature.title}</h4>
               <p className="text-xs text-gray-600">{feature.desc}</p>
             </motion.div>

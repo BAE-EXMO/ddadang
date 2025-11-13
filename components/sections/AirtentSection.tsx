@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { Zap, Package, Home as Tent, Dumbbell, Wind, Flame, VolumeX, Target } from 'lucide-react';
 import SectionWrapper from '../ui/SectionWrapper';
 import Card from '../ui/Card';
 import Button from '../ui/Button';
@@ -107,13 +108,13 @@ export default function AirtentSection() {
               {/* Key Features */}
               <div className="grid grid-cols-2 gap-4 pt-4">
                 {[
-                  { icon: '⚡', label: '빠른 설치', value: '5분' },
-                  { icon: '📦', label: '간편한 이동', value: '전용백' },
-                  { icon: '🏕️', label: '실내외 설치', value: '자유롭게' },
-                  { icon: '💪', label: '내구성', value: '우수' },
+                  { icon: <Zap className="w-8 h-8" />, label: '빠른 설치', value: '5분' },
+                  { icon: <Package className="w-8 h-8" />, label: '간편한 이동', value: '전용백' },
+                  { icon: <Tent className="w-8 h-8" />, label: '실내외 설치', value: '자유롭게' },
+                  { icon: <Dumbbell className="w-8 h-8" />, label: '내구성', value: '우수' },
                 ].map((feature, i) => (
                   <div key={i} className="bg-white rounded-xl p-4 shadow-md border border-amber-100">
-                    <div className="text-3xl mb-2">{feature.icon}</div>
+                    <div className="text-amber-600 mb-2">{feature.icon}</div>
                     <div className="text-sm text-gray-600">{feature.label}</div>
                     <div className="text-lg font-bold text-gray-900">{feature.value}</div>
                   </div>
@@ -223,10 +224,10 @@ export default function AirtentSection() {
             {/* Feature Cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
-                { icon: '🧵', title: '3중에어메쉬원단', desc: '통풍성 우수' },
-                { icon: '🔥', title: '방염', desc: '안전성 인증' },
-                { icon: '🔇', title: '저소음', desc: '조용한 타격감' },
-                { icon: '🎯', title: '집중타격부 TPU라미네이트', desc: '내구성 강화' },
+                { icon: <Wind className="w-10 h-10" />, title: '3중에어메쉬원단', desc: '통풍성 우수' },
+                { icon: <Flame className="w-10 h-10" />, title: '방염', desc: '안전성 인증' },
+                { icon: <VolumeX className="w-10 h-10" />, title: '저소음', desc: '조용한 타격감' },
+                { icon: <Target className="w-10 h-10" />, title: '집중타격부 TPU라미네이트', desc: '내구성 강화' },
               ].map((feature, i) => (
                 <motion.div
                   key={i}
@@ -236,7 +237,7 @@ export default function AirtentSection() {
                   transition={{ duration: 0.5, delay: i * 0.1 }}
                   className="bg-white rounded-2xl p-6 shadow-xl border-2 border-gray-200 hover:border-green-400 transition-all"
                 >
-                  <div className="text-5xl mb-4 text-center">{feature.icon}</div>
+                  <div className="flex justify-center mb-4 text-green-600">{feature.icon}</div>
                   <h5 className="text-lg font-bold text-gray-900 mb-2 text-center">
                     {feature.title}
                   </h5>
