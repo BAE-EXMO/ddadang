@@ -54,7 +54,7 @@ ${formData.simulator ? '✓ 시뮬레이터\n' : ''}${formData.projector ? '✓ 
 종류: ${formData.velcroType}`;
            }
 
-           window.location.href = `mailto:info@exmo.kr?subject=${productType === 'tent' ? 'STUDIO' : 'TPU 스크린'} 구매 문의&body=${encodeURIComponent(emailBody)}`;
+           window.location.href = `mailto:contact@when7.com?subject=${productType === 'tent' ? 'STUDIO' : 'TPU 스크린'} 구매 문의&body=${encodeURIComponent(emailBody)}`;
     onClose();
   };
 

@@ -62,8 +62,8 @@ export default function Footer() {
               <p>경기도 하남시 미사강변대로 16</p>
               <p>하우스디 스마트밸리 F615호</p>
               <p className="mt-4">
-                <a href="mailto:info@exmo.kr" className="text-blue-400 hover:text-blue-300 transition-colors font-mono">
-                  info@exmo.kr
+                <a href="mailto:contact@when7.com" className="text-blue-400 hover:text-blue-300 transition-colors font-mono">
+                  contact@when7.com
                 </a>
               </p>
             </div>
