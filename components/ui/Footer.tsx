@@ -62,6 +62,10 @@ export default function Footer() {
               <p>경기도 하남시 미사강변대로 16</p>
               <p>하우스디 스마트밸리 F615호</p>
               <p className="mt-4">
+                <span className="block">Tel: 031-796-8651</span>
+                <span className="block">Fax: 031-796-8652</span>
+              </p>
+              <p className="mt-2">
                 <a href="mailto:contact@when7.com" className="text-blue-400 hover:text-blue-300 transition-colors font-mono">
                   contact@when7.com
                 </a>
