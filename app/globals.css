@@ -1,18 +1,29 @@
 @import "tailwindcss";
 
 :root {
-  --background: #FEFEFE;
-  --foreground: #2C2C2C;
-  --warm-beige: #F5F1EA;
-  --soft-gold: #D4AF37;
-  --deep-green: #2F5233;
-  --sage-green: #8BA888;
-  --warm-gray: #5C5C5C;
-  --light-cream: #FAF8F3;
-  --sunset-orange: #E8997C;
-  --sky-blue: #A8C5DA;
-  --accent: #D4AF37;
-  --brand-pink: #EC4899;
+  /* Base Colors */
+  --background: #FFFFFF;
+  --foreground: #1A1A1A;
+  
+  /* Brand Colors - Logo Green */
+  --brand-primary: #2F5233;      /* 로고 메인 색상 - 진한 녹색 */
+  --brand-primary-light: #4A7A50; /* 밝은 녹색 */
+  --brand-primary-lighter: #6B9B71; /* 더 밝은 녹색 */
+  --brand-primary-lightest: #8BA888; /* 연한 녹색 */
+  --brand-primary-dark: #1F3622;  /* 어두운 녹색 */
+  
+  /* Grayscale */
+  --gray-50: #FAFAFA;
+  --gray-100: #F5F5F5;
+  --gray-200: #E5E5E5;
+  --gray-300: #D4D4D4;
+  --gray-600: #525252;
+  --gray-800: #262626;
+  --gray-900: #171717;
+  
+  /* Deprecated - 호환성 유지 */
+  --deep-green: var(--brand-primary);
+  --sage-green: var(--brand-primary-lightest);
 }
 
 @theme inline {
@@ -57,6 +68,6 @@ html {
 
 /* Brand name styling */
 .brand-name {
-  color: var(--brand-pink);
+  color: var(--brand-primary);
   font-weight: 600;
 }

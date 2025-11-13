@@ -21,11 +21,11 @@ export default function Button({
   const baseStyles = 'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 hover:scale-105 active:scale-95 tracking-wide';
   
 const variants = {
-  primary: 'bg-gradient-to-r from-amber-500 to-orange-500 text-white hover:from-amber-600 hover:to-orange-600 shadow-lg hover:shadow-2xl transition-all',
-  secondary: 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white hover:from-blue-600 hover:to-cyan-600 shadow-lg hover:shadow-2xl transition-all',
+  primary: 'bg-[#2F5233] text-white hover:bg-[#4A7A50] shadow-lg hover:shadow-2xl transition-all',
+  secondary: 'bg-[#4A7A50] text-white hover:bg-[#6B9B71] shadow-lg hover:shadow-2xl transition-all',
   outline: 'border-2 border-white/70 text-white hover:bg-white/20 backdrop-blur-sm transition-all',
   ghost: 'bg-white/10 text-white hover:bg-white/20 backdrop-blur-md border border-white/30 transition-all',
-  purchase: 'bg-blue-600 text-white hover:bg-blue-700 shadow-lg hover:shadow-2xl transition-all',
+  purchase: 'bg-[#2F5233] text-white hover:bg-[#4A7A50] shadow-lg hover:shadow-2xl transition-all',
 };
 
   const sizes = {
