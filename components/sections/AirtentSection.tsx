@@ -70,7 +70,7 @@ export default function AirtentSection() {
           <span className="inline-block px-6 py-2 bg-amber-100 text-amber-800 rounded-full text-sm font-semibold mb-6">
             추억의 무대를 만드는 기술
           </span>
-          <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+          <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-relaxed md:leading-loose">
             소중한 사람들과 함께할<br />
             <span className="text-amber-600">골프의 무대</span>를 어디든 만들 수 있습니다
           </h2>
