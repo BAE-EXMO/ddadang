@@ -25,12 +25,48 @@ export default function PurchaseModal({ isOpen, onClose, productType }: Purchase
     velcroType: '일반형',
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-           let emailBody = '';
-           if (productType === 'tent') {
-             emailBody = `STUDIO 구매 문의
+    // Google Sheets에 데이터 저장
+    const googleSheetsUrl = process.env.NEXT_PUBLIC_GOOGLE_SHEETS_URL;
+    
+    if (googleSheetsUrl) {
+      try {
+        const orderData = {
+          productType,
+          name: formData.name,
+          phone: formData.phone,
+          address: formData.address,
+          width: formData.width,
+          height: formData.height,
+          velcroPosition: formData.velcroPosition,
+          velcroType: formData.velcroType,
+          simulator: formData.simulator,
+          projector: formData.projector,
+          monitor: formData.monitor
+        };
+        
+        await fetch(googleSheetsUrl, {
+          method: 'POST',
+          mode: 'no-cors', // Google Apps Script는 CORS를 지원하므로 no-cors 모드 사용
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(orderData)
+        });
+        
+        console.log('주문 정보가 Google Sheets에 저장되었습니다.');
+      } catch (error) {
+        console.error('Google Sheets 저장 실패:', error);
+        // 에러가 발생해도 이메일은 계속 진행
+      }
+    }
+    
+    // 이메일 클라이언트 열기
+    let emailBody = '';
+    if (productType === 'tent') {
+      emailBody = `STUDIO 구매 문의
 
 이름: ${formData.name}
 전화번호: ${formData.phone}
@@ -38,8 +74,8 @@ export default function PurchaseModal({ isOpen, onClose, productType }: Purchase
 
 선택 옵션:
 ${formData.simulator ? '✓ 시뮬레이터\n' : ''}${formData.projector ? '✓ 프로젝터\n' : ''}${formData.monitor ? '✓ 모니터\n' : ''}`;
-           } else {
-             emailBody = `TPU 라미네이트 스크린 구매 문의
+    } else {
+      emailBody = `TPU 라미네이트 스크린 구매 문의
 
 이름: ${formData.name}
 전화번호: ${formData.phone}
@@ -52,9 +88,9 @@ ${formData.simulator ? '✓ 시뮬레이터\n' : ''}${formData.projector ? '✓ 
 밸크로:
 부착 위치: ${formData.velcroPosition}
 종류: ${formData.velcroType}`;
-           }
+    }
 
-           window.location.href = `mailto:contact@when7.com?subject=${productType === 'tent' ? 'STUDIO' : 'TPU 스크린'} 구매 문의&body=${encodeURIComponent(emailBody)}`;
+    window.location.href = `mailto:contact@when7.com?subject=${productType === 'tent' ? 'STUDIO' : 'TPU 스크린'} 구매 문의&body=${encodeURIComponent(emailBody)}`;
     onClose();
   };
 
