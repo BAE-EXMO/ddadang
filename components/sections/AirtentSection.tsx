@@ -74,10 +74,6 @@ export default function AirtentSection() {
             소중한 사람들과 함께할<br />
             <span className="text-amber-600">골프의 무대</span>를 어디든 만들 수 있습니다
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            "추억은 장소에 묶여 있지 않습니다"<br />
-            <span className="brand-name">언제칠까</span> Studio는 골프를 어디서든 가능하게 합니다
-          </p>
         </motion.div>
 
         {/* Main Product Showcase */}
@@ -103,11 +99,6 @@ export default function AirtentSection() {
 
             {/* Product Info */}
             <div className="space-y-6">
-              <h3 className="text-4xl font-bold text-gray-900">
-                30분 만에<br />
-                오늘의 추억이 시작됩니다
-              </h3>
-
               <p className="text-lg text-gray-700 leading-relaxed">
                 공기압 프레임 구조로 누구나 쉽게 설치할 수 있습니다.<br />
                 특별한 공간, 특별한 장소에서 골프를 즐기세요!
