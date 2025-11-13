@@ -127,7 +127,7 @@ export default function ProductSection() {
               >
                 {product.id === 'tent' ? (
                   <Button 
-                    variant="primary" 
+                    variant="purchase" 
                     size="md" 
                     onClick={() => openModal('tent')}
                   >
@@ -135,7 +135,7 @@ export default function ProductSection() {
                   </Button>
                 ) : product.id === 'screen' ? (
                   <Button 
-                    variant="primary" 
+                    variant="purchase" 
                     size="md" 
                     onClick={() => openModal('screen')}
                   >

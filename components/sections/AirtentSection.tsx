@@ -149,7 +149,7 @@ export default function AirtentSection() {
               </div>
 
               <Button 
-                variant="primary" 
+                variant="purchase" 
                 size="lg" 
                 onClick={() => setIsModalOpen(true)}
                 className="w-full"
@@ -342,10 +342,9 @@ export default function AirtentSection() {
                   스크린만 별도 구매도 가능합니다
                 </p>
                 <Button 
-                  variant="secondary" 
+                  variant="purchase" 
                   size="lg" 
                   onClick={() => setIsModalOpen(true)}
-                  className="bg-white text-green-900 hover:bg-green-50"
                 >
                   스크린 구매 문의
                 </Button>

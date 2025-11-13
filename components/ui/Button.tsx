@@ -3,7 +3,7 @@ import clsx from 'clsx';
 
 interface ButtonProps {
   children: React.ReactNode;
-  variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
+  variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'purchase';
   size?: 'sm' | 'md' | 'lg';
   href?: string;
   onClick?: () => void;
@@ -25,6 +25,7 @@ const variants = {
   secondary: 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white hover:from-blue-600 hover:to-cyan-600 shadow-lg hover:shadow-2xl transition-all',
   outline: 'border-2 border-white/70 text-white hover:bg-white/20 backdrop-blur-sm transition-all',
   ghost: 'bg-white/10 text-white hover:bg-white/20 backdrop-blur-md border border-white/30 transition-all',
+  purchase: 'bg-blue-600 text-white hover:bg-blue-700 shadow-lg hover:shadow-2xl transition-all',
 };
 
   const sizes = {
