@@ -132,6 +132,47 @@ export default function AirtentSection() {
           </div>
         </motion.div>
 
+        {/* Installation Locations */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="mb-16"
+        >
+          <h3 className="text-3xl font-bold text-gray-900 text-center mb-4">
+            새로운 추억을, 새로운 곳에서
+          </h3>
+          <p className="text-lg text-gray-600 text-center mb-12">
+            어디든 골프의 무대가 됩니다
+          </p>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {locations.map((location, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.05 }}
+                className="group relative aspect-[3/4] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all"
+              >
+                <img
+                  src={location.image}
+                  alt={location.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
+                  <h4 className="text-lg font-bold mb-1">{location.title}</h4>
+                  <p className="text-sm text-white/90">{location.description}</p>
+                </div>
+                <div className="absolute inset-0 border-4 border-transparent group-hover:border-amber-400 transition-all duration-300 rounded-2xl pointer-events-none" />
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
         {/* Premium Screen System Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -238,47 +279,6 @@ export default function AirtentSection() {
                 </Button>
               </div>
             </div>
-          </div>
-        </motion.div>
-
-        {/* Installation Locations */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="mb-16"
-        >
-          <h3 className="text-3xl font-bold text-gray-900 text-center mb-4">
-            새로운 추억을, 새로운 곳에서
-          </h3>
-          <p className="text-lg text-gray-600 text-center mb-12">
-            어디든 골프의 무대가 됩니다
-          </p>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {locations.map((location, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.05 }}
-                className="group relative aspect-[3/4] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all"
-              >
-                <img
-                  src={location.image}
-                  alt={location.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-                  <h4 className="text-lg font-bold mb-1">{location.title}</h4>
-                  <p className="text-sm text-white/90">{location.description}</p>
-                </div>
-                <div className="absolute inset-0 border-4 border-transparent group-hover:border-amber-400 transition-all duration-300 rounded-2xl pointer-events-none" />
-              </motion.div>
-            ))}
           </div>
         </motion.div>
 
