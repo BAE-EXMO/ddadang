@@ -6,23 +6,6 @@ import SectionWrapper from '../ui/SectionWrapper';
 import Card from '../ui/Card';
 
 export default function StorySection() {
-  const values = [
-    {
-      icon: '🏕️',
-      title: '추억의 공간을 만들다',
-      description: 'Studio',
-      detail: '프리미엄 스크린 시스템으로 어디서든 최상의 골프 환경을 제공합니다',
-      color: 'from-amber-500 to-orange-500',
-    },
-    {
-      icon: '📱',
-      title: '추억을 기록하다',
-      description: <><span className="brand-name">언제칠까</span> 앱</>,
-      detail: '골프 약속부터 스코어, 정산까지 모든 순간을 저장합니다',
-      color: 'from-blue-500 to-cyan-500',
-    },
-  ];
-
   const testimonials = [
     {
       name: '김철수',
@@ -51,53 +34,6 @@ export default function StorySection() {
       id="story"
       className="bg-gradient-to-b from-gray-50 to-white"
     >
-      {/* Three Pillars */}
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-        className="mb-24"
-      >
-        <h3 className="text-3xl font-bold text-gray-900 text-center mb-12">
-          2개의 제품, 하나의 스토리
-        </h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-          {values.map((value, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="relative"
-            >
-              <Card>
-                <div className={`w-20 h-20 bg-gradient-to-br ${value.color} rounded-2xl flex items-center justify-center text-5xl mb-6 mx-auto shadow-lg`}>
-                  {value.icon}
-                </div>
-                <div className="text-center">
-                  <h4 className="text-2xl font-bold text-gray-900 mb-2">
-                    {value.title}
-                  </h4>
-                  <p className="text-lg font-semibold text-gray-700 mb-3">
-                    {value.description}
-                  </p>
-                  <p className="text-gray-600 leading-relaxed">
-                    {value.detail}
-                  </p>
-                </div>
-                {i < 1 && (
-                  <div className="hidden md:block absolute top-1/2 -right-6 transform -translate-y-1/2 text-5xl text-gray-300">
-                    →
-                  </div>
-                )}
-              </Card>
-            </motion.div>
-          ))}
-        </div>
-      </motion.div>
-
       {/* Customer Testimonials - 추억 앨범 */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
