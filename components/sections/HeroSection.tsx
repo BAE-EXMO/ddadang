@@ -58,20 +58,21 @@ export default function HeroSection() {
             className="mt-24 grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto"
           >
             {[
-              { icon: '🏕️', title: 'Studio', description: '프리미엄 골프 공간' },
-              { icon: '📱', title: <><span className="brand-name">언제칠까</span> 앱</>, description: '추억을 기록하다' },
+              { icon: '📱', title: <><span className="brand-name">언제칠까</span> 앱</>, description: '추억을 기록하다', href: '#app' },
+              { icon: '🏕️', title: 'Studio', description: '프리미엄 골프 공간', href: '#airtent' },
             ].map((item, i) => (
-              <motion.div
+              <motion.a
                 key={i}
+                href={item.href}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 1.1 + i * 0.1 }}
-                className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all"
+                className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all cursor-pointer"
               >
                 <div className="text-5xl mb-4">{item.icon}</div>
                 <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
                 <p className="text-white/80">{item.description}</p>
-              </motion.div>
+              </motion.a>
             ))}
           </motion.div>
         </motion.div>
