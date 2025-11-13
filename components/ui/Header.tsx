@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronDown, Home, Monitor } from 'lucide-react';
+import { ChevronDown, Home, Monitor, Smartphone } from 'lucide-react';
 import Button from './Button';
 import PurchaseModal from './PurchaseModal';
 
@@ -115,11 +115,21 @@ export default function Header() {
                         setIsModalOpen(true);
                         setPurchaseDropdownOpen(false);
                       }}
-                      className="w-full text-left px-4 py-3 hover:bg-blue-50 transition-colors text-gray-700 hover:text-blue-600 font-medium border-t border-gray-100 flex items-center gap-2"
+                      className="w-full text-left px-4 py-3 hover:bg-[#FEF7FB] transition-colors text-gray-700 hover:text-[#EC4899] font-medium border-t border-gray-100 flex items-center gap-2"
                     >
                       <Monitor className="w-5 h-5" />
                       스크린 구매
                     </button>
+                    <a
+                      href="#app"
+                      onClick={() => {
+                        setPurchaseDropdownOpen(false);
+                      }}
+                      className="w-full text-left px-4 py-3 hover:bg-[#FEF7FB] transition-colors text-gray-700 hover:text-[#EC4899] font-medium border-t border-gray-100 flex items-center gap-2"
+                    >
+                      <Smartphone className="w-5 h-5" />
+                      앱 다운로드
+                    </a>
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -198,6 +208,14 @@ export default function Header() {
                 <Monitor className="w-5 h-5" />
                 스크린 구매
               </button>
+              <a
+                href="#app"
+                onClick={() => setMobileMenuOpen(false)}
+                className="w-full px-4 py-2 bg-[#F472B6] text-white rounded-lg hover:bg-[#F9A8D4] transition-colors font-medium text-sm flex items-center justify-center gap-2"
+              >
+                <Smartphone className="w-5 h-5" />
+                앱 다운로드
+              </a>
             </div>
           </motion.div>
         )}
