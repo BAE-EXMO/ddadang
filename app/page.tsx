@@ -14,8 +14,8 @@ export default function Home() {
       <Header />
       <main>
         <HeroSection />
-        <AirtentSection />
         <AppGuideSection />
+        <AirtentSection />
         <StorySection />
         <CTASection />
       </main>
