@@ -67,30 +67,6 @@ export default function StorySection() {
           ))}
         </div>
       </motion.div>
-
-      {/* Company Info */}
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-        className="text-center"
-      >
-        <div className="inline-block bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
-          <h4 className="text-2xl font-bold text-gray-900 mb-4">
-            주식회사 EXMO
-          </h4>
-          <div className="space-y-2 text-gray-600">
-            <p>경기도 하남시 미사강변대로 16</p>
-            <p>하우스디 스마트밸리 F615호</p>
-            <p className="pt-3">
-              <a href="mailto:info@exmo.kr" className="text-blue-600 hover:text-blue-700 font-semibold">
-                info@exmo.kr
-              </a>
-            </p>
-          </div>
-        </div>
-      </motion.div>
     </SectionWrapper>
   );
 }
