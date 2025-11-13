@@ -19,6 +19,7 @@ export default function ProductSection() {
     {
       id: 'app',
       title: <><span className="brand-name">언제칠까</span> APP</>,
+      altText: '언제칠까 APP',
       description: <>골프 약속부터 정산까지. <span className="brand-name">언제칠까</span>로 한 번에 관리하세요.</>,
       image: 'https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800',
       ctaLabel: '앱 다운로드',
@@ -28,6 +29,7 @@ export default function ProductSection() {
     {
       id: 'tent',
       title: <><span className="brand-name">언제칠까</span> STUDIO</>,
+      altText: '언제칠까 STUDIO',
       description: '공기압 구조로 설치 5분! 실내외 어디든 설치 가능한 이동형 스크린골프 공간. 학교, 캠핑장, 해변, 축제, 전시회, 전원주택까지 장소 제약 없이 골프를 즐기세요.',
       image: '/images/tent/KakaoTalk_20251031_090254255.jpg',
       ctaLabel: '구매 문의',
@@ -37,6 +39,7 @@ export default function ProductSection() {
     {
       id: 'screen',
       title: <><span className="brand-name">언제칠까</span> SCREEN</>,
+      altText: '언제칠까 SCREEN',
       description: '소음·반사·내구성 모두를 잡은 차세대 골프 임팩트 스크린.',
       image: '/images/screen/연습장이미지.jpg',
       ctaLabel: '구매 문의',
@@ -76,7 +79,7 @@ export default function ProductSection() {
               <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-video group">
                 <img
                   src={product.image}
-                  alt={product.title}
+                  alt={product.altText}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className={`absolute inset-0 bg-gradient-to-br ${product.gradient} opacity-40 mix-blend-multiply`} />

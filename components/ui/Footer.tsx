@@ -2,10 +2,10 @@ import React from 'react';
 
 export default function Footer() {
   const quickLinks = [
-    { name: 'Studio', href: '#airtent' },
-    { name: <><span className="brand-name">언제칠까</span> 앱</>, href: '#app' },
-    { name: <><span className="brand-name">언제칠까</span> 이야기</>, href: '#story' },
-    { name: '문의하기', href: '#contact' },
+    { id: 'studio', name: 'Studio', href: '#airtent' },
+    { id: 'app', name: <><span className="brand-name">언제칠까</span> 앱</>, href: '#app' },
+    { id: 'story', name: <><span className="brand-name">언제칠까</span> 이야기</>, href: '#story' },
+    { id: 'contact', name: '문의하기', href: '#contact' },
   ];
 
   const socialLinks = [
@@ -43,7 +43,7 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-4 text-white">Quick Links</h4>
             <ul className="space-y-2">
               {quickLinks.map((link) => (
-                <li key={link.name}>
+                <li key={link.id}>
                   <a
                     href={link.href}
                     className="text-gray-300 hover:text-amber-400 transition-colors text-sm tracking-wide"

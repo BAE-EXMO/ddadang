@@ -17,10 +17,10 @@ export default function Header() {
   }, []);
 
   const navLinks = [
-    { name: 'Studio', href: '#airtent' },
-    { name: <><span className="brand-name">언제칠까</span> 앱</>, href: '#app' },
-    { name: <><span className="brand-name">언제칠까</span> 이야기</>, href: '#story' },
-    { name: '문의하기', href: '#contact' },
+    { id: 'studio', name: 'Studio', href: '#airtent' },
+    { id: 'app', name: <><span className="brand-name">언제칠까</span> 앱</>, href: '#app' },
+    { id: 'story', name: <><span className="brand-name">언제칠까</span> 이야기</>, href: '#story' },
+    { id: 'contact', name: '문의하기', href: '#contact' },
   ];
 
   return (
@@ -51,7 +51,7 @@ export default function Header() {
           <div className="hidden md:flex items-center space-x-6">
             {navLinks.map((link) => (
               <a
-                key={link.name}
+                key={link.id}
                 href={link.href}
                 className="text-gray-700 hover:text-black transition-colors font-normal text-sm"
               >
@@ -102,7 +102,7 @@ export default function Header() {
           >
             {navLinks.map((link) => (
               <a
-                key={link.name}
+                key={link.id}
                 href={link.href}
                 className="block py-2 text-gray-700 hover:text-black transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
