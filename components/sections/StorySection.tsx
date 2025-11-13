@@ -118,35 +118,6 @@ export default function StorySection() {
         </div>
       </motion.div>
 
-      {/* Brand Philosophy */}
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-        className="mb-24"
-      >
-        <div className="max-w-4xl mx-auto bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl p-12 text-white shadow-2xl">
-          <h3 className="text-3xl font-bold mb-8 text-center">
-            <span className="brand-name">언제칠까</span>의 철학
-          </h3>
-          <div className="space-y-6 text-lg leading-relaxed">
-            <p className="text-center text-2xl font-light italic text-yellow-300">
-              "기억에 남는 순간은 기술보다 사람입니다"
-            </p>
-            <p className="text-center">
-              스코어는 잊어도, 추억은 남습니다
-            </p>
-            <p className="text-center">
-              <span className="brand-name">언제칠까</span>는 골프를 통해 사람들의 시간을 더 아름답게 만듭니다
-            </p>
-            <p className="text-center text-xl font-semibold text-yellow-300 pt-4">
-              라운드가 끝나도 추억은 계속됩니다
-            </p>
-          </div>
-        </div>
-      </motion.div>
-
       {/* Customer Testimonials - 추억 앨범 */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
