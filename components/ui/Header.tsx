@@ -58,9 +58,6 @@ export default function Header() {
                 {link.name}
               </a>
             ))}
-            <Button variant="secondary" size="sm" href="#app">
-              <span className="brand-name">언제칠까</span> 앱
-            </Button>
           </div>
 
           {/* Mobile Menu Button */}
