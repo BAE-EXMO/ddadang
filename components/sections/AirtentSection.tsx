@@ -158,6 +158,28 @@ export default function AirtentSection() {
             <h4 className="text-3xl font-bold text-gray-900 text-center mb-12">
               스크린 특성
             </h4>
+            
+            {/* Screen Setup Image */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="mb-12"
+            >
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+                <img
+                  src="/images/studio-screen-setup.jpg"
+                  alt="언제칠까 Studio 스크린 시스템"
+                  className="w-full h-auto object-cover"
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none';
+                  }}
+                />
+              </div>
+            </motion.div>
+
+            {/* Feature Cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
                 { icon: '🧵', title: '3중에어메쉬원단', desc: '통풍성 우수' },
