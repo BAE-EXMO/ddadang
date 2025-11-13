@@ -93,7 +93,7 @@ export default function AirtentSection() {
                 className="w-full h-full object-contain"
               />
               <div className="absolute top-6 right-6 bg-amber-500 text-white px-6 py-3 rounded-full font-bold shadow-lg">
-                ⚡ 설치 30분
+                ⚡ 설치 5분
               </div>
             </div>
 
@@ -107,8 +107,8 @@ export default function AirtentSection() {
               {/* Key Features */}
               <div className="grid grid-cols-2 gap-4 pt-4">
                 {[
-                  { icon: '⚡', label: '빠른 설치', value: '30분' },
-                  { icon: '📦', label: '간편한 이동', value: '150kg' },
+                  { icon: '⚡', label: '빠른 설치', value: '5분' },
+                  { icon: '📦', label: '간편한 이동', value: '전용백' },
                   { icon: '🏕️', label: '실내외 설치', value: '자유롭게' },
                   { icon: '💪', label: '내구성', value: '우수' },
                 ].map((feature, i) => (
@@ -118,25 +118,6 @@ export default function AirtentSection() {
                     <div className="text-lg font-bold text-gray-900">{feature.value}</div>
                   </div>
                 ))}
-              </div>
-
-              {/* Specs */}
-              <div className="bg-gradient-to-r from-amber-50 to-orange-50 rounded-xl p-6 border-2 border-amber-200">
-                <h4 className="font-bold text-gray-900 mb-4">제품 사양</h4>
-                <div className="space-y-2 text-sm">
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">크기</span>
-                    <span className="font-bold text-gray-900">4.6m × 3.5m × 3.3m</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">무게</span>
-                    <span className="font-bold text-gray-900">약 150kg</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">구조</span>
-                    <span className="font-bold text-gray-900">공기압 프레임</span>
-                  </div>
-                </div>
               </div>
 
               <Button 
