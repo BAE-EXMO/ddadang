@@ -2,9 +2,9 @@ import React from 'react';
 
 export default function Footer() {
   const quickLinks = [
-    { id: 'studio', name: 'Studio', href: '#airtent' },
     { id: 'app', name: <><span className="brand-name">언제칠까</span> 앱</>, href: '#app' },
-    { id: 'story', name: <><span className="brand-name">언제칠까</span> 이야기</>, href: '#story' },
+    { id: 'studio', name: 'Studio', href: '#airtent' },
+    { id: 'screen', name: '프리미엄 스크린', href: '#airtent' },
     { id: 'contact', name: '문의하기', href: '#contact' },
   ];
 
