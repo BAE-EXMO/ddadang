@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import Button from '../ui/Button';
 
 export default function HeroSection() {
   const [mounted, setMounted] = useState(false);
@@ -49,18 +48,6 @@ export default function HeroSection() {
             <p className="text-2xl md:text-3xl text-white/95 font-light leading-relaxed max-w-4xl mx-auto drop-shadow-lg">
               <span className="brand-name">언제칠까</span>는 그 추억을 더 오래,<br className="md:hidden" /> 더 스마트하게 지켜드립니다
             </p>
-          </motion.div>
-
-          {/* CTA Buttons */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.6 }}
-            className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center"
-          >
-            <Button variant="primary" size="lg" href="#airtent">
-              추억의 시작 →
-            </Button>
           </motion.div>
 
           {/* Three Pillars */}
