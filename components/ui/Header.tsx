@@ -1,12 +1,17 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ChevronDown, Home, Monitor } from 'lucide-react';
 import Button from './Button';
+import PurchaseModal from './PurchaseModal';
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [purchaseDropdownOpen, setPurchaseDropdownOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [productType, setProductType] = useState<'tent' | 'screen'>('tent');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,6 +20,21 @@ export default function Header() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (purchaseDropdownOpen) {
+        const target = event.target as HTMLElement;
+        if (!target.closest('.purchase-dropdown')) {
+          setPurchaseDropdownOpen(false);
+        }
+      }
+    };
+    
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [purchaseDropdownOpen]);
 
   const navLinks = [
     { id: 'app', name: <><span className="brand-name">언제칠까</span> 앱</>, href: '#app' },
@@ -58,6 +78,52 @@ export default function Header() {
                 {link.name}
               </a>
             ))}
+            
+            {/* Purchase Dropdown */}
+            <div className="relative purchase-dropdown">
+              <button
+                onClick={() => setPurchaseDropdownOpen(!purchaseDropdownOpen)}
+                className="flex items-center gap-1 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium text-sm"
+              >
+                구매하기
+                <ChevronDown className={`w-4 h-4 transition-transform ${purchaseDropdownOpen ? 'rotate-180' : ''}`} />
+              </button>
+              
+              <AnimatePresence>
+                {purchaseDropdownOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-xl border border-gray-200 overflow-hidden z-50"
+                  >
+                    <button
+                      onClick={() => {
+                        setProductType('tent');
+                        setIsModalOpen(true);
+                        setPurchaseDropdownOpen(false);
+                      }}
+                      className="w-full text-left px-4 py-3 hover:bg-blue-50 transition-colors text-gray-700 hover:text-blue-600 font-medium flex items-center gap-2"
+                    >
+                      <Home className="w-5 h-5" />
+                      Studio 구매
+                    </button>
+                    <button
+                      onClick={() => {
+                        setProductType('screen');
+                        setIsModalOpen(true);
+                        setPurchaseDropdownOpen(false);
+                      }}
+                      className="w-full text-left px-4 py-3 hover:bg-blue-50 transition-colors text-gray-700 hover:text-blue-600 font-medium border-t border-gray-100 flex items-center gap-2"
+                    >
+                      <Monitor className="w-5 h-5" />
+                      스크린 구매
+                    </button>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
@@ -107,14 +173,42 @@ export default function Header() {
                 {link.name}
               </a>
             ))}
-            <div className="mt-4">
-              <Button variant="primary" size="sm" href="#download">
-                앱 다운로드
-              </Button>
+            
+            {/* Mobile Purchase Buttons */}
+            <div className="mt-4 space-y-2">
+              <button
+                onClick={() => {
+                  setProductType('tent');
+                  setIsModalOpen(true);
+                  setMobileMenuOpen(false);
+                }}
+                className="w-full px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium text-sm flex items-center justify-center gap-2"
+              >
+                <Home className="w-5 h-5" />
+                Studio 구매
+              </button>
+              <button
+                onClick={() => {
+                  setProductType('screen');
+                  setIsModalOpen(true);
+                  setMobileMenuOpen(false);
+                }}
+                className="w-full px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium text-sm flex items-center justify-center gap-2"
+              >
+                <Monitor className="w-5 h-5" />
+                스크린 구매
+              </button>
             </div>
           </motion.div>
         )}
       </nav>
+      
+      {/* Purchase Modal */}
+      <PurchaseModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        productType={productType}
+      />
     </header>
   );
 }
