@@ -6,7 +6,6 @@ import HeroSection from '@/components/sections/HeroSection';
 import AirtentSection from '@/components/sections/AirtentSection';
 import AppGuideSection from '@/components/sections/AppGuideSection';
 import StorySection from '@/components/sections/StorySection';
-import CTASection from '@/components/sections/CTASection';
 
 export default function Home() {
   return (
@@ -17,7 +16,6 @@ export default function Home() {
         <AppGuideSection />
         <AirtentSection />
         <StorySection />
-        <CTASection />
       </main>
       <Footer />
     </>
