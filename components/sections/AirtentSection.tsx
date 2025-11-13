@@ -58,7 +58,7 @@ export default function AirtentSection() {
     <>
       <SectionWrapper
         id="airtent"
-        className="bg-gradient-to-b from-white via-[#F5F9F6]/30 to-white"
+        className="bg-gradient-to-b from-white via-[#FEF7FB]/30 to-white"
       >
         {/* Section Header */}
         <motion.div
@@ -68,12 +68,12 @@ export default function AirtentSection() {
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-          <span className="inline-block px-6 py-2 bg-[#E5F1E8] text-[#1F3622] rounded-full text-sm font-semibold mb-6">
+          <span className="inline-block px-6 py-2 bg-[#FBE4F0] text-[#DB2777] rounded-full text-sm font-semibold mb-6">
             추억의 무대를 만드는 기술
           </span>
           <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-relaxed md:leading-loose">
             소중한 사람들과 함께할<br />
-            <span className="text-[#2F5233]">골프의 무대</span>를 어디든 만들 수 있습니다
+            <span className="text-[#EC4899]">골프의 무대</span>를 어디든 만들 수 있습니다
           </h2>
         </motion.div>
 
@@ -87,13 +87,13 @@ export default function AirtentSection() {
         >
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             {/* Product Image */}
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-[#F5F9F6] to-white p-8">
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-[#FEF7FB] to-white p-8">
               <img
                 src="/images/studio-locations/실내.png"
                 alt="언제칠까 Studio"
                 className="w-full h-full object-contain"
               />
-              <div className="absolute top-6 right-6 bg-[#2F5233] text-white px-6 py-3 rounded-full font-bold shadow-lg">
+              <div className="absolute top-6 right-6 bg-[#EC4899] text-white px-6 py-3 rounded-full font-bold shadow-lg">
                 ⚡ 설치 5분
               </div>
             </div>
@@ -113,8 +113,8 @@ export default function AirtentSection() {
                   { icon: <Tent className="w-8 h-8" />, label: '실내외 설치', value: '자유롭게' },
                   { icon: <Dumbbell className="w-8 h-8" />, label: '내구성', value: '우수' },
                 ].map((feature, i) => (
-                  <div key={i} className="bg-white rounded-xl p-4 shadow-md border border-[#E5F1E8]">
-                    <div className="text-[#2F5233] mb-2">{feature.icon}</div>
+                  <div key={i} className="bg-white rounded-xl p-4 shadow-md border border-[#FBE4F0]">
+                    <div className="text-[#EC4899] mb-2">{feature.icon}</div>
                     <div className="text-sm text-gray-600">{feature.label}</div>
                     <div className="text-lg font-bold text-gray-900">{feature.value}</div>
                   </div>
@@ -168,7 +168,7 @@ export default function AirtentSection() {
                   <h4 className="text-lg font-bold mb-1">{location.title}</h4>
                   <p className="text-sm text-white/90">{location.description}</p>
                 </div>
-                <div className="absolute inset-0 border-4 border-transparent group-hover:border-[#4A7A50] transition-all duration-300 rounded-2xl pointer-events-none" />
+                <div className="absolute inset-0 border-4 border-transparent group-hover:border-[#F472B6] transition-all duration-300 rounded-2xl pointer-events-none" />
               </motion.div>
             ))}
           </div>
@@ -183,11 +183,11 @@ export default function AirtentSection() {
           className="mb-20 mt-32"
         >
           <div className="text-center mb-16">
-            <span className="inline-block px-6 py-2 bg-[#E5F1E8] text-[#1F3622] rounded-full text-sm font-semibold mb-6">
+            <span className="inline-block px-6 py-2 bg-[#FBE4F0] text-[#DB2777] rounded-full text-sm font-semibold mb-6">
               <span className="brand-name">언제칠까</span> Studio가 조용한 이유
             </span>
             <h3 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              프리미엄 <span className="text-[#2F5233]">스크린 시스템</span>
+              프리미엄 <span className="text-[#EC4899]">스크린 시스템</span>
             </h3>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               타격감은 살리고, 소음은 줄였습니다<br />
@@ -235,9 +235,9 @@ export default function AirtentSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: i * 0.1 }}
-                  className="bg-white rounded-2xl p-6 shadow-xl border-2 border-gray-200 hover:border-[#4A7A50] transition-all"
+                  className="bg-white rounded-2xl p-6 shadow-xl border-2 border-gray-200 hover:border-[#F472B6] transition-all"
                 >
-                  <div className="flex justify-center mb-4 text-[#2F5233]">{feature.icon}</div>
+                  <div className="flex justify-center mb-4 text-[#EC4899]">{feature.icon}</div>
                   <h5 className="text-lg font-bold text-gray-900 mb-2 text-center">
                     {feature.title}
                   </h5>
@@ -250,17 +250,17 @@ export default function AirtentSection() {
           </div>
 
           {/* Why It Matters */}
-          <div className="max-w-4xl mx-auto bg-gradient-to-br from-[#1F3622] to-[#2F5233] rounded-3xl p-12 text-white shadow-2xl">
+          <div className="max-w-4xl mx-auto bg-gradient-to-br from-[#DB2777] to-[#EC4899] rounded-3xl p-12 text-white shadow-2xl">
             <h4 className="text-3xl font-bold mb-8 text-center">
               좋은 추억은 좋은 공간에서 만들어집니다
             </h4>
             <div className="space-y-6">
               <p className="text-lg leading-relaxed text-center">
                 <span className="brand-name">언제칠까</span> Studio의 부드러운 타구감과 저소음은<br />
-                <span className="font-bold text-[#8BA888]">TPU 라미네이트 스크린</span> 덕분입니다
+                <span className="font-bold text-[#FBE4F0]">TPU 라미네이트 스크린</span> 덕분입니다
               </p>
-              <div className="border-t border-[#1F3622]/50 pt-6">
-                <p className="text-center text-xl font-semibold text-[#8BA888]">
+              <div className="border-t border-white/20 pt-6">
+                <p className="text-center text-xl font-semibold text-[#FBE4F0]">
                   '프리미엄 스크린 시스템'은 기본 사양입니다
                 </p>
                 <p className="text-center text-white/80 mt-2">

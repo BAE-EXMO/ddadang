@@ -83,7 +83,7 @@ export default function Header() {
             <div className="relative purchase-dropdown">
               <button
                 onClick={() => setPurchaseDropdownOpen(!purchaseDropdownOpen)}
-                className="flex items-center gap-1 px-4 py-2 bg-[#2F5233] text-white rounded-lg hover:bg-[#4A7A50] transition-colors font-medium text-sm"
+                className="flex items-center gap-1 px-4 py-2 bg-[#EC4899] text-white rounded-lg hover:bg-[#F472B6] transition-colors font-medium text-sm"
               >
                 구매하기
                 <ChevronDown className={`w-4 h-4 transition-transform ${purchaseDropdownOpen ? 'rotate-180' : ''}`} />
@@ -104,7 +104,7 @@ export default function Header() {
                         setIsModalOpen(true);
                         setPurchaseDropdownOpen(false);
                       }}
-                      className="w-full text-left px-4 py-3 hover:bg-[#F5F9F6] transition-colors text-gray-700 hover:text-[#2F5233] font-medium flex items-center gap-2"
+                      className="w-full text-left px-4 py-3 hover:bg-[#FEF7FB] transition-colors text-gray-700 hover:text-[#EC4899] font-medium flex items-center gap-2"
                     >
                       <Home className="w-5 h-5" />
                       Studio 구매
@@ -182,7 +182,7 @@ export default function Header() {
                   setIsModalOpen(true);
                   setMobileMenuOpen(false);
                 }}
-                className="w-full px-4 py-2 bg-[#2F5233] text-white rounded-lg hover:bg-[#4A7A50] transition-colors font-medium text-sm flex items-center justify-center gap-2"
+                className="w-full px-4 py-2 bg-[#EC4899] text-white rounded-lg hover:bg-[#F472B6] transition-colors font-medium text-sm flex items-center justify-center gap-2"
               >
                 <Home className="w-5 h-5" />
                 Studio 구매
@@ -193,7 +193,7 @@ export default function Header() {
                   setIsModalOpen(true);
                   setMobileMenuOpen(false);
                 }}
-                className="w-full px-4 py-2 bg-[#2F5233] text-white rounded-lg hover:bg-[#4A7A50] transition-colors font-medium text-sm flex items-center justify-center gap-2"
+                className="w-full px-4 py-2 bg-[#EC4899] text-white rounded-lg hover:bg-[#F472B6] transition-colors font-medium text-sm flex items-center justify-center gap-2"
               >
                 <Monitor className="w-5 h-5" />
                 스크린 구매

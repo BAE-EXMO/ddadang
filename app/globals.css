@@ -5,12 +5,12 @@
   --background: #FFFFFF;
   --foreground: #1A1A1A;
   
-  /* Brand Colors - Logo Green */
-  --brand-primary: #2F5233;      /* 로고 메인 색상 - 진한 녹색 */
-  --brand-primary-light: #4A7A50; /* 밝은 녹색 */
-  --brand-primary-lighter: #6B9B71; /* 더 밝은 녹색 */
-  --brand-primary-lightest: #8BA888; /* 연한 녹색 */
-  --brand-primary-dark: #1F3622;  /* 어두운 녹색 */
+  /* Brand Colors - Logo Pink (클로버) */
+  --brand-primary: #EC4899;      /* 로고 메인 색상 - 핑크 */
+  --brand-primary-light: #F472B6; /* 밝은 핑크 */
+  --brand-primary-lighter: #F9A8D4; /* 더 밝은 핑크 */
+  --brand-primary-lightest: #FBE4F0; /* 연한 핑크 */
+  --brand-primary-dark: #DB2777;  /* 어두운 핑크 */
   
   /* Grayscale */
   --gray-50: #FAFAFA;
@@ -22,8 +22,8 @@
   --gray-900: #171717;
   
   /* Deprecated - 호환성 유지 */
-  --deep-green: var(--brand-primary);
-  --sage-green: var(--brand-primary-lightest);
+  --deep-green: #2F5233;
+  --sage-green: #8BA888;
 }
 
 @theme inline {

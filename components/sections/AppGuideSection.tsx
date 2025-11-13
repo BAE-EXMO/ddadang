@@ -20,28 +20,28 @@ export default function AppGuideSection() {
       title: '골프 약속, 이제 간단하게', 
       problem: '4명의 스케줄 조율, 날씨 확인, 골프장 예약 변경 공지...',
       solution: '한 번의 기록으로 모두 완료. 캘린더에서 날씨 확인하고, 약속 카드가 곧 단톡방입니다.',
-      color: 'from-[#2F5233] to-[#4A7A50]'
+      color: 'from-[#EC4899] to-[#F472B6]'
     },
     { 
       icon: <DollarSign className="w-12 h-12" />, 
       title: '정산 걱정 없는 즐거운 라운드', 
       problem: '타당 천원 정산 때문에 언성이 높아지고, 총액이 안 맞아 불편하셨죠?',
       solution: '타수에 따른 정확한 자동 정산. 누가 얼마를 잃고 땄는지 투명하게. 이제 천원 때문에 기분 상할 일 없습니다.',
-      color: 'from-[#4A7A50] to-[#6B9B71]'
+      color: 'from-[#F472B6] to-[#F9A8D4]'
     },
     { 
       icon: <Users className="w-12 h-12" />, 
       title: '총무도, 회원도 편한 월례회', 
       problem: '총무는 참여 여부 일일이 확인하고, 회원은 불참 메시지 남기기 부담스럽고...',
       solution: '약속 카드 삭제만으로 불참 의사 전달. 회원 관리 한눈에, 새 회원 추가도 자동으로.',
-      color: 'from-[#6B9B71] to-[#8BA888]'
+      color: 'from-[#F9A8D4] to-[#FBE4F0]'
     },
     { 
       icon: <Camera className="w-12 h-12" />, 
       title: '함께한 추억, 영원히 간직하세요', 
       problem: '작년 그날의 라운드, 누구와 함께했는지 기억나시나요?',
       solution: '한 명만 저장하면 동반자 모두에게 공유. 앨범처럼 찾아보는 추억, 전적 비교까지.',
-      color: 'from-[#1F3622] to-[#2F5233]'
+      color: 'from-[#DB2777] to-[#EC4899]'
     },
   ];
 
@@ -81,7 +81,7 @@ export default function AppGuideSection() {
   return (
     <SectionWrapper
       id="app"
-      className="bg-gradient-to-b from-white via-[#F5F9F6]/30 to-white"
+      className="bg-gradient-to-b from-white via-[#FEF7FB]/30 to-white"
     >
       {/* Emotional Opening */}
       <motion.div
@@ -91,11 +91,11 @@ export default function AppGuideSection() {
         transition={{ duration: 0.8 }}
         className="text-center mb-20"
       >
-        <span className="inline-block px-6 py-2 bg-[#E5F1E8] text-[#1F3622] rounded-full text-sm font-semibold mb-6">
+        <span className="inline-block px-6 py-2 bg-[#FBE4F0] text-[#DB2777] rounded-full text-sm font-semibold mb-6">
           추억을 기억하는 방법
         </span>
         <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-8 leading-relaxed md:leading-loose">
-          기억은 <span className="text-[#2F5233]">기록될 때</span><br />
+          기억은 <span className="text-[#EC4899]">기록될 때</span><br />
           완성됩니다
         </h2>
 
@@ -108,9 +108,9 @@ export default function AppGuideSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="bg-white rounded-2xl p-6 shadow-lg border-2 border-[#E5F1E8]"
+              className="bg-white rounded-2xl p-6 shadow-lg border-2 border-[#FBE4F0]"
             >
-              <div className="flex justify-center mb-4 text-[#2F5233]">{memory.icon}</div>
+              <div className="flex justify-center mb-4 text-[#EC4899]">{memory.icon}</div>
               <p className="text-lg text-gray-700 font-medium italic">
                 "{memory.text}"
               </p>
@@ -145,7 +145,7 @@ export default function AppGuideSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
           {/* App Screenshots/Info */}
           <div className="relative">
-            <div className="bg-gradient-to-br from-[#2F5233] to-[#1F3622] rounded-3xl p-12 text-white shadow-2xl">
+            <div className="bg-gradient-to-br from-[#EC4899] to-[#DB2777] rounded-3xl p-12 text-white shadow-2xl">
               <h3 className="text-3xl font-bold mb-6">
                 골프의 추억 = <br />
                 함께한 시간 + 기록 + 에피소드
@@ -223,7 +223,7 @@ export default function AppGuideSection() {
               transition={{ duration: 0.5, delay: i * 0.05 }}
               className="bg-white rounded-xl p-4 shadow-md border border-gray-100 hover:shadow-lg transition-all text-center"
             >
-              <div className="flex justify-center mb-3 text-[#2F5233]">{feature.icon}</div>
+              <div className="flex justify-center mb-3 text-[#EC4899]">{feature.icon}</div>
               <h4 className="text-sm font-bold text-gray-900 mb-1">{feature.title}</h4>
               <p className="text-xs text-gray-600">{feature.desc}</p>
             </motion.div>
