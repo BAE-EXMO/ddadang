@@ -98,7 +98,7 @@ export default function AppGuideSection() {
         <span className="inline-block px-6 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold mb-6">
           추억을 기억하는 방법
         </span>
-        <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-8">
+        <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-8 leading-relaxed md:leading-loose">
           기억은 <span className="text-blue-600">기록될 때</span><br />
           완성됩니다
         </h2>
