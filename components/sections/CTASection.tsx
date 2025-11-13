@@ -44,42 +44,6 @@ export default function CTASection() {
 
       {/* Content */}
       <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-        >
-          <span className="inline-block px-6 py-2 bg-yellow-500/20 border border-yellow-400/30 rounded-full text-yellow-300 text-sm font-semibold mb-8 backdrop-blur-sm">
-            추억을 함께 만들어갑니다
-          </span>
-
-          {/* Main Heading */}
-                 <h2 className="text-5xl md:text-7xl font-extrabold text-white mb-8 tracking-tight leading-tight drop-shadow-2xl">
-                   추억을 만드는 기술
-                   <br />
-                   <span className="brand-name">
-                     언제칠까
-                   </span>
-                 </h2>
-
-                 {/* Emotional Messages */}
-                 <motion.div
-                   initial={{ opacity: 0 }}
-                   whileInView={{ opacity: 1 }}
-                   viewport={{ once: true }}
-                   transition={{ duration: 0.8, delay: 0.2 }}
-                   className="mb-12 space-y-4"
-                 >
-                   <p className="text-2xl md:text-3xl text-white font-light italic">
-                     "추억을 만들고, 기록하고, 지켜줍니다"
-                   </p>
-                   <p className="text-xl text-white/90">
-                     Studio · <span className="brand-name">언제칠까</span> 앱
-                   </p>
-                 </motion.div>
-        </motion.div>
-
         {/* CTA Buttons */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
