@@ -121,7 +121,7 @@ export default function Header() {
                       스크린 구매
                     </button>
                     <a
-                      href="#app"
+                      href="#download"
                       onClick={() => {
                         setPurchaseDropdownOpen(false);
                       }}
@@ -209,7 +209,7 @@ export default function Header() {
                 스크린 구매
               </button>
               <a
-                href="#app"
+                href="#download"
                 onClick={() => setMobileMenuOpen(false)}
                 className="w-full px-4 py-2 bg-[#F472B6] text-white rounded-lg hover:bg-[#F9A8D4] transition-colors font-medium text-sm flex items-center justify-center gap-2"
               >

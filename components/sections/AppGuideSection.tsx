@@ -233,6 +233,7 @@ export default function AppGuideSection() {
 
       {/* Emotional Closing */}
       <motion.div
+        id="download"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
