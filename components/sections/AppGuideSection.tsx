@@ -130,7 +130,7 @@ export default function AppGuideSection() {
             className="space-y-4"
           >
             <p className="text-2xl text-gray-700 font-light">
-              언제칠까 앱은 추억을 잃지 않게 합니다
+              <span className="brand-name">언제칠까</span> 앱은 추억을 잃지 않게 합니다
             </p>
             <p className="text-xl text-gray-600">
               사진처럼, 스코어도 기록됩니다
@@ -167,7 +167,7 @@ export default function AppGuideSection() {
               </div>
               <div className="mt-8 pt-8 border-t border-blue-400">
                 <p className="text-2xl font-bold">
-                  → 언제칠까 앱이 추억을 '간단히' 남겨줍니다
+                  → <span className="brand-name">언제칠까</span> 앱이 추억을 '간단히' 남겨줍니다
                 </p>
               </div>
             </div>
@@ -248,7 +248,7 @@ export default function AppGuideSection() {
 
           <div className="pt-8">
             <Button variant="primary" size="lg" href="#download">
-              📱 언제칠까 앱 다운로드
+              📱 <span className="brand-name">언제칠까</span> 앱 다운로드
             </Button>
           </div>
 

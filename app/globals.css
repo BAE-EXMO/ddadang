@@ -12,6 +12,7 @@
   --sunset-orange: #E8997C;
   --sky-blue: #A8C5DA;
   --accent: #D4AF37;
+  --brand-pink: #EC4899;
 }
 
 @theme inline {
@@ -52,4 +53,10 @@ html {
 
 .shadow-medium {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Brand name styling */
+.brand-name {
+  color: var(--brand-pink);
+  font-weight: 600;
 }

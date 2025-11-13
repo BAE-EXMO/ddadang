@@ -76,7 +76,7 @@ export default function AirtentSection() {
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             "추억은 장소에 묶여 있지 않습니다"<br />
-            언제칠까 Studio는 골프를 어디서든 가능하게 합니다
+            <span className="brand-name">언제칠까</span> Studio는 골프를 어디서든 가능하게 합니다
           </p>
         </motion.div>
 
@@ -170,7 +170,7 @@ export default function AirtentSection() {
         >
           <div className="text-center mb-16">
             <span className="inline-block px-6 py-2 bg-green-100 text-green-800 rounded-full text-sm font-semibold mb-6">
-              언제칠까 Studio가 조용한 이유
+              <span className="brand-name">언제칠까</span> Studio가 조용한 이유
             </span>
             <h3 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               프리미엄 <span className="text-green-600">스크린 시스템</span>
@@ -326,7 +326,7 @@ export default function AirtentSection() {
             </h4>
             <div className="space-y-6">
               <p className="text-lg leading-relaxed text-center">
-                언제칠까 Studio의 부드러운 타구감과 저소음은<br />
+                <span className="brand-name">언제칠까</span> Studio의 부드러운 타구감과 저소음은<br />
                 <span className="font-bold text-yellow-300">TPU 라미네이트 스크린</span> 덕분입니다
               </p>
               <div className="border-t border-green-700 pt-6">
@@ -408,7 +408,7 @@ export default function AirtentSection() {
               "추억은 특별한 장소에서 만들어집니다"
             </p>
             <p className="text-xl text-gray-600 mt-6">
-              언제칠까 Studio가 그 특별한 장소를 만들어드립니다
+              <span className="brand-name">언제칠까</span> Studio가 그 특별한 장소를 만들어드립니다
             </p>
           </div>
         </motion.div>

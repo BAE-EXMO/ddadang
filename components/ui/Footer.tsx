@@ -3,8 +3,8 @@ import React from 'react';
 export default function Footer() {
   const quickLinks = [
     { name: 'Studio', href: '#airtent' },
-    { name: '언제칠까 앱', href: '#app' },
-    { name: '언제칠까 이야기', href: '#story' },
+    { name: <><span className="brand-name">언제칠까</span> 앱</>, href: '#app' },
+    { name: <><span className="brand-name">언제칠까</span> 이야기</>, href: '#story' },
     { name: '문의하기', href: '#contact' },
   ];
 
@@ -28,15 +28,13 @@ export default function Footer() {
                   className="w-full h-full object-contain"
                 />
               </div>
-              <h3 className="text-3xl font-bold">
-                <span className="bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">
-                  언제칠까
-                </span>
+              <h3 className="text-3xl font-bold brand-name">
+                언제칠까
               </h3>
             </div>
             <p className="text-sm text-gray-400 mb-2">by EXMO Inc.</p>
             <p className="text-gray-300 text-sm">
-              Studio · 언제칠까 앱
+              Studio · <span className="brand-name">언제칠까</span> 앱
             </p>
           </div>
 

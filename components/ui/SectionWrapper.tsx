@@ -8,8 +8,8 @@ interface SectionWrapperProps {
   children: React.ReactNode;
   id?: string;
   className?: string;
-  heading?: string;
-  subheading?: string;
+  heading?: React.ReactNode;
+  subheading?: React.ReactNode;
   bgColor?: 'dark' | 'darker' | 'gradient';
 }
 

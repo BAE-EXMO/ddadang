@@ -59,7 +59,7 @@ export default function StudioLocationSection() {
   return (
     <SectionWrapper
       id="studio-locations"
-      heading="언제칠까 STUDIO, 어디든 설치 가능합니다"
+      heading={<><span className="brand-name">언제칠까</span> STUDIO, 어디든 설치 가능합니다</>}
       subheading="5분 안에 설치 완료! 장소에 구애받지 않는 이동형 스크린골프 공간"
       bgColor="dark"
     >

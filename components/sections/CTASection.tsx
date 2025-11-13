@@ -58,7 +58,7 @@ export default function CTASection() {
                  <h2 className="text-5xl md:text-7xl font-extrabold text-white mb-8 tracking-tight leading-tight drop-shadow-2xl">
                    추억을 만드는 기술
                    <br />
-                   <span className="text-yellow-400">
+                   <span className="brand-name">
                      언제칠까
                    </span>
                  </h2>
@@ -75,7 +75,7 @@ export default function CTASection() {
                      "추억을 만들고, 기록하고, 지켜줍니다"
                    </p>
                    <p className="text-xl text-white/90">
-                     Studio · 언제칠까 앱
+                     Studio · <span className="brand-name">언제칠까</span> 앱
                    </p>
                  </motion.div>
         </motion.div>
@@ -92,7 +92,7 @@ export default function CTASection() {
                  Studio 문의
                </Button>
                <Button variant="secondary" size="lg" href="#app">
-                 언제칠까 앱 다운로드
+                 <span className="brand-name">언제칠까</span> 앱 다운로드
                </Button>
         </motion.div>
 

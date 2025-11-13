@@ -18,8 +18,8 @@ export default function Header() {
 
   const navLinks = [
     { name: 'Studio', href: '#airtent' },
-    { name: '언제칠까 앱', href: '#app' },
-    { name: '언제칠까 이야기', href: '#story' },
+    { name: <><span className="brand-name">언제칠까</span> 앱</>, href: '#app' },
+    { name: <><span className="brand-name">언제칠까</span> 이야기</>, href: '#story' },
     { name: '문의하기', href: '#contact' },
   ];
 
@@ -42,7 +42,7 @@ export default function Header() {
                 className="w-full h-full object-contain"
               />
             </div>
-            <div className="text-2xl font-bold bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">
+            <div className="text-2xl font-bold brand-name">
               언제칠까
             </div>
           </a>
@@ -59,7 +59,7 @@ export default function Header() {
               </a>
             ))}
             <Button variant="secondary" size="sm" href="#app">
-              언제칠까 앱
+              <span className="brand-name">언제칠까</span> 앱
             </Button>
           </div>
 

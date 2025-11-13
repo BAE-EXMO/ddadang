@@ -18,8 +18,8 @@ export default function ProductSection() {
   const products = [
     {
       id: 'app',
-      title: '언제칠까 APP',
-      description: '골프 약속부터 정산까지. 언제칠까로 한 번에 관리하세요.',
+      title: <><span className="brand-name">언제칠까</span> APP</>,
+      description: <>골프 약속부터 정산까지. <span className="brand-name">언제칠까</span>로 한 번에 관리하세요.</>,
       image: 'https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800',
       ctaLabel: '앱 다운로드',
       ctaHref: '#download',
@@ -27,7 +27,7 @@ export default function ProductSection() {
     },
     {
       id: 'tent',
-      title: '언제칠까 STUDIO',
+      title: <><span className="brand-name">언제칠까</span> STUDIO</>,
       description: '공기압 구조로 설치 5분! 실내외 어디든 설치 가능한 이동형 스크린골프 공간. 학교, 캠핑장, 해변, 축제, 전시회, 전원주택까지 장소 제약 없이 골프를 즐기세요.',
       image: '/images/tent/KakaoTalk_20251031_090254255.jpg',
       ctaLabel: '구매 문의',
@@ -36,7 +36,7 @@ export default function ProductSection() {
     },
     {
       id: 'screen',
-      title: '언제칠까 SCREEN',
+      title: <><span className="brand-name">언제칠까</span> SCREEN</>,
       description: '소음·반사·내구성 모두를 잡은 차세대 골프 임팩트 스크린.',
       image: '/images/screen/연습장이미지.jpg',
       ctaLabel: '구매 문의',
@@ -55,8 +55,8 @@ export default function ProductSection() {
       
       <SectionWrapper
         id="products"
-        heading="언제칠까, 세 가지 형태의 솔루션"
-        subheading="언제칠까는 골프를 더 똑똑하게 만듭니다."
+        heading={<><span className="brand-name">언제칠까</span>, 세 가지 형태의 솔루션</>}
+        subheading={<><span className="brand-name">언제칠까</span>는 골프를 더 똑똑하게 만듭니다.</>}
         bgColor="dark"
       >
       <div className="space-y-24">

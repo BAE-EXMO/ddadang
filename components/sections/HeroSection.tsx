@@ -47,7 +47,7 @@ export default function HeroSection() {
             className="space-y-6"
           >
             <p className="text-2xl md:text-3xl text-white/95 font-light leading-relaxed max-w-4xl mx-auto drop-shadow-lg">
-              언제칠까는 그 추억을 더 오래,<br className="md:hidden" /> 더 스마트하게 지켜드립니다
+              <span className="brand-name">언제칠까</span>는 그 추억을 더 오래,<br className="md:hidden" /> 더 스마트하게 지켜드립니다
             </p>
 
             <div className="pt-8 space-y-4">
@@ -84,7 +84,7 @@ export default function HeroSection() {
           >
             {[
               { icon: '🏕️', title: 'Studio', description: '프리미엄 골프 공간' },
-              { icon: '📱', title: '언제칠까 앱', description: '추억을 기록하다' },
+              { icon: '📱', title: <><span className="brand-name">언제칠까</span> 앱</>, description: '추억을 기록하다' },
             ].map((item, i) => (
               <motion.div
                 key={i}
