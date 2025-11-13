@@ -59,6 +59,7 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4 text-white">Contact</h4>
             <div className="text-sm text-gray-300 space-y-2">
+              <p className="font-semibold text-white">엑스모 주식회사</p>
               <p>경기도 하남시 미사강변대로 16</p>
               <p>하우스디 스마트밸리 F615호</p>
               <p className="mt-4">
