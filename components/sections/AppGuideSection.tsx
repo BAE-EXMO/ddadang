@@ -13,72 +13,67 @@ export default function AppGuideSection() {
     { icon: '⛳', text: '최고의 샷, 그 순간의 감동' },
   ];
 
-  const features = [
+  const benefits = [
     { 
-      icon: '🗓️', 
-      title: '약속 관리', 
-      description: '일정 조율부터 동반자 초대까지',
+      icon: '📅', 
+      title: '골프 약속, 이제 간단하게', 
+      problem: '4명의 스케줄 조율, 날씨 확인, 골프장 예약 변경 공지...',
+      solution: '한 번의 기록으로 모두 완료. 캘린더에서 날씨 확인하고, 약속 카드가 곧 단톡방입니다.',
       color: 'from-blue-500 to-cyan-500'
     },
     { 
-      icon: '💬', 
-      title: '실시간 채팅', 
-      description: '약속별 그룹 채팅으로 소통',
+      icon: '💰', 
+      title: '정산 걱정 없는 즐거운 라운드', 
+      problem: '타당 천원 정산 때문에 언성이 높아지고, 총액이 안 맞아 불편하셨죠?',
+      solution: '타수에 따른 정확한 자동 정산. 누가 얼마를 잃고 땄는지 투명하게. 이제 천원 때문에 기분 상할 일 없습니다.',
       color: 'from-green-500 to-emerald-500'
     },
     { 
-      icon: '⚡', 
-      title: '스코어 기록', 
-      description: '간편한 버튼 입력',
-      color: 'from-yellow-500 to-orange-500'
-    },
-    { 
-      icon: '💰', 
-      title: '자동 정산', 
-      description: '복잡한 계산은 이제 그만',
+      icon: '👥', 
+      title: '총무도, 회원도 편한 월례회', 
+      problem: '총무는 참여 여부 일일이 확인하고, 회원은 불참 메시지 남기기 부담스럽고...',
+      solution: '약속 카드 삭제만으로 불참 의사 전달. 회원 관리 한눈에, 새 회원 추가도 자동으로.',
       color: 'from-purple-500 to-pink-500'
     },
     { 
-      icon: '🏆', 
-      title: '추억 저장', 
-      description: '모든 라운드를 기록',
-      color: 'from-red-500 to-rose-500'
-    },
-    { 
-      icon: '👥', 
-      title: '월례회', 
-      description: '정기 모임을 한곳에서',
-      color: 'from-indigo-500 to-blue-500'
+      icon: '📸', 
+      title: '함께한 추억, 영원히 간직하세요', 
+      problem: '작년 그날의 라운드, 누구와 함께했는지 기억나시나요?',
+      solution: '한 명만 저장하면 동반자 모두에게 공유. 앨범처럼 찾아보는 추억, 전적 비교까지.',
+      color: 'from-rose-500 to-orange-500'
     },
   ];
 
-  const useCases = [
+  const quickFeatures = [
     {
-      title: '골프 약속 만들기',
-      steps: [
-        '새 약속 버튼 터치',
-        '날짜, 시간, 골프장 입력',
-        '동반자 초대',
-        'SMS 초대장 자동 발송',
-      ],
+      icon: '📅',
+      title: '약속 생성',
+      desc: '캘린더에서 날씨 보며 일정 조율',
     },
     {
-      title: '게임 스코어링',
-      steps: [
-        '채팅방에서 게임 시작',
-        '코스 및 플레이어 설정',
-        '홀별 스코어 간편 입력',
-        '실시간 순위 확인',
-      ],
+      icon: '💬',
+      title: '그룹 채팅',
+      desc: '약속 카드가 곧 단톡방',
     },
     {
+      icon: '⚡',
+      title: '간편 입력',
+      desc: '홀별 스코어 버튼으로 기록',
+    },
+    {
+      icon: '💰',
       title: '자동 정산',
-      steps: [
-        '홀 완료 후 정산하기',
-        '타당, 버디 자동 계산',
-        '벌금 자동 적용',
-        '최종 정산표 저장',
-      ],
+      desc: '타수 기반 투명한 계산',
+    },
+    {
+      icon: '📊',
+      title: '전적 관리',
+      desc: '동반자별 누적 전적 비교',
+    },
+    {
+      icon: '🏆',
+      title: '추억 저장',
+      desc: '앨범처럼 라운드 기록 보관',
     },
   ];
 
@@ -173,26 +168,29 @@ export default function AppGuideSection() {
             </div>
           </div>
 
-          {/* Features List */}
+          {/* Benefits List */}
           <div className="space-y-6">
             <h3 className="text-3xl font-bold text-gray-900 mb-8">
-              스마트한 기록 시스템
+              <span className="brand-name">언제칠까</span> 앱의 장점
             </h3>
-            {features.map((feature, i) => (
+            {benefits.map((benefit, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="flex items-center gap-4 bg-white rounded-xl p-4 shadow-md border border-gray-100 hover:shadow-lg transition-all"
+                className="bg-white rounded-xl p-6 shadow-md border border-gray-100 hover:shadow-xl transition-all"
               >
-                <div className={`text-4xl bg-gradient-to-r ${feature.color} w-16 h-16 rounded-2xl flex items-center justify-center text-white shadow-lg`}>
-                  {feature.icon}
-                </div>
-                <div>
-                  <h4 className="text-xl font-bold text-gray-900">{feature.title}</h4>
-                  <p className="text-gray-600">{feature.description}</p>
+                <div className="flex items-start gap-4 mb-4">
+                  <div className={`text-4xl bg-gradient-to-r ${benefit.color} w-16 h-16 flex-shrink-0 rounded-2xl flex items-center justify-center text-white shadow-lg`}>
+                    {benefit.icon}
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-bold text-gray-900 mb-2">{benefit.title}</h4>
+                    <p className="text-sm text-gray-500 italic mb-2">❌ {benefit.problem}</p>
+                    <p className="text-gray-700">✅ {benefit.solution}</p>
+                  </div>
                 </div>
               </motion.div>
             ))}
@@ -200,7 +198,7 @@ export default function AppGuideSection() {
         </div>
       </motion.div>
 
-      {/* How to Use */}
+      {/* Quick Features */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -208,26 +206,26 @@ export default function AppGuideSection() {
         transition={{ duration: 0.8 }}
         className="mb-20"
       >
-        <h3 className="text-3xl font-bold text-gray-900 text-center mb-12">
-          간편한 사용 방법
+        <h3 className="text-3xl font-bold text-gray-900 text-center mb-4">
+          모든 기능이 하나의 앱에
         </h3>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {useCases.map((useCase, index) => (
-            <Card key={index} delay={index * 0.1}>
-              <h4 className="text-2xl font-bold text-gray-900 mb-6">
-                {useCase.title}
-              </h4>
-              <div className="space-y-3">
-                {useCase.steps.map((step, i) => (
-                  <div key={i} className="flex items-start gap-3">
-                    <span className="flex-shrink-0 w-7 h-7 bg-blue-500 text-white rounded-full flex items-center justify-center text-sm font-bold">
-                      {i + 1}
-                    </span>
-                    <p className="text-gray-700 pt-0.5">{step}</p>
-                  </div>
-                ))}
-              </div>
-            </Card>
+        <p className="text-xl text-gray-600 text-center mb-12">
+          골프 약속부터 추억 저장까지, <span className="brand-name">언제칠까</span> 하나로 완성됩니다
+        </p>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-6xl mx-auto">
+          {quickFeatures.map((feature, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: i * 0.05 }}
+              className="bg-white rounded-xl p-4 shadow-md border border-gray-100 hover:shadow-lg transition-all text-center"
+            >
+              <div className="text-4xl mb-3">{feature.icon}</div>
+              <h4 className="text-sm font-bold text-gray-900 mb-1">{feature.title}</h4>
+              <p className="text-xs text-gray-600">{feature.desc}</p>
+            </motion.div>
           ))}
         </div>
       </motion.div>
