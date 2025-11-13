@@ -151,19 +151,19 @@ export default function AppGuideSection() {
                 함께한 시간 + 기록 + 에피소드
               </h3>
               <div className="space-y-4">
-                <p className="text-lg text-blue-100">
+                <p className="text-lg text-white/90">
                   ✓ 스코어 기록이 귀찮다
                 </p>
-                <p className="text-lg text-blue-100">
+                <p className="text-lg text-white/90">
                   ✓ 계산이 번거롭다
                 </p>
-                <p className="text-lg text-blue-100">
+                <p className="text-lg text-white/90">
                   ✓ 기억은 흐려진다
                 </p>
               </div>
-              <div className="mt-8 pt-8 border-t border-blue-400">
+              <div className="mt-8 pt-8 border-t border-white/30">
                 <p className="text-2xl font-bold">
-                  → <span className="brand-name">언제칠까</span> 앱이 추억을 '간단히' 남겨줍니다
+                  → <span className="font-semibold text-white">언제칠까</span> 앱이 추억을 '간단히' 남겨줍니다
                 </p>
               </div>
             </div>
@@ -248,7 +248,7 @@ export default function AppGuideSection() {
 
           <div className="pt-8">
             <Button variant="primary" size="lg" href="#download">
-              📱 <span className="brand-name">언제칠까</span> 앱 다운로드
+              📱 <span className="font-semibold text-white">언제칠까</span> 앱 다운로드
             </Button>
           </div>
 

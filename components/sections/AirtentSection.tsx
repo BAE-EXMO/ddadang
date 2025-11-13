@@ -256,7 +256,7 @@ export default function AirtentSection() {
             </h4>
             <div className="space-y-6">
               <p className="text-lg leading-relaxed text-center">
-                <span className="brand-name">언제칠까</span> Studio의 부드러운 타구감과 저소음은<br />
+                <span className="font-semibold text-white">언제칠까</span> Studio의 부드러운 타구감과 저소음은<br />
                 <span className="font-bold text-[#FBE4F0]">TPU 라미네이트 스크린</span> 덕분입니다
               </p>
               <div className="border-t border-white/20 pt-6">
