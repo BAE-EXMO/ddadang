@@ -59,7 +59,7 @@ export default function HeroSection() {
           >
             {[
               { icon: '📱', title: <><span className="brand-name">언제칠까</span> 앱</>, description: '추억을 기록하다', href: '#app' },
-              { icon: '🏕️', title: 'Studio', description: '프리미엄 골프 공간', href: '#airtent' },
+              { icon: '🏕️', title: 'Studio', description: '프라이빗 골프공간', href: '#airtent' },
             ].map((item, i) => (
               <motion.a
                 key={i}
