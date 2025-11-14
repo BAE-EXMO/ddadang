@@ -223,11 +223,6 @@ export default function AppGuideSection() {
         className="text-center py-16"
       >
         <div className="max-w-3xl mx-auto space-y-8">
-          <p className="text-2xl md:text-3xl font-light text-gray-700 leading-relaxed italic">
-            "지난 라운드도, 다음 라운드도,<br />
-            추억은 잊히지 않습니다"
-          </p>
-
           <div className="pt-8">
             <Button variant="primary" size="lg" href="#download">
               📱 <span className="font-semibold text-white">언제칠까</span> 앱 다운로드
