@@ -14,43 +14,53 @@ export default function AirtentSection() {
   const locations = [
     {
       title: '학교 실내강당',
-      image: '/images/studio-locations/실내강당.png',
+      image: '/images/tent/실내강당.png',
       description: '체육 수업과 방과후 활동',
     },
     {
       title: '전원주택',
-      image: '/images/studio-locations/개인주택.png',
+      image: '/images/tent/개인주택.png',
       description: '집 앞마당의 프라이빗 골프',
     },
     {
       title: '캠핑장',
-      image: '/images/studio-locations/캠핑장.png',
+      image: '/images/tent/캠핑장.png',
       description: '캠핑과 골프를 동시에',
     },
     {
       title: '해수욕장',
-      image: '/images/studio-locations/해수욕장.png',
+      image: '/images/tent/해수욕장.png',
       description: '바다에서 즐기는 골프',
     },
     {
+      title: '해수욕장(야간)',
+      image: '/images/tent/해수욕장(야간).png',
+      description: '밤바다에서 즐기는 특별한 경험',
+    },
+    {
       title: '지방축제 개최지',
-      image: '/images/studio-locations/축제장소.png',
+      image: '/images/tent/축제.png',
       description: '축제 현장의 인기 콘텐츠',
     },
     {
+      title: '전시장',
+      image: '/images/tent/전시장.png',
+      description: '전시회와 박람회의 명품 콘텐츠',
+    },
+    {
       title: '클럽하우스',
-      image: '/images/studio-locations/골프장.png',
+      image: '/images/tent/클럽하우스.png',
       description: '실전 같은 연습 환경',
     },
     {
       title: '프로 개인 강습장',
-      image: '/images/studio-locations/개인레슨.png',
+      image: '/images/tent/레슨.png',
       description: '1:1 맞춤형 레슨',
     },
     {
-      title: '골프장 & 컨트리클럽',
-      image: '/images/studio-locations/골프코스.png',
-      description: '워밍업과 대기 시간 활용',
+      title: '개인 연습장',
+      image: '/images/tent/개인연습장.png',
+      description: '언제든 자유롭게 연습',
     },
   ];
 
@@ -89,7 +99,7 @@ export default function AirtentSection() {
             {/* Product Image */}
             <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-[#FEF7FB] to-white p-8">
               <img
-                src="/images/studio-locations/실내.png"
+                src="/images/tent/텐트.png"
                 alt="언제칠까 Studio"
                 className="w-full h-full object-contain"
               />
@@ -211,7 +221,7 @@ export default function AirtentSection() {
             >
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <img
-                  src="/images/studio-screen-setup.jpg"
+                  src="/images/tent/스크린.jpg"
                   alt="언제칠까 Studio 스크린 시스템"
                   className="w-full h-auto object-cover"
                   onError={(e) => {
