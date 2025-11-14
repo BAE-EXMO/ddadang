@@ -406,23 +406,6 @@ export default function AirtentSection() {
           </div>
         </motion.div>
 
-        {/* Emotional Closing */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center py-16"
-        >
-          <div className="max-w-3xl mx-auto">
-            <p className="text-2xl md:text-3xl font-light text-gray-700 leading-relaxed italic">
-              "추억은 특별한 장소에서 만들어집니다"
-            </p>
-            <p className="text-xl text-gray-600 mt-6">
-              <span className="brand-name">언제칠까</span> Studio가 그 특별한 장소를 만들어드립니다
-            </p>
-          </div>
-        </motion.div>
       </SectionWrapper>
 
       <PurchaseModal
