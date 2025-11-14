@@ -192,12 +192,9 @@ export default function AppGuideSection() {
         transition={{ duration: 0.8 }}
         className="mb-20"
       >
-        <h3 className="text-3xl font-bold text-gray-900 text-center mb-4">
+        <h3 className="text-3xl font-bold text-gray-900 text-center mb-12">
           모든 기능이 하나의 앱에
         </h3>
-        <p className="text-xl text-gray-600 text-center mb-12">
-          골프 약속부터 추억 저장까지, <span className="brand-name">언제칠까</span> 하나로 완성됩니다
-        </p>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-6xl mx-auto">
           {quickFeatures.map((feature, i) => (
             <motion.div
