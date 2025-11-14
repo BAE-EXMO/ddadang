@@ -10,6 +10,7 @@ import PurchaseModal from '../ui/PurchaseModal';
 
 export default function AirtentSection() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isScreenModalOpen, setIsScreenModalOpen] = useState(false);
 
   const locations = [
     {
@@ -397,7 +398,7 @@ export default function AirtentSection() {
                 <Button 
                   variant="purchase" 
                   size="lg" 
-                  onClick={() => setIsModalOpen(true)}
+                  onClick={() => setIsScreenModalOpen(true)}
                 >
                   스크린 구매 문의
                 </Button>
@@ -412,6 +413,12 @@ export default function AirtentSection() {
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
         productType="tent"
+      />
+      
+      <PurchaseModal
+        isOpen={isScreenModalOpen}
+        onClose={() => setIsScreenModalOpen(false)}
+        productType="screen"
       />
     </>
   );
