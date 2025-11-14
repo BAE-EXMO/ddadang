@@ -16,9 +16,15 @@ export default function PurchaseModal({ isOpen, onClose, productType }: Purchase
     address: '',
     email: '',
     // Tent options
+    studioBody: false,
+    floor: false,
+    tarp: false,
+    canopy: false,
+    electricPump: false,
+    screen: false,
     simulator: false,
     projector: false,
-    monitor: false,
+    mat: false,
     // Screen options
     width: '',
     height: '',
@@ -54,9 +60,15 @@ export default function PurchaseModal({ isOpen, onClose, productType }: Purchase
           velcroBackLeft: formData.velcroBackLeft,
           velcroBackRight: formData.velcroBackRight,
           additionalNotes: formData.additionalNotes,
+          studioBody: formData.studioBody,
+          floor: formData.floor,
+          tarp: formData.tarp,
+          canopy: formData.canopy,
+          electricPump: formData.electricPump,
+          screen: formData.screen,
           simulator: formData.simulator,
           projector: formData.projector,
-          monitor: formData.monitor
+          mat: formData.mat
         };
         
         await fetch(googleSheetsUrl, {
@@ -81,11 +93,14 @@ export default function PurchaseModal({ isOpen, onClose, productType }: Purchase
       emailBody = `STUDIO 구매 문의
 
 이름: ${formData.name}
-전화번호: ${formData.phone}
-주소: ${formData.address}
+연락처: ${formData.phone}
+배송받을 곳: ${formData.address}
+이메일: ${formData.email}
 
-선택 옵션:
-${formData.simulator ? '✓ 시뮬레이터\n' : ''}${formData.projector ? '✓ 프로젝터\n' : ''}${formData.monitor ? '✓ 모니터\n' : ''}`;
+제품구성:
+${formData.studioBody ? '✓ 스튜디오 본체\n' : ''}${formData.floor ? '✓ 바닥\n' : ''}${formData.tarp ? '✓ 타프\n' : ''}${formData.canopy ? '✓ 캐노피\n' : ''}${formData.electricPump ? '✓ 전기에어펌프\n' : ''}${formData.screen ? '✓ 스크린\n' : ''}${formData.simulator ? '✓ 시뮬레이터\n' : ''}${formData.projector ? '✓ 프로젝터\n' : ''}${formData.mat ? '✓ 매트\n' : ''}
+기타 문의:
+${formData.additionalNotes}`;
     } else {
       emailBody = `TPU 라미네이트 스크린 구매 문의
 
@@ -168,7 +183,7 @@ ${formData.additionalNotes}`;
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  {productType === 'screen' ? '연락처 *' : '전화번호 *'}
+                  연락처 *
                 </label>
                 <input
                   type="tel"
@@ -181,7 +196,7 @@ ${formData.additionalNotes}`;
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  {productType === 'screen' ? '받을 곳 *' : '주소 *'}
+                  {productType === 'screen' ? '받을 곳 *' : '배송받을 곳 *'}
                 </label>
                 <input
                   type="text"
@@ -192,56 +207,123 @@ ${formData.additionalNotes}`;
                 />
               </div>
 
-              {productType === 'screen' && (
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    이메일 *
-                  </label>
-                  <input
-                    type="email"
-                    required
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent"
-                  />
-                </div>
-              )}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  이메일 *
+                </label>
+                <input
+                  type="email"
+                  required
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent"
+                />
+              </div>
 
               {productType === 'tent' ? (
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    옵션 선택
-                  </label>
-                  <div className="space-y-2">
-                    <label className="flex items-center">
-                      <input
-                        type="checkbox"
-                        checked={formData.simulator}
-                        onChange={(e) => setFormData({ ...formData, simulator: e.target.checked })}
-                        className="w-4 h-4 text-gray-600 border-gray-300 rounded focus:ring-gray-500"
-                      />
-                      <span className="ml-2 text-sm text-gray-700">시뮬레이터</span>
+                <>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-3">
+                      제품구성
                     </label>
-                    <label className="flex items-center">
-                      <input
-                        type="checkbox"
-                        checked={formData.projector}
-                        onChange={(e) => setFormData({ ...formData, projector: e.target.checked })}
-                        className="w-4 h-4 text-gray-600 border-gray-300 rounded focus:ring-gray-500"
-                      />
-                      <span className="ml-2 text-sm text-gray-700">프로젝터</span>
-                    </label>
-                    <label className="flex items-center">
-                      <input
-                        type="checkbox"
-                        checked={formData.monitor}
-                        onChange={(e) => setFormData({ ...formData, monitor: e.target.checked })}
-                        className="w-4 h-4 text-gray-600 border-gray-300 rounded focus:ring-gray-500"
-                      />
-                      <span className="ml-2 text-sm text-gray-700">모니터</span>
-                    </label>
+                    <div className="grid grid-cols-2 gap-3">
+                      <label className="flex items-center">
+                        <input
+                          type="checkbox"
+                          checked={formData.studioBody}
+                          onChange={(e) => setFormData({ ...formData, studioBody: e.target.checked })}
+                          className="w-4 h-4 text-green-600 border-gray-300 rounded focus:ring-green-500"
+                        />
+                        <span className="ml-2 text-sm text-gray-700">스튜디오 본체</span>
+                      </label>
+                      <label className="flex items-center">
+                        <input
+                          type="checkbox"
+                          checked={formData.floor}
+                          onChange={(e) => setFormData({ ...formData, floor: e.target.checked })}
+                          className="w-4 h-4 text-green-600 border-gray-300 rounded focus:ring-green-500"
+                        />
+                        <span className="ml-2 text-sm text-gray-700">바닥</span>
+                      </label>
+                      <label className="flex items-center">
+                        <input
+                          type="checkbox"
+                          checked={formData.tarp}
+                          onChange={(e) => setFormData({ ...formData, tarp: e.target.checked })}
+                          className="w-4 h-4 text-green-600 border-gray-300 rounded focus:ring-green-500"
+                        />
+                        <span className="ml-2 text-sm text-gray-700">타프</span>
+                      </label>
+                      <label className="flex items-center">
+                        <input
+                          type="checkbox"
+                          checked={formData.canopy}
+                          onChange={(e) => setFormData({ ...formData, canopy: e.target.checked })}
+                          className="w-4 h-4 text-green-600 border-gray-300 rounded focus:ring-green-500"
+                        />
+                        <span className="ml-2 text-sm text-gray-700">캐노피</span>
+                      </label>
+                      <label className="flex items-center">
+                        <input
+                          type="checkbox"
+                          checked={formData.electricPump}
+                          onChange={(e) => setFormData({ ...formData, electricPump: e.target.checked })}
+                          className="w-4 h-4 text-green-600 border-gray-300 rounded focus:ring-green-500"
+                        />
+                        <span className="ml-2 text-sm text-gray-700">전기에어펌프</span>
+                      </label>
+                      <label className="flex items-center">
+                        <input
+                          type="checkbox"
+                          checked={formData.screen}
+                          onChange={(e) => setFormData({ ...formData, screen: e.target.checked })}
+                          className="w-4 h-4 text-green-600 border-gray-300 rounded focus:ring-green-500"
+                        />
+                        <span className="ml-2 text-sm text-gray-700">스크린</span>
+                      </label>
+                      <label className="flex items-center">
+                        <input
+                          type="checkbox"
+                          checked={formData.simulator}
+                          onChange={(e) => setFormData({ ...formData, simulator: e.target.checked })}
+                          className="w-4 h-4 text-green-600 border-gray-300 rounded focus:ring-green-500"
+                        />
+                        <span className="ml-2 text-sm text-gray-700">시뮬레이터</span>
+                      </label>
+                      <label className="flex items-center">
+                        <input
+                          type="checkbox"
+                          checked={formData.projector}
+                          onChange={(e) => setFormData({ ...formData, projector: e.target.checked })}
+                          className="w-4 h-4 text-green-600 border-gray-300 rounded focus:ring-green-500"
+                        />
+                        <span className="ml-2 text-sm text-gray-700">프로젝터</span>
+                      </label>
+                      <label className="flex items-center">
+                        <input
+                          type="checkbox"
+                          checked={formData.mat}
+                          onChange={(e) => setFormData({ ...formData, mat: e.target.checked })}
+                          className="w-4 h-4 text-green-600 border-gray-300 rounded focus:ring-green-500"
+                        />
+                        <span className="ml-2 text-sm text-gray-700">매트</span>
+                      </label>
+                    </div>
                   </div>
-                </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      기타 문의
+                    </label>
+                    <textarea
+                      value={formData.additionalNotes}
+                      onChange={(e) => setFormData({ ...formData, additionalNotes: e.target.value })}
+                      rows={4}
+                      placeholder="추가로 문의하실 내용을 입력해주세요"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent resize-none"
+                    />
+                  </div>
+                </>
               ) : (
                 <>
                   <div className="grid grid-cols-2 gap-4">
