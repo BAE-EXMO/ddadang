@@ -143,6 +143,119 @@ export default function AirtentSection() {
           </div>
         </motion.div>
 
+        {/* Video Showcase */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="mb-32"
+        >
+          <h3 className="text-3xl font-bold text-gray-900 text-center mb-4">
+            설치부터 사용까지, 간편하게
+          </h3>
+          <p className="text-lg text-gray-600 text-center mb-12">
+            5분이면 충분합니다
+          </p>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto mb-8">
+            {/* Video 1 */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="relative rounded-2xl overflow-hidden shadow-2xl bg-black group aspect-video"
+            >
+              <video
+                className="w-full h-full object-cover"
+                autoPlay
+                loop
+                muted
+                playsInline
+              >
+                <source src="/images/tent/이미지_회전_동영상_제작.mp4" type="video/mp4" />
+              </video>
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
+                <h4 className="text-white text-xl font-bold mb-2">360° 뷰</h4>
+                <p className="text-white/90">모든 각도에서 완벽한 공간</p>
+              </div>
+            </motion.div>
+
+            {/* Video 2 */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="relative rounded-2xl overflow-hidden shadow-2xl bg-black group aspect-video"
+            >
+              <video
+                className="w-full h-full object-cover"
+                autoPlay
+                loop
+                muted
+                playsInline
+              >
+                <source src="/images/tent/이미지_동영상_변환.mp4" type="video/mp4" />
+              </video>
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
+                <h4 className="text-white text-xl font-bold mb-2">실제 사용 모습</h4>
+                <p className="text-white/90">언제 어디서나 골프를</p>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Additional Videos */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {/* Video 3 */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="relative rounded-2xl overflow-hidden shadow-2xl bg-black group aspect-video"
+            >
+              <video
+                className="w-full h-full object-cover"
+                autoPlay
+                loop
+                muted
+                playsInline
+              >
+                <source src="/images/tent/KakaoTalk_20251031_090352028.mp4" type="video/mp4" />
+              </video>
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
+                <h4 className="text-white text-xl font-bold mb-2">설치 과정</h4>
+                <p className="text-white/90">누구나 쉽게 설치 가능</p>
+              </div>
+            </motion.div>
+
+            {/* Video 4 */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="relative rounded-2xl overflow-hidden shadow-2xl bg-black group aspect-video"
+            >
+              <video
+                className="w-full h-full object-cover"
+                autoPlay
+                loop
+                muted
+                playsInline
+              >
+                <source src="/images/tent/KakaoTalk_20251031_090533290.mp4" type="video/mp4" />
+              </video>
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
+                <h4 className="text-white text-xl font-bold mb-2">다양한 공간 활용</h4>
+                <p className="text-white/90">실내외 어디든 가능</p>
+              </div>
+            </motion.div>
+          </div>
+        </motion.div>
+
         {/* Installation Locations */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
