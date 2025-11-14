@@ -14,6 +14,7 @@ export default function PurchaseModal({ isOpen, onClose, productType }: Purchase
     name: '',
     phone: '',
     address: '',
+    email: '',
     // Tent options
     simulator: false,
     projector: false,
@@ -21,8 +22,13 @@ export default function PurchaseModal({ isOpen, onClose, productType }: Purchase
     // Screen options
     width: '',
     height: '',
-    velcroPosition: '',
-    velcroType: '일반형',
+    velcroFrontTop: '',
+    velcroFrontLeft: '',
+    velcroFrontRight: '',
+    velcroBackTop: '',
+    velcroBackLeft: '',
+    velcroBackRight: '',
+    additionalNotes: '',
   });
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -38,10 +44,16 @@ export default function PurchaseModal({ isOpen, onClose, productType }: Purchase
           name: formData.name,
           phone: formData.phone,
           address: formData.address,
+          email: formData.email,
           width: formData.width,
           height: formData.height,
-          velcroPosition: formData.velcroPosition,
-          velcroType: formData.velcroType,
+          velcroFrontTop: formData.velcroFrontTop,
+          velcroFrontLeft: formData.velcroFrontLeft,
+          velcroFrontRight: formData.velcroFrontRight,
+          velcroBackTop: formData.velcroBackTop,
+          velcroBackLeft: formData.velcroBackLeft,
+          velcroBackRight: formData.velcroBackRight,
+          additionalNotes: formData.additionalNotes,
           simulator: formData.simulator,
           projector: formData.projector,
           monitor: formData.monitor
@@ -77,17 +89,28 @@ ${formData.simulator ? '✓ 시뮬레이터\n' : ''}${formData.projector ? '✓ 
     } else {
       emailBody = `TPU 라미네이트 스크린 구매 문의
 
-이름: ${formData.name}
-전화번호: ${formData.phone}
-주소: ${formData.address}
+이름 또는 상호: ${formData.name}
+연락처: ${formData.phone}
+받을 곳: ${formData.address}
+이메일: ${formData.email}
 
 사이즈:
 가로: ${formData.width}mm
 세로: ${formData.height}mm
 
-밸크로:
-부착 위치: ${formData.velcroPosition}
-종류: ${formData.velcroType}`;
+밸크로 위치:
+[앞면]
+- 상: ${formData.velcroFrontTop}
+- 좌: ${formData.velcroFrontLeft}
+- 우: ${formData.velcroFrontRight}
+
+[뒷면]
+- 상: ${formData.velcroBackTop}
+- 좌: ${formData.velcroBackLeft}
+- 우: ${formData.velcroBackRight}
+
+기타 문의:
+${formData.additionalNotes}`;
     }
 
     window.location.href = `mailto:contact@when7.com?subject=${productType === 'tent' ? 'STUDIO' : 'TPU 스크린'} 구매 문의&body=${encodeURIComponent(emailBody)}`;
@@ -132,7 +155,7 @@ ${formData.simulator ? '✓ 시뮬레이터\n' : ''}${formData.projector ? '✓ 
             <form onSubmit={handleSubmit} className="p-6 space-y-4">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  이름 *
+                  {productType === 'screen' ? '이름 또는 상호 *' : '이름 *'}
                 </label>
                 <input
                   type="text"
@@ -145,7 +168,7 @@ ${formData.simulator ? '✓ 시뮬레이터\n' : ''}${formData.projector ? '✓ 
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  전화번호 *
+                  {productType === 'screen' ? '연락처 *' : '전화번호 *'}
                 </label>
                 <input
                   type="tel"
@@ -158,7 +181,7 @@ ${formData.simulator ? '✓ 시뮬레이터\n' : ''}${formData.projector ? '✓ 
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  주소 *
+                  {productType === 'screen' ? '받을 곳 *' : '주소 *'}
                 </label>
                 <input
                   type="text"
@@ -168,6 +191,21 @@ ${formData.simulator ? '✓ 시뮬레이터\n' : ''}${formData.projector ? '✓ 
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent"
                 />
               </div>
+
+              {productType === 'screen' && (
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    이메일 *
+                  </label>
+                  <input
+                    type="email"
+                    required
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent"
+                  />
+                </div>
+              )}
 
               {productType === 'tent' ? (
                 <div>
@@ -209,7 +247,7 @@ ${formData.simulator ? '✓ 시뮬레이터\n' : ''}${formData.projector ? '✓ 
                   <div className="grid grid-cols-2 gap-4">
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
-                        가로 (mm) *
+                        가로크기 (mm) *
                       </label>
                       <input
                         type="number"
@@ -221,7 +259,7 @@ ${formData.simulator ? '✓ 시뮬레이터\n' : ''}${formData.projector ? '✓ 
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
-                        세로 (mm) *
+                        세로크기 (mm) *
                       </label>
                       <input
                         type="number"
@@ -234,32 +272,118 @@ ${formData.simulator ? '✓ 시뮬레이터\n' : ''}${formData.projector ? '✓ 
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      밸크로 부착 위치 *
+                    <label className="block text-sm font-medium text-gray-700 mb-3">
+                      밸크로 위치 *
                     </label>
-                    <input
-                      type="text"
-                      required
-                      value={formData.velcroPosition}
-                      onChange={(e) => setFormData({ ...formData, velcroPosition: e.target.value })}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent"
-                    />
+                    
+                    {/* 앞면 */}
+                    <div className="mb-4 p-4 bg-gray-50 rounded-lg">
+                      <h4 className="font-semibold text-gray-900 mb-3">앞면</h4>
+                      <div className="space-y-3">
+                        <div>
+                          <label className="block text-xs font-medium text-gray-600 mb-1">상</label>
+                          <select
+                            required
+                            value={formData.velcroFrontTop}
+                            onChange={(e) => setFormData({ ...formData, velcroFrontTop: e.target.value })}
+                            className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-gray-500 focus:border-transparent"
+                          >
+                            <option value="">선택하세요</option>
+                            <option value="까슬이">까슬이</option>
+                            <option value="보슬이">보슬이</option>
+                          </select>
+                        </div>
+                        <div className="grid grid-cols-2 gap-3">
+                          <div>
+                            <label className="block text-xs font-medium text-gray-600 mb-1">좌</label>
+                            <select
+                              required
+                              value={formData.velcroFrontLeft}
+                              onChange={(e) => setFormData({ ...formData, velcroFrontLeft: e.target.value })}
+                              className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-gray-500 focus:border-transparent"
+                            >
+                              <option value="">선택하세요</option>
+                              <option value="까슬이">까슬이</option>
+                              <option value="보슬이">보슬이</option>
+                            </select>
+                          </div>
+                          <div>
+                            <label className="block text-xs font-medium text-gray-600 mb-1">우</label>
+                            <select
+                              required
+                              value={formData.velcroFrontRight}
+                              onChange={(e) => setFormData({ ...formData, velcroFrontRight: e.target.value })}
+                              className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-gray-500 focus:border-transparent"
+                            >
+                              <option value="">선택하세요</option>
+                              <option value="까슬이">까슬이</option>
+                              <option value="보슬이">보슬이</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* 뒷면 */}
+                    <div className="p-4 bg-gray-50 rounded-lg">
+                      <h4 className="font-semibold text-gray-900 mb-3">뒷면</h4>
+                      <div className="space-y-3">
+                        <div>
+                          <label className="block text-xs font-medium text-gray-600 mb-1">상</label>
+                          <select
+                            required
+                            value={formData.velcroBackTop}
+                            onChange={(e) => setFormData({ ...formData, velcroBackTop: e.target.value })}
+                            className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-gray-500 focus:border-transparent"
+                          >
+                            <option value="">선택하세요</option>
+                            <option value="까슬이">까슬이</option>
+                            <option value="보슬이">보슬이</option>
+                          </select>
+                        </div>
+                        <div className="grid grid-cols-2 gap-3">
+                          <div>
+                            <label className="block text-xs font-medium text-gray-600 mb-1">좌</label>
+                            <select
+                              required
+                              value={formData.velcroBackLeft}
+                              onChange={(e) => setFormData({ ...formData, velcroBackLeft: e.target.value })}
+                              className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-gray-500 focus:border-transparent"
+                            >
+                              <option value="">선택하세요</option>
+                              <option value="까슬이">까슬이</option>
+                              <option value="보슬이">보슬이</option>
+                            </select>
+                          </div>
+                          <div>
+                            <label className="block text-xs font-medium text-gray-600 mb-1">우</label>
+                            <select
+                              required
+                              value={formData.velcroBackRight}
+                              onChange={(e) => setFormData({ ...formData, velcroBackRight: e.target.value })}
+                              className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-gray-500 focus:border-transparent"
+                            >
+                              <option value="">선택하세요</option>
+                              <option value="까슬이">까슬이</option>
+                              <option value="보슬이">보슬이</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
 
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      밸크로 종류 *
+                      기타 문의
                     </label>
-                    <select
-                      value={formData.velcroType}
-                      onChange={(e) => setFormData({ ...formData, velcroType: e.target.value })}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent"
-                    >
-                      <option value="일반형">일반형</option>
-                      <option value="강력형">강력형</option>
-                      <option value="초강력형">초강력형</option>
-                      <option value="기타">기타</option>
-                    </select>
+                    <textarea
+                      value={formData.additionalNotes}
+                      onChange={(e) => setFormData({ ...formData, additionalNotes: e.target.value })}
+                      rows={4}
+                      placeholder="추가로 문의하실 내용을 입력해주세요"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent resize-none"
+                    />
                   </div>
                 </>
               )}
