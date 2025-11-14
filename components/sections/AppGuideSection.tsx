@@ -117,21 +117,6 @@ export default function AppGuideSection() {
             </motion.div>
           ))}
         </div>
-
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="space-y-4"
-          >
-            <p className="text-2xl text-gray-700 font-light">
-              <span className="brand-name">언제칠까</span> 앱은 추억을 잃지 않게 합니다
-            </p>
-            <p className="text-xl text-gray-600">
-              사진처럼, 스코어도 기록됩니다
-            </p>
-          </motion.div>
       </motion.div>
 
       {/* App Preview */}
