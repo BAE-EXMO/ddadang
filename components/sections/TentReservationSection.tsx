@@ -19,6 +19,7 @@ interface Reservation {
 
 export default function TentReservationSection() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [showAll, setShowAll] = useState(false);
 
   const reservations: Reservation[] = [
     {
@@ -286,7 +287,7 @@ export default function TentReservationSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-7xl mx-auto">
-          {reservations.map((reservation, index) => (
+          {(showAll ? reservations : reservations.slice(0, 3)).map((reservation, index) => (
             <motion.div
               key={reservation.id}
               initial={{ opacity: 0, y: 30 }}
@@ -325,6 +326,24 @@ export default function TentReservationSection() {
             </motion.div>
           ))}
         </div>
+
+        {/* 전체보기 버튼 */}
+        {!showAll && reservations.length > 3 && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mt-12 text-center"
+          >
+            <button
+              onClick={() => setShowAll(true)}
+              className="px-8 py-4 bg-white text-[#EC4899] border-2 border-[#EC4899] rounded-lg font-bold hover:bg-[#FEF7FB] transition-all duration-300 hover:scale-105 shadow-lg"
+            >
+              전체보기 ({reservations.length}건)
+            </button>
+          </motion.div>
+        )}
 
         {/* CTA */}
         <motion.div

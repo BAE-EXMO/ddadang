@@ -16,13 +16,22 @@ export default function Home() {
     <>
       <Header />
       <main>
+        {/* Hero */}
         <HeroSection />
+        
+        {/* 앱 섹션 */}
         <AppGuideSection />
+        
+        {/* 스튜디오 섹션 */}
         <AirtentSection />
+        <BusinessValueSection />
         <TentReservationSection />
+        
+        {/* 스크린 섹션 */}
         <ScreenSystemSection />
         <ScreenReviewsSection />
-        <BusinessValueSection />
+        
+        {/* 스토리 */}
         <StorySection />
       </main>
       <Footer />

@@ -18,6 +18,7 @@ interface Review {
 
 export default function ScreenReviewsSection() {
   const [selectedFilter, setSelectedFilter] = useState<'all' | 'business' | 'personal'>('all');
+  const [showAll, setShowAll] = useState(false);
 
   const reviews: Review[] = [
     {
@@ -689,7 +690,7 @@ export default function ScreenReviewsSection() {
 
       {/* 후기 목록 */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-7xl mx-auto">
-        {filteredReviews.map((review, index) => (
+        {(showAll ? filteredReviews : filteredReviews.slice(0, 3)).map((review, index) => (
           <motion.div
             key={review.id}
             initial={{ opacity: 0, y: 30 }}
@@ -738,6 +739,24 @@ export default function ScreenReviewsSection() {
           </motion.div>
         ))}
       </div>
+
+      {/* 전체보기 버튼 */}
+      {!showAll && filteredReviews.length > 3 && (
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mt-12 text-center"
+        >
+          <button
+            onClick={() => setShowAll(true)}
+            className="px-8 py-4 bg-white text-[#EC4899] border-2 border-[#EC4899] rounded-lg font-bold hover:bg-[#FEF7FB] transition-all duration-300 hover:scale-105 shadow-lg"
+          >
+            전체보기 ({filteredReviews.length}건)
+          </button>
+        </motion.div>
+      )}
 
       {/* CTA */}
       <motion.div
