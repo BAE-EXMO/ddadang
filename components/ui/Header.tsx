@@ -40,7 +40,6 @@ export default function Header() {
     { id: 'app', name: <><span className="brand-name">언제칠까</span> 앱</>, href: '#app' },
     { id: 'studio', name: 'Studio', href: '#airtent' },
     { id: 'screen', name: '프리미엄 스크린', href: '#airtent' },
-    { id: 'contact', name: '문의하기', href: '#contact' },
   ];
 
   return (
