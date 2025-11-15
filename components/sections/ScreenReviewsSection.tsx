@@ -758,29 +758,6 @@ export default function ScreenReviewsSection() {
         </motion.div>
       )}
 
-      {/* CTA */}
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-        className="mt-16 text-center"
-      >
-        <div className="bg-gradient-to-r from-gray-800 to-gray-900 rounded-2xl p-8 max-w-3xl mx-auto">
-          <h3 className="text-2xl font-bold text-white mb-4">
-            당신도 이런 변화를 경험해보세요
-          </h3>
-          <p className="text-gray-300 mb-6">
-            TPU 라미네이트 스크린으로 더 나은 골프 환경을 만들어드립니다
-          </p>
-          <a
-            href="#contact"
-            className="inline-block px-8 py-4 bg-[#EC4899] text-white font-semibold rounded-lg hover:bg-[#F472B6] transition-all duration-300 hover:scale-105 shadow-lg"
-          >
-            구매 문의하기
-          </a>
-        </div>
-      </motion.div>
     </SectionWrapper>
   );
 }
