@@ -107,9 +107,9 @@ export default function BusinessValueSection() {
           <div className="inline-block px-6 py-2 bg-black text-white rounded-sm text-sm font-bold mb-6 tracking-wider">
             BUSINESS OPPORTUNITY
           </div>
-          <h2 className="text-4xl md:text-6xl font-bold text-black mb-6 tracking-tight">
-            골프장 창업의<br />
-            <span className="relative inline-block">
+          <h2 className="text-4xl md:text-6xl font-bold text-black mb-6 tracking-tight leading-relaxed">
+            스크린골프 창업의<br />
+            <span className="relative inline-block mt-4">
               <span className="relative z-10">패러다임 전환</span>
               <span className="absolute bottom-2 left-0 w-full h-3 bg-gray-200 -z-10"></span>
             </span>
