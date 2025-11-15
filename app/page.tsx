@@ -8,7 +8,7 @@ import AppGuideSection from '@/components/sections/AppGuideSection';
 import StorySection from '@/components/sections/StorySection';
 import ScreenReviewsSection from '@/components/sections/ScreenReviewsSection';
 import BusinessValueSection from '@/components/sections/BusinessValueSection';
-import TentReviewsSection from '@/components/sections/TentReviewsSection';
+import TentReservationSection from '@/components/sections/TentReservationSection';
 import ScreenSystemSection from '@/components/sections/ScreenSystemSection';
 
 export default function Home() {
@@ -19,7 +19,7 @@ export default function Home() {
         <HeroSection />
         <AppGuideSection />
         <AirtentSection />
-        <TentReviewsSection />
+        <TentReservationSection />
         <ScreenSystemSection />
         <ScreenReviewsSection />
         <BusinessValueSection />
