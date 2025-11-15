@@ -128,7 +128,7 @@ ${formData.additionalNotes}`;
 ${formData.additionalNotes}`;
     }
 
-    window.location.href = `mailto:contact@when7.com?subject=${productType === 'tent' ? 'STUDIO' : 'TPU 스크린'} 구매 문의&body=${encodeURIComponent(emailBody)}`;
+    window.location.href = `mailto:ggoggoo@naver.com?subject=${productType === 'tent' ? 'STUDIO' : 'TPU 스크린'} 구매 문의&body=${encodeURIComponent(emailBody)}`;
     onClose();
   };
 

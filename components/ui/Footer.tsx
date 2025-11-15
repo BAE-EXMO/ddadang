@@ -67,8 +67,8 @@ export default function Footer() {
                 <span className="block">Fax: 031-796-8652</span>
               </p>
               <p className="mt-2">
-                <a href="mailto:contact@when7.com" className="text-blue-400 hover:text-blue-300 transition-colors font-mono">
-                  contact@when7.com
+                <a href="mailto:ggoggoo@naver.com" className="text-blue-400 hover:text-blue-300 transition-colors font-mono">
+                  ggoggoo@naver.com
                 </a>
               </p>
             </div>
