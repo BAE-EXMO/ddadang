@@ -8,6 +8,7 @@ import AppGuideSection from '@/components/sections/AppGuideSection';
 import StorySection from '@/components/sections/StorySection';
 import ScreenReviewsSection from '@/components/sections/ScreenReviewsSection';
 import BusinessValueSection from '@/components/sections/BusinessValueSection';
+import TentReviewsSection from '@/components/sections/TentReviewsSection';
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         <HeroSection />
         <AppGuideSection />
         <AirtentSection />
+        <TentReviewsSection />
         <ScreenReviewsSection />
         <BusinessValueSection />
         <StorySection />
