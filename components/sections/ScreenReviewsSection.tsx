@@ -342,7 +342,7 @@ export default function ScreenReviewsSection() {
           <span className="brand-name">언제칠까</span> TPU 라미네이트 스크린이 만든 변화
         </>
       }
-      bgColor="light"
+      bgColor="gradient"
     >
       {/* 통계 요약 */}
       <motion.div
