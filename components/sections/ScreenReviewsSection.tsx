@@ -758,6 +758,26 @@ export default function ScreenReviewsSection() {
         </motion.div>
       )}
 
+      {/* 닫기 버튼 */}
+      {showAll && filteredReviews.length > 3 && (
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="mt-12 text-center"
+        >
+          <button
+            onClick={() => {
+              setShowAll(false);
+              document.getElementById('screen-reviews')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }}
+            className="px-8 py-4 bg-gray-800 text-white border-2 border-gray-800 rounded-lg font-bold hover:bg-gray-700 transition-all duration-300 hover:scale-105 shadow-lg"
+          >
+            닫기 ✕
+          </button>
+        </motion.div>
+      )}
+
     </SectionWrapper>
   );
 }
