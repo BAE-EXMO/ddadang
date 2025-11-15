@@ -308,6 +308,29 @@ export default function TentReviewsSection() {
         }
         bgColor="dark"
       >
+        {/* 출시 예정 알림 */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mb-12"
+        >
+          <div className="max-w-4xl mx-auto bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-8 text-white shadow-2xl text-center">
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <span className="text-4xl">🚀</span>
+              <h3 className="text-3xl font-bold">2026년 1월 출시 예정</h3>
+            </div>
+            <p className="text-blue-100 text-lg mb-4">
+              현재 사전 예약을 받고 있습니다. 아래는 실제 예약/운영 중인 고객님들의 후기입니다.
+            </p>
+            <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-6 py-2 rounded-full">
+              <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+              <span className="font-semibold">사전 예약 진행 중</span>
+            </div>
+          </div>
+        </motion.div>
+
         {/* 통계 요약 */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}

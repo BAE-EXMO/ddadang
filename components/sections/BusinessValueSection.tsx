@@ -471,8 +471,11 @@ export default function BusinessValueSection() {
           className="text-center"
         >
           <div className="inline-block bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl p-12 shadow-2xl">
+            <div className="mb-6 inline-block bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-3 rounded-full font-bold">
+              🚀 2026년 1월 출시 예정 - 사전 예약 진행 중
+            </div>
             <h3 className="text-3xl font-bold text-white mb-4">
-              지금 바로 시작하세요
+              지금 사전 예약하세요
             </h3>
             <p className="text-gray-300 mb-8 max-w-2xl">
               빈땅을 가지고 계신가요? 골프 사업을 꿈꾸시나요?<br />
@@ -484,7 +487,7 @@ export default function BusinessValueSection() {
                 size="lg"
                 onClick={() => setIsModalOpen(true)}
               >
-                💼 사업 상담 신청
+                💼 사전 예약 상담 신청
               </Button>
               <Button 
                 variant="outline" 

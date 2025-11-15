@@ -104,6 +104,9 @@ export default function AirtentSection() {
                 alt="언제칠까 Studio"
                 className="w-full h-full object-contain"
               />
+              <div className="absolute top-6 left-6 bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-3 rounded-full font-bold shadow-lg animate-pulse">
+                🚀 2026년 1월 출시 예정
+              </div>
               <div className="absolute top-6 right-6 bg-[#EC4899] text-white px-6 py-3 rounded-full font-bold shadow-lg">
                 ⚡ 설치 5분
               </div>
@@ -132,14 +135,20 @@ export default function AirtentSection() {
                 ))}
               </div>
 
-              <Button 
-                variant="purchase" 
-                size="lg" 
-                onClick={() => setIsModalOpen(true)}
-                className="w-full"
-              >
-                구매 문의하기
-              </Button>
+              <div className="space-y-3">
+                <div className="bg-gradient-to-r from-blue-50 to-blue-100 border-2 border-blue-200 rounded-lg p-4 text-center">
+                  <p className="text-blue-900 font-bold text-lg mb-1">🚀 2026년 1월 출시 예정</p>
+                  <p className="text-blue-700 text-sm">지금 사전 예약을 받고 있습니다</p>
+                </div>
+                <Button 
+                  variant="purchase" 
+                  size="lg" 
+                  onClick={() => setIsModalOpen(true)}
+                  className="w-full"
+                >
+                  사전 예약 문의하기
+                </Button>
+              </div>
             </div>
           </div>
         </motion.div>
