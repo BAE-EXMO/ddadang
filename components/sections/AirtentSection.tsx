@@ -214,55 +214,6 @@ export default function AirtentSection() {
               </div>
             </motion.div>
           </div>
-
-          {/* Additional Videos */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {/* Video 3 */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="relative rounded-2xl overflow-hidden shadow-2xl bg-black group aspect-video"
-            >
-              <video
-                className="w-full h-full object-cover"
-                autoPlay
-                loop
-                muted
-                playsInline
-              >
-                <source src="/images/tent/KakaoTalk_20251031_090352028.mp4" type="video/mp4" />
-              </video>
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
-                <h4 className="text-white text-xl font-bold mb-2">설치 과정</h4>
-                <p className="text-white/90">누구나 쉽게 설치 가능</p>
-              </div>
-            </motion.div>
-
-            {/* Video 4 */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="relative rounded-2xl overflow-hidden shadow-2xl bg-black group aspect-video"
-            >
-              <video
-                className="w-full h-full object-cover"
-                autoPlay
-                loop
-                muted
-                playsInline
-              >
-                <source src="/images/tent/KakaoTalk_20251031_090533290.mp4" type="video/mp4" />
-              </video>
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
-                <h4 className="text-white text-xl font-bold mb-2">다양한 공간 활용</h4>
-                <p className="text-white/90">실내외 어디든 가능</p>
-              </div>
-            </motion.div>
-          </div>
         </motion.div>
 
         {/* Installation Locations */}
