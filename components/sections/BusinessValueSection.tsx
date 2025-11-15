@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import SectionWrapper from '../ui/SectionWrapper';
 import Button from '../ui/Button';
 import PurchaseModal from '../ui/PurchaseModal';
-import { TrendingDown, TrendingUp, Building2, Tent, DollarSign, Clock, MapPin, Home, Zap, Shield } from 'lucide-react';
+import { TrendingDown, TrendingUp, Building2, Tent, DollarSign, Clock, MapPin, Home, Zap, Shield, BarChart3, CheckCircle2 } from 'lucide-react';
 
 export default function BusinessValueSection() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -67,7 +67,8 @@ export default function BusinessValueSection() {
       investment: "3천만원~",
       revenue: "월 500만원~",
       features: ["저렴한 토지 임대", "주차장 필수", "시뮬레이터 임대"],
-      payback: "6개월"
+      payback: "6개월",
+      roi: "200%"
     },
     {
       type: "복합 레저시설",
@@ -75,7 +76,8 @@ export default function BusinessValueSection() {
       investment: "5천만원~",
       revenue: "월 1,000만원~",
       features: ["골프 + 캠핑 결합", "주말 집중 운영", "체험형 프로그램"],
-      payback: "8개월"
+      payback: "8개월",
+      roi: "240%"
     },
     {
       type: "글램핑 리조트",
@@ -83,7 +85,8 @@ export default function BusinessValueSection() {
       investment: "1억원~",
       revenue: "월 2,000만원~",
       features: ["숙박 + 골프 패키지", "사계절 운영", "프리미엄 가격"],
-      payback: "10개월"
+      payback: "10개월",
+      roi: "300%"
     }
   ];
 
@@ -91,7 +94,7 @@ export default function BusinessValueSection() {
     <>
       <SectionWrapper
         id="business-value"
-        bgColor="darker"
+        bgColor="dark"
       >
         {/* 메인 헤드라인 */}
         <motion.div
@@ -101,15 +104,19 @@ export default function BusinessValueSection() {
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-          <div className="inline-block px-6 py-2 bg-[#EC4899] text-white rounded-full text-sm font-semibold mb-6">
-            💡 스마트한 사업 아이템
+          <div className="inline-block px-6 py-2 bg-black text-white rounded-sm text-sm font-bold mb-6 tracking-wider">
+            BUSINESS OPPORTUNITY
           </div>
-          <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-            골프장 창업의 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#EC4899] to-[#F472B6]">고정관념을 깨다</span>
+          <h2 className="text-4xl md:text-6xl font-bold text-black mb-6 tracking-tight">
+            골프장 창업의<br />
+            <span className="relative inline-block">
+              <span className="relative z-10">패러다임 전환</span>
+              <span className="absolute bottom-2 left-0 w-full h-3 bg-gray-200 -z-10"></span>
+            </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed font-medium">
             수억원의 시설비? 높은 임대료? 이제는 옛날 이야기입니다.<br />
-            <span className="font-bold text-gray-900">빈땅만 있으면 누구나 골프 사업을 시작할 수 있습니다.</span>
+            <span className="text-black font-bold">데이터로 증명된 새로운 비즈니스 모델</span>
           </p>
         </motion.div>
 
@@ -122,10 +129,10 @@ export default function BusinessValueSection() {
           className="mb-20"
         >
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              기존 스크린골프장의 한계
+            <h3 className="text-3xl font-bold text-black mb-4">
+              기존 스크린골프장의 현실
             </h3>
-            <p className="text-gray-600">창업을 망설이게 만드는 4가지 이유</p>
+            <p className="text-gray-600 font-medium">창업을 망설이게 만드는 4가지 리스크</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
@@ -136,11 +143,11 @@ export default function BusinessValueSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white rounded-2xl p-6 border-2 border-red-200 hover:border-red-400 transition-all"
+                className="bg-white rounded-sm p-6 border-2 border-gray-300 hover:border-gray-900 transition-all shadow-sm"
               >
-                <div className="text-red-500 mb-4">{problem.icon}</div>
-                <h4 className="text-lg font-bold text-gray-900 mb-2">{problem.title}</h4>
-                <p className="text-gray-600 text-sm">{problem.description}</p>
+                <div className="text-gray-900 mb-4">{problem.icon}</div>
+                <h4 className="text-lg font-bold text-black mb-2">{problem.title}</h4>
+                <p className="text-gray-600 text-sm font-medium">{problem.description}</p>
               </motion.div>
             ))}
           </div>
@@ -154,7 +161,7 @@ export default function BusinessValueSection() {
           transition={{ duration: 0.6 }}
           className="flex justify-center items-center my-16"
         >
-          <div className="bg-gradient-to-r from-red-500 to-[#EC4899] text-white px-12 py-4 rounded-full text-3xl font-bold shadow-2xl">
+          <div className="bg-black text-white px-12 py-4 rounded-sm text-3xl font-bold shadow-lg tracking-wider">
             VS
           </div>
         </motion.div>
@@ -168,10 +175,10 @@ export default function BusinessValueSection() {
           className="mb-20"
         >
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              <span className="brand-name text-[#EC4899]">언제칠까</span> STUDIO의 혁신
+            <h3 className="text-3xl font-bold text-black mb-4">
+              <span className="brand-name">언제칠까</span> STUDIO의 솔루션
             </h3>
-            <p className="text-gray-600">사업 리스크를 최소화하는 4가지 솔루션</p>
+            <p className="text-gray-600 font-medium">사업 리스크를 최소화하는 4가지 핵심 가치</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
@@ -182,20 +189,20 @@ export default function BusinessValueSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-[#FEF7FB] to-white rounded-2xl p-6 border-2 border-[#EC4899] hover:shadow-2xl transition-all"
+                className="bg-gradient-to-b from-gray-50 to-white rounded-sm p-6 border-2 border-black hover:shadow-2xl transition-all"
               >
-                <div className="text-[#EC4899] mb-4">{solution.icon}</div>
-                <div className="inline-block px-3 py-1 bg-[#EC4899] text-white rounded-full text-xs font-bold mb-3">
+                <div className="text-black mb-4">{solution.icon}</div>
+                <div className="inline-block px-3 py-1 bg-black text-white rounded-sm text-xs font-bold mb-3 tracking-wider">
                   {solution.highlight}
                 </div>
-                <h4 className="text-lg font-bold text-gray-900 mb-2">{solution.title}</h4>
-                <p className="text-gray-600 text-sm">{solution.description}</p>
+                <h4 className="text-lg font-bold text-black mb-2">{solution.title}</h4>
+                <p className="text-gray-600 text-sm font-medium">{solution.description}</p>
               </motion.div>
             ))}
           </div>
         </motion.div>
 
-        {/* 핵심 메시지 */}
+        {/* 핵심 데이터 */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -203,51 +210,51 @@ export default function BusinessValueSection() {
           transition={{ duration: 0.8 }}
           className="mb-20"
         >
-          <div className="max-w-5xl mx-auto bg-gradient-to-br from-[#EC4899] via-[#F472B6] to-[#F9A8D4] rounded-3xl p-12 text-white shadow-2xl">
+          <div className="max-w-5xl mx-auto bg-black rounded-sm p-12 text-white shadow-2xl border-4 border-gray-900">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               <div>
-                <h3 className="text-3xl font-bold mb-6">
-                  외곽 빈땅이<br />
-                  수익 창출 골드존으로
+                <h3 className="text-3xl font-bold mb-6 tracking-tight">
+                  외곽 빈땅을<br />
+                  수익 창출 자산으로
                 </h3>
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
-                    <Shield className="w-6 h-6 flex-shrink-0 mt-1" />
+                    <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" />
                     <div>
-                      <p className="font-bold mb-1">주차장만 있으면 OK</p>
-                      <p className="text-white/80 text-sm">접근성 좋은 외곽 토지를 활용하세요</p>
+                      <p className="font-bold mb-1">주차장만 확보하면 시작 가능</p>
+                      <p className="text-gray-300 text-sm">접근성 좋은 외곽 토지를 활용</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
-                    <Shield className="w-6 h-6 flex-shrink-0 mt-1" />
+                    <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" />
                     <div>
                       <p className="font-bold mb-1">시뮬레이터 임대로 즉시 영업</p>
-                      <p className="text-white/80 text-sm">복잡한 설비 투자 없이 바로 시작</p>
+                      <p className="text-gray-300 text-sm">복잡한 설비 투자 불필요</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
-                    <Shield className="w-6 h-6 flex-shrink-0 mt-1" />
+                    <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" />
                     <div>
                       <p className="font-bold mb-1">골프 + 캠핑 + 숙박 3 in 1</p>
-                      <p className="text-white/80 text-sm">다목적 활용으로 수익 극대화</p>
+                      <p className="text-gray-300 text-sm">다목적 활용으로 수익 극대화</p>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+              <div className="bg-white/10 backdrop-blur-sm rounded-sm p-8 border border-white/20">
                 <div className="text-center mb-6">
-                  <p className="text-white/80 text-sm mb-2">초기 투자 대비 회수 기간</p>
-                  <div className="text-5xl font-bold mb-2">6개월</div>
-                  <p className="text-white/80 text-sm">평균 손익분기점</p>
+                  <p className="text-gray-300 text-sm mb-2 font-bold tracking-wider">평균 손익분기점</p>
+                  <div className="text-6xl font-bold mb-2 tracking-tighter">6개월</div>
+                  <p className="text-gray-300 text-sm">초기 투자 대비 회수 기간</p>
                 </div>
-                <div className="grid grid-cols-2 gap-4 text-center">
+                <div className="grid grid-cols-2 gap-4 text-center border-t border-white/20 pt-6">
                   <div>
-                    <p className="text-3xl font-bold mb-1">1/10</p>
-                    <p className="text-white/80 text-xs">초기 투자비</p>
+                    <p className="text-4xl font-bold mb-1 tracking-tighter">1/10</p>
+                    <p className="text-gray-300 text-xs font-bold">초기 투자비</p>
                   </div>
                   <div>
-                    <p className="text-3xl font-bold mb-1">3배</p>
-                    <p className="text-white/80 text-xs">수익 다각화</p>
+                    <p className="text-4xl font-bold mb-1 tracking-tighter">3배</p>
+                    <p className="text-gray-300 text-xs font-bold">수익 다각화</p>
                   </div>
                 </div>
               </div>
@@ -264,10 +271,10 @@ export default function BusinessValueSection() {
           className="mb-20"
         >
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              당신에게 맞는 사업 모델을 선택하세요
+            <h3 className="text-3xl font-bold text-black mb-4">
+              검증된 비즈니스 모델
             </h3>
-            <p className="text-gray-600">토지 규모와 입지에 따른 맞춤형 사업 전략</p>
+            <p className="text-gray-600 font-medium">토지 규모와 입지에 따른 맞춤형 사업 전략</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -278,37 +285,41 @@ export default function BusinessValueSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all"
+                className="bg-white rounded-sm overflow-hidden shadow-lg border-2 border-gray-200 hover:border-black transition-all"
               >
-                <div className={`p-6 text-white ${
-                  index === 0 ? 'bg-gradient-to-br from-blue-500 to-blue-600' :
-                  index === 1 ? 'bg-gradient-to-br from-purple-500 to-purple-600' :
-                  'bg-gradient-to-br from-pink-500 to-pink-600'
-                }`}>
-                  <h4 className="text-2xl font-bold mb-2">{model.type}</h4>
-                  <p className="text-white/80 text-sm">{model.location}</p>
+                <div className="p-6 bg-black text-white border-b-4 border-gray-900">
+                  <h4 className="text-2xl font-bold mb-2 tracking-tight">{model.type}</h4>
+                  <p className="text-gray-300 text-sm font-medium">{model.location}</p>
                 </div>
                 <div className="p-6">
-                  <div className="mb-6">
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-gray-600 text-sm">초기 투자</span>
-                      <span className="text-xl font-bold text-gray-900">{model.investment}</span>
+                  <div className="mb-6 pb-6 border-b-2 border-gray-100">
+                    <div className="grid grid-cols-2 gap-4 mb-4">
+                      <div>
+                        <span className="text-gray-600 text-xs font-bold block mb-1">초기 투자</span>
+                        <span className="text-2xl font-bold text-black">{model.investment}</span>
+                      </div>
+                      <div>
+                        <span className="text-gray-600 text-xs font-bold block mb-1">예상 월매출</span>
+                        <span className="text-2xl font-bold text-black">{model.revenue}</span>
+                      </div>
                     </div>
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-gray-600 text-sm">예상 월매출</span>
-                      <span className="text-xl font-bold text-[#EC4899]">{model.revenue}</span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-gray-600 text-sm">손익분기점</span>
-                      <span className="text-lg font-bold text-green-600">{model.payback}</span>
+                    <div className="grid grid-cols-2 gap-4">
+                      <div>
+                        <span className="text-gray-600 text-xs font-bold block mb-1">손익분기점</span>
+                        <span className="text-xl font-bold text-green-600">{model.payback}</span>
+                      </div>
+                      <div>
+                        <span className="text-gray-600 text-xs font-bold block mb-1">연 ROI</span>
+                        <span className="text-xl font-bold text-blue-600">{model.roi}</span>
+                      </div>
                     </div>
                   </div>
-                  <div className="border-t border-gray-200 pt-4">
-                    <p className="text-sm font-semibold text-gray-700 mb-2">핵심 특징</p>
+                  <div>
+                    <p className="text-sm font-bold text-black mb-3">핵심 특징</p>
                     <ul className="space-y-2">
                       {model.features.map((feature, i) => (
-                        <li key={i} className="flex items-center gap-2 text-sm text-gray-600">
-                          <div className="w-1.5 h-1.5 bg-[#EC4899] rounded-full"></div>
+                        <li key={i} className="flex items-center gap-2 text-sm text-gray-700 font-medium">
+                          <div className="w-1.5 h-1.5 bg-black rounded-full"></div>
                           {feature}
                         </li>
                       ))}
@@ -320,7 +331,7 @@ export default function BusinessValueSection() {
           </div>
         </motion.div>
 
-        {/* 비교 이미지 섹션 */}
+        {/* 비교 표 */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -328,134 +339,46 @@ export default function BusinessValueSection() {
           transition={{ duration: 0.8 }}
           className="mb-20"
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {/* 기존 방식 */}
-            <div className="bg-white rounded-2xl p-8 shadow-xl">
-              <div className="flex items-center gap-3 mb-6">
-                <Building2 className="w-8 h-8 text-red-500" />
-                <h4 className="text-2xl font-bold text-gray-900">기존 실내 골프장</h4>
-              </div>
-              <div className="space-y-4 mb-6">
-                <div className="flex justify-between items-center py-3 border-b border-gray-200">
-                  <span className="text-gray-600">시설비</span>
-                  <span className="font-bold text-red-600">3억원~</span>
+          <div className="max-w-5xl mx-auto">
+            <div className="bg-white rounded-sm overflow-hidden shadow-xl border-2 border-gray-200">
+              <div className="grid grid-cols-3 border-b-2 border-gray-900">
+                <div className="p-4 bg-gray-50 border-r border-gray-200">
+                  <p className="text-sm font-bold text-gray-600">비교 항목</p>
                 </div>
-                <div className="flex justify-between items-center py-3 border-b border-gray-200">
-                  <span className="text-gray-600">월 임대료</span>
-                  <span className="font-bold text-red-600">500만원~</span>
+                <div className="p-4 bg-gray-50 border-r border-gray-200">
+                  <p className="text-sm font-bold text-gray-900">기존 실내 골프장</p>
                 </div>
-                <div className="flex justify-between items-center py-3 border-b border-gray-200">
-                  <span className="text-gray-600">인테리어</span>
-                  <span className="font-bold text-red-600">1억원~</span>
-                </div>
-                <div className="flex justify-between items-center py-3 border-b border-gray-200">
-                  <span className="text-gray-600">회수 기간</span>
-                  <span className="font-bold text-red-600">3~5년</span>
-                </div>
-                <div className="flex justify-between items-center py-3">
-                  <span className="text-gray-600">운영 유연성</span>
-                  <span className="font-bold text-red-600">낮음</span>
+                <div className="p-4 bg-black">
+                  <p className="text-sm font-bold text-white">언제칠까 STUDIO</p>
                 </div>
               </div>
-              <div className="bg-red-50 rounded-lg p-4 text-center">
-                <p className="text-red-700 font-bold">총 투자비 4억원 이상</p>
-                <p className="text-red-600 text-sm mt-1">높은 리스크, 장기 회수</p>
-              </div>
-            </div>
-
-            {/* 언제칠까 스튜디오 */}
-            <div className="bg-gradient-to-br from-[#FEF7FB] to-white rounded-2xl p-8 shadow-xl border-2 border-[#EC4899]">
-              <div className="flex items-center gap-3 mb-6">
-                <Tent className="w-8 h-8 text-[#EC4899]" />
-                <h4 className="text-2xl font-bold text-gray-900">
-                  <span className="brand-name text-[#EC4899]">언제칠까</span> STUDIO
-                </h4>
-              </div>
-              <div className="space-y-4 mb-6">
-                <div className="flex justify-between items-center py-3 border-b border-pink-200">
-                  <span className="text-gray-600">시설비</span>
-                  <span className="font-bold text-green-600">3천만원~</span>
+              {[
+                { label: "시설비", old: "3억원~", new: "3천만원~" },
+                { label: "월 임대료", old: "500만원~", new: "50만원~" },
+                { label: "인테리어", old: "1억원~", new: "불필요" },
+                { label: "회수 기간", old: "3~5년", new: "6개월~" },
+                { label: "운영 유연성", old: "낮음", new: "매우 높음" }
+              ].map((row, index) => (
+                <div key={index} className={`grid grid-cols-3 ${index < 4 ? 'border-b border-gray-200' : ''}`}>
+                  <div className="p-4 bg-gray-50 border-r border-gray-200">
+                    <p className="text-sm font-bold text-gray-700">{row.label}</p>
+                  </div>
+                  <div className="p-4 border-r border-gray-200">
+                    <p className="text-sm font-bold text-red-600">{row.old}</p>
+                  </div>
+                  <div className="p-4 bg-gray-50">
+                    <p className="text-sm font-bold text-blue-600">{row.new}</p>
+                  </div>
                 </div>
-                <div className="flex justify-between items-center py-3 border-b border-pink-200">
-                  <span className="text-gray-600">월 임대료</span>
-                  <span className="font-bold text-green-600">50만원~</span>
+              ))}
+              <div className="grid grid-cols-2">
+                <div className="p-6 bg-red-50 text-center border-r border-gray-200">
+                  <p className="text-red-900 font-bold text-lg mb-1">총 투자비 4억원 이상</p>
+                  <p className="text-red-700 text-sm font-medium">높은 리스크, 장기 회수</p>
                 </div>
-                <div className="flex justify-between items-center py-3 border-b border-pink-200">
-                  <span className="text-gray-600">인테리어</span>
-                  <span className="font-bold text-green-600">불필요</span>
-                </div>
-                <div className="flex justify-between items-center py-3 border-b border-pink-200">
-                  <span className="text-gray-600">회수 기간</span>
-                  <span className="font-bold text-green-600">6개월~</span>
-                </div>
-                <div className="flex justify-between items-center py-3">
-                  <span className="text-gray-600">운영 유연성</span>
-                  <span className="font-bold text-green-600">매우 높음</span>
-                </div>
-              </div>
-              <div className="bg-gradient-to-r from-[#EC4899] to-[#F472B6] rounded-lg p-4 text-center text-white">
-                <p className="font-bold text-lg">총 투자비 5천만원 이하</p>
-                <p className="text-white/90 text-sm mt-1">최소 리스크, 빠른 회수</p>
-              </div>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* 추가 이점 */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="mb-16"
-        >
-          <div className="max-w-4xl mx-auto bg-white rounded-2xl p-8 shadow-xl">
-            <h4 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-              <span className="brand-name text-[#EC4899]">언제칠까</span> STUDIO만의 특별한 장점
-            </h4>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-full bg-[#FEF7FB] flex items-center justify-center flex-shrink-0">
-                  <Tent className="w-6 h-6 text-[#EC4899]" />
-                </div>
-                <div>
-                  <h5 className="font-bold text-gray-900 mb-2">캠핑용 텐트로도 활용</h5>
-                  <p className="text-gray-600 text-sm">
-                    골프 시즌이 아닐 때는 프리미엄 캠핑 텐트로 대여하여 추가 수익 창출이 가능합니다.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-full bg-[#FEF7FB] flex items-center justify-center flex-shrink-0">
-                  <Home className="w-6 h-6 text-[#EC4899]" />
-                </div>
-                <div>
-                  <h5 className="font-bold text-gray-900 mb-2">숙박 시설로 전환</h5>
-                  <p className="text-gray-600 text-sm">
-                    내부 인테리어만 조금 손보면 글램핑 숙박시설로 즉시 전환 가능합니다.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-full bg-[#FEF7FB] flex items-center justify-center flex-shrink-0">
-                  <MapPin className="w-6 h-6 text-[#EC4899]" />
-                </div>
-                <div>
-                  <h5 className="font-bold text-gray-900 mb-2">이동 및 재배치 자유</h5>
-                  <p className="text-gray-600 text-sm">
-                    사업이 잘 안되면 다른 곳으로 이동 가능. 실패 리스크를 최소화합니다.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-full bg-[#FEF7FB] flex items-center justify-center flex-shrink-0">
-                  <Shield className="w-6 h-6 text-[#EC4899]" />
-                </div>
-                <div>
-                  <h5 className="font-bold text-gray-900 mb-2">사계절 운영 가능</h5>
-                  <p className="text-gray-600 text-sm">
-                    냉난방 시스템으로 봄·여름·가을·겨울 365일 안정적 운영이 가능합니다.
-                  </p>
+                <div className="p-6 bg-blue-50 text-center">
+                  <p className="text-blue-900 font-bold text-lg mb-1">총 투자비 5천만원 이하</p>
+                  <p className="text-blue-700 text-sm font-medium">최소 리스크, 빠른 회수</p>
                 </div>
               </div>
             </div>
@@ -470,34 +393,32 @@ export default function BusinessValueSection() {
           transition={{ duration: 0.8 }}
           className="text-center"
         >
-          <div className="inline-block bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl p-12 shadow-2xl">
-            <div className="mb-6 inline-block bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-3 rounded-full font-bold">
+          <div className="inline-block bg-white border-4 border-black rounded-sm p-12 shadow-2xl">
+            <div className="mb-6 inline-block bg-blue-600 text-white px-6 py-3 rounded-sm font-bold tracking-wider">
               🚀 2026년 1월 출시 예정 - 사전 예약 진행 중
             </div>
-            <h3 className="text-3xl font-bold text-white mb-4">
+            <h3 className="text-3xl font-bold text-black mb-4 tracking-tight">
               지금 사전 예약하세요
             </h3>
-            <p className="text-gray-300 mb-8 max-w-2xl">
+            <p className="text-gray-600 mb-8 max-w-2xl font-medium">
               빈땅을 가지고 계신가요? 골프 사업을 꿈꾸시나요?<br />
-              <span className="brand-name text-[#F472B6]">언제칠까</span> STUDIO가 당신의 꿈을 현실로 만들어드립니다.
+              <span className="text-black font-bold">데이터 기반의 사업 계획을 제공해드립니다</span>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                variant="primary" 
-                size="lg"
+              <button
                 onClick={() => setIsModalOpen(true)}
+                className="px-8 py-4 bg-black text-white font-bold rounded-sm hover:bg-gray-900 transition-all duration-300 hover:scale-105 shadow-lg tracking-wider"
               >
                 💼 사전 예약 상담 신청
-              </Button>
-              <Button 
-                variant="outline" 
-                size="lg"
+              </button>
+              <a
                 href="#contact"
+                className="px-8 py-4 bg-white text-black font-bold rounded-sm border-2 border-black hover:bg-gray-50 transition-all duration-300 tracking-wider"
               >
                 📞 전화 문의
-              </Button>
+              </a>
             </div>
-            <p className="text-gray-400 text-sm mt-6">
+            <p className="text-gray-600 text-sm mt-6 font-medium">
               * 사업 계획서 및 수익성 분석 자료를 무료로 제공해드립니다
             </p>
           </div>
@@ -512,4 +433,3 @@ export default function BusinessValueSection() {
     </>
   );
 }
-
