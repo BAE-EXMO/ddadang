@@ -5,7 +5,6 @@ import Footer from '@/components/ui/Footer';
 import HeroSection from '@/components/sections/HeroSection';
 import AirtentSection from '@/components/sections/AirtentSection';
 import AppGuideSection from '@/components/sections/AppGuideSection';
-import StorySection from '@/components/sections/StorySection';
 import ScreenReviewsSection from '@/components/sections/ScreenReviewsSection';
 import BusinessValueSection from '@/components/sections/BusinessValueSection';
 import TentReservationSection from '@/components/sections/TentReservationSection';
@@ -30,9 +29,6 @@ export default function Home() {
         {/* 스크린 섹션 */}
         <ScreenSystemSection />
         <ScreenReviewsSection />
-        
-        {/* 스토리 */}
-        <StorySection />
       </main>
       <Footer />
     </>
